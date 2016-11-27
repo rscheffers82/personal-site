@@ -2,15 +2,15 @@
 
 Format:
 	'name' : '',							Name of the site
-	'description' : '',						Description of the project
-	'url' : ['',''],						1st URL is the live project, 2nd the source code
+	'description' : '',						Description of the data
+	'url' : ['',''],						1st URL is the live data, 2nd the source code
 	'img' : '',								image to display
 	'skills' : ['','','','',''],			Technologies used, HTML, CSS, PHP, Wordpress, React.js etc
 
 */
 
-
-var portfolio = [{
+var p = (function () {
+	var projects = [{
 		'number': '1',	
 		'name': 'React Countdown App',
 		'description' : 'Countdown and Timer app build on React',
@@ -20,8 +20,8 @@ var portfolio = [{
 	},{	
 		'number': '2',	
 		'name': 'Brilliant Massage Therapy',
-		'description' : 'Wordpress website build in collaboration with ThinkUp Design. We incorporated two websites of the client into on professional SEO optimised and visual appealing website. While I mainly worked on the setup and functionality of the site, ThinkUp Design led the design aspect.',
-		'url': ['http://jolitabrilliant.com','#'],
+		'description' : 'Wordpress website build in collaboration with <a href="http://www.thinkupdesign.ca" target="_blank">ThinkUp Design</a>. We incorporated two websites of the client into on professional SEO optimised and visual appealing website. While I mainly worked on the setup and functionality of the site, ThinkUp Design led the design aspect.',
+		'url': ['http://jolitabrilliant.com'],
 		'img' : 'images/jolita-brilliant.jpg',						
 		'tech' : ['Wordpress','Visual Composer','HTML','CSS','Photoshop']	
 	},{
@@ -34,28 +34,28 @@ var portfolio = [{
 	},{					
 		'number': '4',	
 		'name': 'Black Belt Proofreader',
-		'description' : '',
-		'url': ['http://blackbeltproofreader.com','#'],
+		'description' : 'WordPress based website build in collaboration with the owner.',
+		'url': ['http://blackbeltproofreader.com'],
 		'img' : 'images/blackbeltproofreader.jpg',						
 		'tech' : ['Wordpress','Divi Builder','HTML','CSS','Photoshop']	
 	},{
 		'number': '5',	
 		'name': 'Simon',
-		'description' : 'Simon: an electronic game of memory skill. Test how sharp your memory still is... Recreated by Roy Scheffers using HTML, SCSS and Javascript as part of FreeCodeCamp\'s curriculum.',
+		'description' : 'Simon: an electronic retro game build on mainly jQuery, Javascript, SCSS and HTML. This assignment was part of FreeCodeCamp\'s curriculum.',
 		'url': ['https://rscheffers82.github.io/Simon-game/','https://github.com/rscheffers82/Simon-game'],
 		'img' : 'images/simon.jpg',
 		'tech' : ['HTML','SCSS','Gulp','Javascript','Photoshop']
 	},{
 		'number': '6',	
 		'name': 'Tic Tac Toe',
-		'description' : 'One or two player game',
+		'description' : 'Classic Tic Tac Toe game that has two player and single player mode gameplay. Several levels of AI are build in that rely on the NegaMax algoritm to calculate the score of a future moves.',
 		'url': ['https://rscheffers82.github.io/Tic-Tac-Toe-JS-game/','https://github.com/rscheffers82/Tic-Tac-Toe-JS-game'],
 		'img' : 'images/tic-tac-toe.jpg',
 		'tech' : ['HTML','SCSS','Gulp','Javascript', 'NegaMax algoritm', 'Photoshop']
 	},{
 		'number': '7',	
 		'name': 'Sand Timer',
-		'description' : 'Alternative design to the pomodoro timer to increase productivity.',
+		'description' : 'Sand Timer application designed to boost productivity by setting a focused work and break time. Both times can be regulated by sliders and the timer is in a continues loop. The base concept was taken from the pomodoro timer. The app is displayed on HTML Canvas element and build modular, making it easy to integrate on other sites.',
 		'url': ['https://codepen.io/roycode/full/rLyZgm','https://github.com/rscheffers82/Pomodoro-Timer'],
 		'img' : 'images/sand-timer.jpg',
 		'tech' : ['HTML','canvas','CSS','Javascript']
@@ -69,34 +69,35 @@ var portfolio = [{
 	},{
 		'number': '9',	
 		'name': 'Weather App',
-		'description' : 'Load local weather',
+		'description' : 'Weather Application which based on the user\'s IP or browser information displays their local weather using the <a href="https://darksky.net/dev" target="_blank">Dark Sky API</a>.',
 		'url': ['http://codepen.io/roycode/full/WwqYrB','http://codepen.io/roycode/pen/WwqYrB'],
 		'img' : 'images/Weather-application-in-javascript.jpg',								
 		'tech' : ['HTML','SCSS','Bootstrap','Javascript','API']
 	},{
 		'number': '10',	
 		'name': 'Wikimedia Viewer',
-		'description' : '',
+		'description' : 'The Wikimedia Viewer application uses the Wikimedia Web API to retrieve information from WikiPedia and displays it.',
 		'url': ['http://codepen.io/roycode/full/VjZZvw','http://codepen.io/roycode/pen/VjZZvw'],
 		'img' : 'images/wikipedia-viewer.jpg',
 		'tech' : ['HTML','CSS','Bootstrap','Javascript','API']
 	},{
 		'number': '11',	
 		'name': 'Quote Generator',
-		'description' : 'Be inspired by some of the world most beautiful quotes',
+		'description' : 'Be inspired by some of the world most beautiful quotes. This application uses an AJAX request to load in quotes that the reader can share via Twitter.',
 		'url': ['http://codepen.io/roycode/full/NNJzmG','http://codepen.io/roycode/pen/NNJzmG'],
 		'img' : 'images/random-quote-generator-javascript.jpg',								
 		'tech' : ['HTML','CSS','Bootstrap','Javascript']
 	},{
 		'number': '12',	
 		'name': 'Tribute page',
-		'description' : 'First project',
+		'description' : 'One of my earlier projects which aim was to build a tribute page using HTML and CSS. ',
 		'url': ['http://codepen.io/roycode/full/BKPamX','http://codepen.io/roycode/pen/BKPamX'],
-		'img' : 'images/Project-StevenGreer.jpg',								
+		'img' : 'images/StevenGreer.jpg',								
 		'tech' : ['HTML','CSS']
+	}]
 
 /*	},{			fix app, currently not displaying anything
-		'name': 'TwitchTV JSON API project',
+		'name': 'TwitchTV JSON API data',
 		'description' : 'Load Twitch TV data into the site',
 		'url': ['http://rscheffers82.github.io/TwitchTV','https://github.com/rscheffers82/TwitchTV'],
 		'img' : 'images/Weather-application-in-javascript.jpg',
@@ -109,14 +110,59 @@ var portfolio = [{
 		'img' : '',		// 400 * 250						
 		'tech' : ['','','','','']
 */
-}]
 
-/*
-Idea, drop down window with more information
-For ideas
+	return{
+		modal: function (number) {
+			var {name, description, img, url, tech} = projects[number];
+			function showTech() {
+				var data = '<div class="tech-wrapper">';
+				tech.forEach(function(item){
+					data += '<div class="tech">' + item + '</div>';
+				});
+				data += '</div>';
+				return( data );
+			}
+			function showImg() {
+				return '<img class="img-responsive" src="' + img + '" alt="' + name + '">'
+			}
+			function showDescription() {
+				return '<div class="description-wrapper">' + description + '</div>'
+			}
 
-- http://sergiopedercini.com/				- drop down effect (tic tac toe)
-- http://www.goslingo.com/ 					- how projects are shown, Jquery
-This project was undertaken in collaboration with Lick Studio
+			$('.modal-title').html(name);
+			$('.modal-body').html( showImg() + showTech() + showDescription() );
+			$(".btn-primary").attr('href', url[0]);
+			$(".project-image").attr('href', url[0]);
 
-*/
+
+			console.log( url[1] );
+			if ( url[1] ) {
+				console.log('in defined');
+				$(".btn-default").removeClass("hide-btn");
+				$(".btn-default").attr('href', url[1]);
+			} else {
+				console.log('in undefined');
+				$(".btn-default").addClass("hide-btn");
+			}
+		},
+		showProjects: function () {
+			var data = '';
+			for ( i = 0; i < projects.length; i++ ){
+			  if ( i === 0 ) data += '<div class="row">'
+			  data += '<div class="col-xs-4 text-center">' +
+			                '<div class="project">' +
+			                  '<a data-number="' + i + '"  data-toggle="modal" data-target=".bd-example-modal-lg">' +
+			                    '<h4>'+projects[i].name+'</h4>' +
+			                    '<img class="img-responsive" src="'+projects[i].img+'" alt="'+projects[i].name+'">' +
+			                  '</a>' +
+			                '</div>' +
+			             '</div>';
+			  if ( i > 0 && (i+1)%3 === 0 ) data += '</div><div class="row">'
+			}
+		return data;
+		}
+	}
+
+
+
+})();

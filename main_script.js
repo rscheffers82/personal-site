@@ -1,5 +1,6 @@
 // Javascript
 $( document ).ready(function() {
+  // add all projects into portfolio part of the page
 
 });
 
@@ -25,24 +26,9 @@ $(".navbar a, footer a[href='#intro']").on('click', function(event) {
   });
 });
 
-console.log(portfolio);
+$('#portfolio').append( p.showProjects() );
 
-var project = '';
-for ( i = 0; i < portfolio.length; i++ ){
-  if ( i === 0 ) project += '<div class="row">'
-  project += '<div class="col-xs-4 text-center">' +
-                '<div class="project">' +
-                  // '<a href="' +portfolio[i].url[0]+'" target="_blank">' +
-                  '<a>' +
-                    '<h4>'+portfolio[i].name+'</h4>' +
-                    '<img class="img-responsive" src="'+portfolio[i].img+'" alt="'+portfolio[i].name+'">' +
-                  '</a>' +
-                '</div>' +
-             '</div>';
-  if ( i > 0 && (i+1)%3 === 0 ) project += '</div><div class="row">'
-}
-$('#portfolio').append(project);
-
-$('.project').on("click", function(){
-  console.log('clicked');
+$( '#portfolio' ).on("click", 'a', function(e){
+  console.log( $(this).data('number') );
+  p.modal( $(this).data('number') );
 });

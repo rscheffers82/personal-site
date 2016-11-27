@@ -179,3 +179,58 @@ hr{
   height: 0.1em; 
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(91, 76, 20, 0.75), rgba(0, 0, 0, 0));
 }
+
+/* Modal classes */
+
+.modal-content{
+  background: url('images/concrete_seamless.png');
+  overflow: hidden;
+}
+
+.modal-title {
+  background: #315A9E;
+  border-bottom: 1px solid #222223;
+  font-size: 3rem;
+  line-height: 5rem;
+  color: #fafafc;
+  text-align: center;
+}
+
+.modal-body img{
+  margin: 10px auto;
+  -webkit-box-shadow: 2px 2px 5px #ccc;
+  -moz-box-shadow: 2px 2px 5px #ccc;
+  box-shadow: 2px 2px 5px #ccc;
+}
+
+.modal-footer {
+  border: none;
+}
+
+.tech-wrapper {
+  text-align: center;
+  margin: 20px;
+}
+.tech {
+  background-color: #315A9E;
+  color: #fafafc;
+  display: inline-block;
+  margin: 0px 7px 7px 0px;
+  padding: 0px 7px;
+  border-radius: 2px;
+  -webkit-box-shadow: 1px 1px 5px #bbb;
+  -moz-box-shadow: 1px 1px 5px #bbb;
+  box-shadow: 1px 1px 5px #bbb;
+}
+
+.tech:last-child {
+  margin-left: 0px;
+}
+
+.description-wrapper{
+  margin: 0px 20px;
+}
+
+.hide-btn {
+  display: none;
+}
