@@ -2,17 +2,14 @@
 
 body {
   font: 15px "Open Sans", sans-serif;
-  line-height: 1.6em;
-  font-size: 1.75em;
-  font-weight: 500;
-  /*color: #665033;*/
-  color: #241b09;
+  font-size: 1.75rem;
+  line-height: 2.5rem;
   position: relative;
   background-color: #CC9933;
 }
 
 h2,h3{
-  font-family: Comfortaa;
+  font-family: "Open Sans", Comfortaa;
 }
 
 .container {
@@ -22,7 +19,8 @@ h2,h3{
   border: 1px solid #5b4314;
   border-radius: 10px;
   margin-bottom: 20px;
-  background: url('images/concrete_seamless.png');
+  /*background: url('images/concrete_seamless.png');*/
+  background: url('images/concrete_seamless2.jpg');
   -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.7);
   -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.7);
   box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.7);
@@ -76,6 +74,9 @@ h2,h3{
   border-radius: 10px;
 }
 
+p {
+  text-shadow: 0 0 3px #eee;
+}
 .around-img{
   border: 1px solid #5b4314;
   border-radius: 50%;
@@ -183,7 +184,7 @@ hr{
 /* Modal classes */
 
 .modal-content{
-  background: url('images/concrete_seamless.png');
+  background: url('images/concrete_seamless2.jpg');
   overflow: hidden;
 }
 

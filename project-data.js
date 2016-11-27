@@ -138,7 +138,7 @@ var p = (function () {
 
 			}
 			function showDescription() {
-				return '<div class="description-wrapper">' + description + '</div>'
+				return '<div class="description-wrapper"><p>' + description + '</p></div>'
 			}
 
 			$('.modal-title').html(name);
