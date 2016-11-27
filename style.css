@@ -151,9 +151,9 @@ h2,h3{
   color: #000;
 }
 .img-skills{
-    height: 85px;
+    height: 60px;
+    width: 60px;
     margin: 0 5px 20px;
-    width: 85px;
 }
 #portfolio {
   padding: 30px;
@@ -196,15 +196,11 @@ hr{
   text-align: center;
 }
 
-.modal-body img{
+.modal-img-wrapper img{
   margin: 10px auto;
   -webkit-box-shadow: 2px 2px 5px #ccc;
   -moz-box-shadow: 2px 2px 5px #ccc;
   box-shadow: 2px 2px 5px #ccc;
-
-}
-.modal-body a{
-
 }
 
 .modal-footer {
@@ -212,6 +208,7 @@ hr{
 }
 
 .tech-wrapper {
+  display: block;
   text-align: center;
   margin: 20px;
 }

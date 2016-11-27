@@ -129,8 +129,13 @@ var p = (function () {
 				return( data );
 			}
 			function showImg() {
-				return '<a href="' + url[0] +'" target="_blank">' + 
-				'<img class="img-responsive" src="' + img + '" alt="' + name + '"></a>'
+				var data = '<div class="modal-img-wrapper">' +
+					'<a href="' + url[0] +'" target="_blank">' + 
+					'<img class="img-responsive" src="' + img + '" alt="' + name + '"></a>' +
+		        '</div>'
+				return data;
+
+
 			}
 			function showDescription() {
 				return '<div class="description-wrapper">' + description + '</div>'
