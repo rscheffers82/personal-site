@@ -113,7 +113,13 @@ var p = (function () {
 
 	return{
 		modal: function (number) {
-			var {name, description, img, url, tech} = projects[number];
+			//var {name, description, img, url, tech} = projects[number];
+			var name = projects[number].name;
+			var description = projects[number].description;
+			var img = projects[number].img;
+			var url = projects[number].url
+			var tech = projects[number].tech;
+
 			function showTech() {
 				var data = '<div class="tech-wrapper">';
 				tech.forEach(function(item){
