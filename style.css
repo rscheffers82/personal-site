@@ -201,6 +201,10 @@ hr{
   -webkit-box-shadow: 2px 2px 5px #ccc;
   -moz-box-shadow: 2px 2px 5px #ccc;
   box-shadow: 2px 2px 5px #ccc;
+
+}
+.modal-body a{
+
 }
 
 .modal-footer {
@@ -221,6 +225,7 @@ hr{
   -webkit-box-shadow: 1px 1px 5px #bbb;
   -moz-box-shadow: 1px 1px 5px #bbb;
   box-shadow: 1px 1px 5px #bbb;
+  cursor: default;
 }
 
 .tech:last-child {

@@ -51,7 +51,7 @@ var p = (function () {
 		'description' : 'Classic Tic Tac Toe game that has two player and single player mode gameplay. Several levels of AI are build in that rely on the NegaMax algoritm to calculate the score of a future moves.',
 		'url': ['https://rscheffers82.github.io/Tic-Tac-Toe-JS-game/','https://github.com/rscheffers82/Tic-Tac-Toe-JS-game'],
 		'img' : 'images/tic-tac-toe.jpg',
-		'tech' : ['HTML','SCSS','Gulp','Javascript', 'NegaMax algoritm', 'Photoshop']
+		'tech' : ['HTML','SCSS','Gulp','Javascript', 'negaMax algoritm', 'Photoshop']
 	},{
 		'number': '7',	
 		'name': 'Sand Timer',
@@ -62,10 +62,10 @@ var p = (function () {
 	},{
 		'number': '8',	
 		'name': 'Calculator',
-		'description' : 'Solar Calculator',
+		'description' : 'Solar Calculator build on jQuery and Javascript',
 		'url': ['http://codepen.io/roycode/full/qNapgw','https://github.com/rscheffers82/calculator-html-css-js'],
 		'img' : 'images/calculator-js.jpg',
-		'tech' : ['HTML','CSS','Javascript','Photoshop']
+		'tech' : ['HTML','CSS','jQuery','Javascript','Photoshop']
 	},{
 		'number': '9',	
 		'name': 'Weather App',
@@ -92,7 +92,7 @@ var p = (function () {
 		'name': 'Tribute page',
 		'description' : 'One of my earlier projects which aim was to build a tribute page using HTML and CSS. ',
 		'url': ['http://codepen.io/roycode/full/BKPamX','http://codepen.io/roycode/pen/BKPamX'],
-		'img' : 'images/StevenGreer.jpg',								
+		'img' : 'images/Project-StevenGreer.jpg',								
 		'tech' : ['HTML','CSS']
 	}]
 
@@ -123,7 +123,8 @@ var p = (function () {
 				return( data );
 			}
 			function showImg() {
-				return '<img class="img-responsive" src="' + img + '" alt="' + name + '">'
+				return '<a href="' + url[0] +'" target="_blank">' + 
+				'<img class="img-responsive" src="' + img + '" alt="' + name + '"></a>'
 			}
 			function showDescription() {
 				return '<div class="description-wrapper">' + description + '</div>'
@@ -131,18 +132,16 @@ var p = (function () {
 
 			$('.modal-title').html(name);
 			$('.modal-body').html( showImg() + showTech() + showDescription() );
-			$(".btn-primary").attr('href', url[0]);
+			$(".site").attr('href', url[0]);
 			$(".project-image").attr('href', url[0]);
 
 
 			console.log( url[1] );
 			if ( url[1] ) {
-				console.log('in defined');
-				$(".btn-default").removeClass("hide-btn");
-				$(".btn-default").attr('href', url[1]);
+				$(".code").removeClass("hide-btn");
+				$(".code").attr('href', url[1]);
 			} else {
-				console.log('in undefined');
-				$(".btn-default").addClass("hide-btn");
+				$(".code").addClass("hide-btn");
 			}
 		},
 		showProjects: function () {
