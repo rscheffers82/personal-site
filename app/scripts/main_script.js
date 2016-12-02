@@ -1,6 +1,9 @@
 // Javascript
 $( document ).ready(function() {
   // add all projects into portfolio part of the page
+  $('.projects').append( p.showProjects() );
+//  $('.projects').append( p.showProjects() );
+
 
 });
 
@@ -25,8 +28,6 @@ $(".navbar a, footer a[href='#intro']").on('click', function(event) {
     window.location.hash = hash;
   });
 });
-
-$('.projects').append( p.showProjects() );
 
 $( '.projects' ).on("click", 'a', function(e){
   console.log( $(this).data('number') );
