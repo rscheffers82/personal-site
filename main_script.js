@@ -26,9 +26,9 @@ $(".navbar a, footer a[href='#intro']").on('click', function(event) {
   });
 });
 
-$('#portfolio').append( p.showProjects() );
+$('.projects').append( p.showProjects() );
 
-$( '#portfolio' ).on("click", 'a', function(e){
+$( '.projects' ).on("click", 'a', function(e){
   console.log( $(this).data('number') );
   p.modal( $(this).data('number') );
 });

@@ -1,3 +1,6 @@
 development/
 certificates/
+node_modules/
 Website-improvements-V2.txt
+package.json
+gulpfile.js
