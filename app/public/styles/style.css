@@ -1,0 +1,209 @@
+body {
+  margin-top: 30px;
+  font-family: "Droid Serif",serif;
+  font-size: 1.75rem;
+  line-height: 3rem;
+  position: relative;
+  color: #686868; }
+
+#after-intro,
+#about,
+#portfolio,
+#contact {
+  padding: 5rem; }
+
+#after-intro {
+  /* Stripped */
+  background: transparent url("../images/diagonal-bg.png") repeat scroll center center; }
+
+#about {
+  /* Blue */
+  background-color: #306d9f;
+  color: #e1e1e1; }
+
+#portfolio {
+  /* Stripped */
+  background: transparent url("../images/diagonal-bg.png") repeat scroll center center; }
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 33px;
+  text-transform: uppercase;
+  margin-top: 3rem; }
+
+a {
+  color: #D2612A; }
+
+.navbar,
+.navbar-default {
+  background-color: #282839;
+  border-radius: 0px;
+  border: 0px;
+  margin-bottom: 0;
+  font-size: 14px;
+  letter-spacing: 3px;
+  line-height: 30px; }
+
+.navbar-right {
+  margin: 2px 10px 2px 2px; }
+
+.navbar-brand {
+  margin-left: 25px;
+  color: #f4f4f4 !important; }
+
+.navbar-nav li a {
+  color: #ccccff !important; }
+
+.navbar-nav li a:hover {
+  background-color: #306d9f !important;
+  /*border-radius: 10px;*/ }
+
+.navbar-nav > .active > a,
+.navbar-nav > .active > a:hover {
+  background-color: #306d9f !important;
+  /*border: 1px solid #182D4F;*/
+  /*border-radius: 10px;*/ }
+
+.around-img {
+  height: 302px;
+  margin: auto;
+  max-height: 75vw;
+  max-width: 90%;
+  position: relative;
+  width: 302px;
+  margin-top: 15px; }
+
+.front-img {
+  border: 7px solid #fafafc;
+  border-radius: 50%;
+  height: 300px;
+  max-height: 75vw;
+  max-width: 100%;
+  position: relative;
+  width: 300px; }
+
+.skill-wrapper {
+  display: block; }
+
+.skill {
+  display: inline-block;
+  margin-left: 5px;
+  border: 1px solid #eee;
+  padding: 2px 10px; }
+
+.project {
+  text-align: center;
+  color: #222223;
+  background-color: #fafafc;
+  margin: 2rem 2rem 4rem;
+  overflow: hidden;
+  border: 1px solid #5b4314;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.7); }
+
+.project:hover {
+  -webkit-box-shadow: 3px 5px 15px 0px #222223;
+  -moz-box-shadow: 3px 5px 15px 0px #222223;
+  box-shadow: 3px 5px 5px 0px #222223; }
+
+.project a {
+  color: inherit;
+  text-decoration: none; }
+
+@media (max-width: 480px) {
+  .project h4 {
+    font-size: 4vw !important; } }
+
+.social {
+  display: block;
+  margin: auto auto 5px;
+  border: 1px solid #306d9f;
+  border-radius: 3px;
+  background-color: #e1e1e1;
+  color: #306d9f;
+  max-width: 15em;
+  min-width: 10em;
+  width: 90%; }
+
+.social:hover {
+  text-decoration: none;
+  background-color: #294c85;
+  color: #e1e1e1; }
+
+.img-skills {
+  height: 60px;
+  width: 60px;
+  margin: 0 5px 20px; }
+
+.btn-send {
+  background-color: #D13627;
+  padding: 9px 33px 9px 33px;
+  border: 1px solid #f44336;
+  border-radius: 3px; }
+
+.btn-send:hover {
+  background-color: #f44336; }
+
+.footer {
+  background-color: #2f2f2f;
+  font-size: 0.8em; }
+
+hr {
+  width: 80%;
+  text-align: center;
+  height: 0.1em;
+  margin: 3rem auto;
+  background-image: linear-gradient(to right, transparent, rgba(91, 76, 20, 0.75), transparent); }
+
+#about hr {
+  background-image: linear-gradient(to right, transparent, rgba(250, 250, 250, 0.75), transparent); }
+
+/* Modal classes */
+.modal-content {
+  background: url("images/concrete_seamless2.jpg");
+  overflow: hidden; }
+
+.modal-title {
+  background: #315A9E;
+  border-bottom: 1px solid #222223;
+  font-size: 3rem;
+  line-height: 5rem;
+  color: #fafafc;
+  text-align: center; }
+
+.modal-img-wrapper img {
+  border-radius: 5px;
+  margin: 10px auto;
+  -webkit-box-shadow: 2px 2px 5px #ccc;
+  -moz-box-shadow: 2px 2px 5px #ccc;
+  box-shadow: 2px 2px 5px #ccc; }
+
+.modal-footer {
+  border: none; }
+
+.tech-wrapper {
+  display: block;
+  text-align: center;
+  margin: 20px; }
+
+.tech {
+  background-color: #315A9E;
+  color: #fafafc;
+  display: inline-block;
+  margin: 0px 7px 7px 0px;
+  padding: 0px 7px;
+  border-radius: 2px;
+  -webkit-box-shadow: 1px 1px 5px #bbb;
+  -moz-box-shadow: 1px 1px 5px #bbb;
+  box-shadow: 1px 1px 5px #bbb;
+  cursor: default; }
+
+.tech:last-child {
+  margin-left: 0px; }
+
+.description-wrapper {
+  margin: 0px 20px; }
+
+.hide-btn {
+  display: none; }
