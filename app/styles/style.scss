@@ -10,7 +10,7 @@ $text-color-dark: #222223;
 
 $grey-white: #e1e1e1;
 $white-background-striped: '../images/diagonal-bg.png';
-$white-background-striped: '../isometric-grid.png';
+$white-background-striped: '../images/isometric-grid.png';
 
 $call-to-action: #E9612A;
 
@@ -209,11 +209,13 @@ hr{
   text-align: center;
   height: 0.1em;
   margin: 3rem auto;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(91, 76, 20, 0.75), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to right, transparent, rgba(250, 76, 20, 0.75), transparent);
+  background-color: $blue;
 }
 
 #about hr{
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(250, 250, 250, 0.75), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to right, transparent, rgba(250, 76, 20, 0.75), transparent);
+  background-color: $blue;
 }
 
 /* Modal classes */

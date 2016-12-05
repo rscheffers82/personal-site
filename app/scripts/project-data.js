@@ -12,10 +12,10 @@ Format:
 var p = (function () {
 	var projects = [{
 		'name': 'React Todo App',
-		'description' : 'Todo App build on React which lets you add and search todo\'s. Completed tasks are automatically archieved and can be made visible with the select box. Data is stored locally in the browser',
+		'description' : 'Todo Application build on React and Redux which let\'s you add new tasks to the list and search existing todo items. Completed tasks are automatically archieved and can be made visible with the select box. Data is stored locally in the browser',
 		'url': ['http://thawing-river-94231.herokuapp.com','https://github.com/rscheffers82/React-ToDo'],
 		'img' : 'images/react-todo-app.jpg',
-		'tech' : ['React','Javscript','JSX','SCSS','HTML']
+		'tech' : ['React', 'Redux', 'Javscript','JSX','SCSS','HTML']
 	},{
 		'name': 'Brilliant Massage Therapy',
 		'description' : 'Wordpress website build in collaboration with <a href="http://www.thinkupdesign.ca" target="_blank">ThinkUp Design</a>. We incorporated two websites of the client into on professional SEO optimised and visual appealing website. While I mainly worked on the setup and functionality of the site, ThinkUp Design led the design aspect.',
