@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "personal portfolio for royscheffers.com",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "test",
+    "start": "gulp watch"
+  },
+  "author": "Roy Scheffers",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "browser-sync": "^2.16.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "jquery": "^3.1.1",
+    "uglify": "^0.1.5"
+  }
+}
