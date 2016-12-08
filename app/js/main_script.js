@@ -4,10 +4,20 @@ $( document ).ready(function() {
   $('.projects').append( p.showProjects() );
 //  $('.projects').append( p.showProjects() );
 
+  $(".sticky-wrapper").sticky({topSpacing:0});
 
 });
 
-$('body').scrollspy({target: ".navbar", offset: 50});
+
+
+
+
+//$('body').scrollspy({target: ".navbar", offset: 120});
+
+
+
+
+
 
 $(document).on('click','.navbar-collapse.in',function(e) {
     if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {

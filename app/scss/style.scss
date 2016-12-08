@@ -1,20 +1,93 @@
+// --------------------------------------
+// color bases
+// http://bootstraplovers.com/templates/assan-v2.5/main-template/buttons.html
+// http://bootstraplovers.com/templates/assan-v2.5/main-template/index.html#
+// http://bootstraplovers.com/templates/assan-v2.5/main-template/me.html
+// http://wrapbootstrap.com/preview/WB0RK211T
+// http://barunka.ondrejsvestka.cz/
+// implement some of the things in this site
+// footer at the bottom
+
+// http://wrapbootstrap.com/preview/WB0RK211T
+
+// Gray and white tones
+// template online
+// https://color.adobe.com/IT-website-color-theme-8962610/
+// https://color.adobe.com/Copy-of-IT-website-color-theme-8962709/ (Improvements Andrew)
+
+// _____________________________________
+//
+// Theme main colors
+// ________________________________________
+
+$call-to-action: #E74C3C;
+$primary-color: #3498DB;   //nice blue 306d9f
+$secondary-color: #334A55;
+
+$white: #FFFFFF;
+$off-white: #F4F4F4; //#f7f7f7;
+
+// maybe not enough contrast
+// $white: #F7F7F7;
+// $off-white: #f4f4f4; //#f7f7f7;
+
+
+// Text colors, gray block
+$grey-white: #8f8f8f;      // slightly lighter for less attention to items #f7f7f7;
+$dark-grey: #3f3f3f;        // header text
+$soft-grey: #676767;        // normal text
+
+// button darker gray color #bfbfbf;
+// On overlay the accent color comes up
+// #3498db
+
+// $primary-color: #336699; //#306d9f;
+// $secundary-color: #fafafc;
+
+
+// Fonts to consider for headers
+// "Montserrat",sans-serif
+
+
+// or the blue and gray from here
+// http://barunka.ondrejsvestka.cz/
+
+//
+// retro-overlay::after {
+//     background: rgba(0, 0, 0, 0) url("images/retro-overlay.png") repeat scroll 0 0;
+//     content: "";
+//     height: 100%;
+//     left: 0;
+//     position: absolute;
+//     top: 0;
+//     width: 100%;
+//
+
+
+
+
 // ____________________________________________
 //
 //                 Variables
 // ____________________________________________
 
+// $primary-color: #336699; //#306d9f;
+// $secundary-color: #fafafc;
+$white: #f4f4f4;
+$grey: #e1e1e1;
+$black: #222223;
+
+$navbar-color: /*#686868; */ #282839;       // dark blue
 $blue: #306d9f;
-$dark-blue: #282839;
 $text-color-grey: #686868;
 $text-color-dark: #222223;
 
-$grey-white: #e1e1e1;
 $white-background-striped: '../images/diagonal-bg.png';
 $white-background-striped: '../images/isometric-grid.png';
 
-$call-to-action: #E9612A;
+// $call-to-action: #E9612A;
 
-// $bright-white: #f1f1f1;
+ $bright-white: #f1f1f1;
 
 
 // ____________________________________________
@@ -22,13 +95,21 @@ $call-to-action: #E9612A;
 //      Stylesheet for Portfolio Page
 // ____________________________________________
 
+@font-face {
+ font-family: 'CODE Light';
+ src: url('./app/fonts/custom/CODE-Light.otf') format("opentype");
+}
+
 body {
   margin-top: 10px;
-  font-family: "Droid Serif",serif;
+  font-family: 'Helvetica', "Droid Serif",serif;
   font-size: 1.75rem;
   line-height: 3rem;
   position: relative;
-  color: $text-color-grey;
+  color: $white;
+  background: rgba(0, 0, 0, 0) url($white-background-striped) repeat scroll center center;
+background: rgba(0, 0, 0, 0) url($white-background-striped) repeat scroll center center;
+  //background-color: $primary-color;// #989898;
 }
 
 
@@ -41,22 +122,22 @@ body {
 
 #after-intro {
   /* Stripped */
-  background: rgba(0, 0, 0, 0) url($white-background-striped) repeat scroll center center;
+//  background: rgba(0, 0, 0, 0) url($white-background-striped) repeat scroll center center;
+  //color: #777;
 }
 
 #about {
   /* Blue */
-  background-color: $blue;
-  color: $grey-white;
+//  color: $grey;
 }
 
 #portfolio {
   /* Stripped */
-  background: rgba(0, 0, 0, 0) url("../images/diagonal-bg.png") repeat scroll center center;
+//  background: rgba(0, 0, 0, 0) url("../images/diagonal-bg.png") repeat scroll center center;
 }
 
 #contact {
-
+  background-color: $grey;
 }
 
 h1{
@@ -64,14 +145,58 @@ h1{
   font-size: 33px;
   text-transform: uppercase;
   margin-top: 3rem;
+  color: $bright-white;
 }
 
 a {
   color: $call-to-action;
 }
+
+.landing {
+  background-attachment: fixed;
+  background-color: #111;
+  background-image: url('../images/landing.jpg');
+  background-position: center center;
+  background-size: cover;
+  color: #fff;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.intro-message{
+  max-width: 600px;
+  background-color: rgba(250,250,255, 0.4);
+  color: #3f3f3f;
+  font-size: 5rem;
+  margin: 0 auto;
+  margin-top: 30vh;
+  padding: 50px 20px;
+}
+
+.intro-message p{
+  color: #676767;
+  margin-top: 3rem;
+  font-size: 3rem
+}
+
+.sticky-wrapper {
+  width: 100%;
+  z-index: 2;
+}
+
+
+
+
+
+
+
 .navbar,
 .navbar-default {
-  background-color: $dark-blue;
+  background-color: $navbar-color;
   border-radius: 0px;
   border: 0px;
   margin-bottom: 0;
@@ -102,21 +227,23 @@ a {
 .navbar-nav li a{
   color: #ccccff !important;
   margin-left: 2px;
+  border-bottom: 3px solid $blue;
 }
 .navbar-nav li a:hover{
-  background-color: $blue !important;
+//  background-color: $blue !important;
     /*border-radius: 10px;*/
+    border-bottom: 3px solid #E34E26;
 }
 .navbar-nav > .active > a,
 .navbar-nav > .active > a:hover {
-  background-color: $blue !important;
+  background-color: inherit !important;
   /*border: 1px solid #182D4F;*/
   /*border-radius: 10px;*/
 }
 
 .around-img{
-  // border: 1px solid $blue;
-  // border-radius: 50%;
+  border: 1px solid $blue;
+  border-radius: 50%;
   height: 302px;
   margin: auto;
   max-height: 75vw;
@@ -171,7 +298,7 @@ a {
   margin: auto auto 5px;
   border: 1px solid $blue;
   border-radius: 3px;
-  background-color: $grey-white;
+  background-color: $grey;
   color: $blue;
   max-width: 15em;
   min-width: 10em;
@@ -180,7 +307,7 @@ a {
 .social:hover{
   text-decoration: none;
   background-color: #294c85;
-  color: $grey-white;
+  color: $grey;
 }
 
 .img-skills{
@@ -209,13 +336,10 @@ hr{
   text-align: center;
   height: 0.1em;
   margin: 3rem auto;
-  background-image: linear-gradient(to right, transparent, rgba(250, 76, 20, 0.75), transparent);
+  //background-image: linear-gradient(to right, transparent, rgba(250, 76, 20, 0.75), transparent);
   background-color: $blue;
-}
-
-#about hr{
-  background-image: linear-gradient(to right, transparent, rgba(250, 76, 20, 0.75), transparent);
-  background-color: $blue;
+  color: $blue;
+  border: 0;
 }
 
 /* Modal classes */
@@ -248,7 +372,7 @@ hr{
   border-bottom: 1px solid #222223;
   font-size: 3rem;
   line-height: 5rem;
-  color: $grey-white;
+  color: $grey;
   text-align: center;
 }
 
@@ -271,7 +395,7 @@ hr{
 }
 .tech {
   background-color: $blue;
-  color: $grey-white;
+  color: $grey;
   display: inline-block;
   margin: 0px 7px 7px 0px;
   padding: 0px 7px;

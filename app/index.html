@@ -40,18 +40,28 @@
 
 
 </head>
-<body>
+<body data-spy="scroll" data-target="#main-nav">
 
-	<nav class="navbar navbar-default navbar-fixed-top">
+<div class="landing">
+	<div class="content">
+		<div class="text-center intro-message">
+			ROY SCHEFFERS
+			<p>Taking web projects to newer hights</p>
+		</div>
+	</div>
+</div>
+
+<div class="sticky-wrapper">
+	<nav class="navbar navbar-default">
   <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">RoyKode.io</a>
     </div>
-  <div class="collapse navbar-collapse" id="myNavbar">
+  <div class="collapse nav navbar-collapse" id="main-nav" data-spy="prefix">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#intro">Intro</a></li>
         <li><a href="#about">About</a></li>
@@ -59,8 +69,8 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
-</nav>
-
+	</nav>
+</div>
 <div><br></div>
 <div id="intro"></div>
 <div id="after-intro" class="container-fluid text-center">
@@ -199,6 +209,7 @@
 		<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
 		<script type="text/javascript" src="js/libs/jquery.min.js"></script>
 		<script type="text/javascript" src="js/libs/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/libs/jquery.sticky.js"></script>
 
     <script type="text/javascript" src="js/project-data.js"></script>
     <script type="text/javascript" src="js/main_script.js"></script>
