@@ -1,56 +1,4 @@
 // --------------------------------------
-// color bases
-// http://bootstraplovers.com/templates/assan-v2.5/main-template/buttons.html
-// http://bootstraplovers.com/templates/assan-v2.5/main-template/index.html#
-// http://bootstraplovers.com/templates/assan-v2.5/main-template/me.html
-// http://wrapbootstrap.com/preview/WB0RK211T
-// http://barunka.ondrejsvestka.cz/
-// implement some of the things in this site
-// footer at the bottom
-
-// http://wrapbootstrap.com/preview/WB0RK211T
-
-// Gray and white tones
-// template online
-// https://color.adobe.com/IT-website-color-theme-8962610/
-// https://color.adobe.com/Copy-of-IT-website-color-theme-8962709/ (Improvements Andrew)
-
-// _____________________________________
-//
-// Theme main colors
-// ________________________________________
-
-$call-to-action: #E74C3C;
-$primary-color: #3498DB;   //nice blue 306d9f
-$secondary-color: #334A55;
-
-$white: #FFFFFF;
-$off-white: #F4F4F4; //#f7f7f7;
-
-// maybe not enough contrast
-// $white: #F7F7F7;
-// $off-white: #f4f4f4; //#f7f7f7;
-
-
-// Text colors, gray block
-$grey-white: #8f8f8f;      // slightly lighter for less attention to items #f7f7f7;
-$dark-grey: #3f3f3f;        // header text
-$soft-grey: #676767;        // normal text
-
-// button darker gray color #bfbfbf;
-// On overlay the accent color comes up
-// #3498db
-
-// $primary-color: #336699; //#306d9f;
-// $secundary-color: #fafafc;
-
-
-// Fonts to consider for headers
-// "Montserrat",sans-serif
-
-
-// or the blue and gray from here
-// http://barunka.ondrejsvestka.cz/
 
 //
 // retro-overlay::after {
@@ -63,32 +11,49 @@ $soft-grey: #676767;        // normal text
 //     width: 100%;
 //
 
+// color bases
+// http://bootstraplovers.com/templates/assan-v2.5/main-template/buttons.html
+// http://bootstraplovers.com/templates/assan-v2.5/main-template/index.html#
+// http://bootstraplovers.com/templates/assan-v2.5/main-template/me.html
+// http://wrapbootstrap.com/preview/WB0RK211T
+// http://barunka.ondrejsvestka.cz/
+// implement some of the things in this site
+// footer at the bottom
+
+// or the blue and gray from here
+// http://barunka.ondrejsvestka.cz/
+
+// http://wrapbootstrap.com/preview/WB0RK211T
+
+// Gray and white tones
+// template online
+// https://color.adobe.com/IT-website-color-theme-8962610/
+// https://color.adobe.com/Copy-of-IT-website-color-theme-8962709/ (Improvements Andrew)
+
+// maybe not enough contrast
+// $white: #F7F7F7;
+// $off-white: #f4f4f4; //#f7f7f7;
 
 
-
-// ____________________________________________
+// _____________________________________
 //
-//                 Variables
-// ____________________________________________
+// Theme main colors
+// ________________________________________
 
-// $primary-color: #336699; //#306d9f;
-// $secundary-color: #fafafc;
-$white: #f4f4f4;
-$grey: #e1e1e1;
-$black: #222223;
+$call-to-action: #E74C3C;
+$primary-color: #3498DB;   //nice blue 306d9f
+$secondary-color: #334A55;
 
-$navbar-color: /*#686868; */ #282839;       // dark blue
-$blue: #306d9f;
-$text-color-grey: #686868;
-$text-color-dark: #222223;
+$white: #FFFFFF;
+$soft-white: #F4F4F4; //#f7f7f7;
 
-$white-background-striped: '../images/diagonal-bg.png';
-$white-background-striped: '../images/isometric-grid.png';
+// Text colors, gray block
+$grey-white: #8f8f8f;      // slightly lighter for less attention to items #f7f7f7;
+$dark-grey: #3f3f3f;        // header text
+$soft-grey: #676767;        // normal text
 
-// $call-to-action: #E9612A;
-
- $bright-white: #f1f1f1;
-
+// Fonts to consider for headers
+// "Montserrat",sans-serif
 
 // ____________________________________________
 //
@@ -96,42 +61,44 @@ $white-background-striped: '../images/isometric-grid.png';
 // ____________________________________________
 
 body {
-  margin-top: 10px;
+  background-color: $white;
+  color: $soft-grey;
   font-family: 'Helvetica', "Droid Serif",serif;
   font-size: 1.75rem;
   line-height: 3rem;
   position: relative;
-  color: $white;
-  background: rgba(0, 0, 0, 0) url($white-background-striped) repeat scroll center center;
-background: rgba(0, 0, 0, 0) url($white-background-striped) repeat scroll center center;
+
+
+//  background: rgba(0, 0, 0, 0) url($white-background-striped) repeat scroll center center;
+//  background: rgba(0, 0, 0, 0) url($white-background-striped) repeat scroll center center;
   //background-color: $primary-color;// #989898;
 }
 
-
-#after-intro,
-#about,
-#portfolio,
-#contact {
-
+.content-area{
+  margin-top: 70px;
 }
 
-#after-intro {
-
-}
-
-#about {
-
-}
-
-#portfolio {
-
-}
-
-#contact {
+.about-area,
+.services-area,
+.portfolio-area,
+.testimonals-area,
+.contact-area{
+  border: 1px solid #aaa;
+  padding: 20px;
 }
 
 h1{
+  font-family: sans-serif;
+  color: $primary-color;
 
+}
+
+h1:before {
+  display: block;
+  content: " ";
+  margin-top: -70px;
+  height: 70px;
+  visibility: hidden;
 }
 
 a {
@@ -139,79 +106,83 @@ a {
 }
 
 .landing {
-  // background-attachment: fixed;
-  // background-color: #111;
-  // background-image: url('../images/landing.jpg');
-  // background-position: center center;
-  // background-size: cover;
-  // color: #fff;
-  // height: 100vh;
-  // min-height: 600px;
-  // overflow: hidden;
-  // padding: 0;
-  // position: relative;
-  // width: 100%;
+  background-attachment: fixed;
+  background-color: #111;
+  background-image: url('../images/working-on-laptop.jpg');
+  background-position: center center;
+  background-size: cover;
+  color: #fff;
+  max-height: 20vh;
+  min-height: 20vh;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 100%;
 }
 
 .sticky-wrapper {
-  // width: 100%;
-  // z-index: 2;
+  width: 100%;
 }
 
 
 .navbar,
 .navbar-default {
-
+  width: 100%;
+  background-color: $secondary-color;
+  border: none;
+  border-radius: 0;
 }
 .navbar-right{
-
+  color: $secondary-color;
 }
 .navbar-brand{
 
 }
 
 .navbar-nav li a{
-
+  color: $soft-white !important;
+  background-color: inherit !important;
+  border-bottom: 5px solid $secondary-color;
 }
 .navbar-nav li a:hover{
-
+  border-bottom: 5px solid $primary-color;
 }
 .navbar-nav > .active > a,
 .navbar-nav > .active > a:hover {
-
+  border-bottom: 5px solid $primary-color;
 }
 
 /* Modal classes */
 
-.modal-content{
+.modal{
   overflow: hidden;
-  background-color: $blue;
+  background-color: $secondary-color;
   // background: url($white-background-striped);
-   background: rgba(250, 250, 250, 0.95) url($white-background-striped) repeat scroll center center;
-   color: $text-color-grey;
+   //background: rgba(250, 250, 250, 0.95) url($white-background-striped) repeat scroll center center;
+  // color: $text-color-grey;
 
    a {
-     color: $text-color-dark;
+    // color: $text-color-dark;
    }
 
    .btn .code {
-     color: $blue;
+  //   color: $blue;
    }
    .btn .site {
-     color: $text-color-grey;
+//     color: $text-color-grey;
    }
    .btn .myclose {
-     color: $call-to-action;
+  //   color: $call-to-action;
    }
 
 }
 
 .modal-title {
-  background: $blue;
+//  background: $blue;
   border-bottom: 1px solid #222223;
   font-size: 3rem;
   line-height: 5rem;
-  color: $grey;
+//  color: $grey;
   text-align: center;
 }
 
