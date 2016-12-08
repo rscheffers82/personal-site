@@ -1,45 +1,23 @@
 // Javascript
 $( document ).ready(function() {
   // add all projects into portfolio part of the page
-  $('.projects').append( p.showProjects() );
-//  $('.projects').append( p.showProjects() );
+  // $('.projects').append( p.showProjects() );
+  // $(".sticky-wrapper").sticky({topSpacing:0});
 
-  $(".sticky-wrapper").sticky({topSpacing:0});
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-86887764-1', 'auto');
+  ga('send', 'pageview');
 
 });
 
-
-
-
-
 //$('body').scrollspy({target: ".navbar", offset: 120});
-
-
-
-
-
 
 $(document).on('click','.navbar-collapse.in',function(e) {
     if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
         $(this).collapse('hide');
     }
-});
-
-$(".navbar a, footer a[href='#intro']").on('click', function(event) {
-  event.preventDefault();   // Prevent default anchor click behavior
-  var hash = this.hash;     // Store hash
-
-  // Using jQuery's animate() method to add smooth page scroll
-  // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-  $('html, body').animate({
-    scrollTop: $(hash).offset().top
-  }, 900, function(){
-    // Add hash (#) to URL when done scrolling (default click behavior)
-    window.location.hash = hash;
-  });
-});
-
-$( '.projects' ).on("click", 'a', function(e){
-  console.log( $(this).data('number') );
-  p.modal( $(this).data('number') );
 });
