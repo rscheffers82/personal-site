@@ -6,28 +6,6 @@ body {
   line-height: 3rem;
   position: relative; }
 
-.content-area {
-  margin-top: 70px; }
-
-.about-area,
-.services-area,
-.portfolio-area,
-.testimonals-area,
-.contact-area {
-  border: 1px solid #aaa;
-  padding: 20px; }
-
-h1 {
-  font-family: sans-serif;
-  color: #3498DB; }
-
-h1:before {
-  display: block;
-  content: " ";
-  margin-top: -70px;
-  height: 70px;
-  visibility: hidden; }
-
 .landing {
   background-attachment: fixed;
   background-color: #111;
@@ -43,7 +21,8 @@ h1:before {
   width: 100%; }
 
 .sticky-wrapper {
-  width: 100%; }
+  width: 100%;
+  z-index: 999; }
 
 .navbar,
 .navbar-default {
@@ -67,7 +46,57 @@ h1:before {
 .navbar-nav > .active > a:hover {
   border-bottom: 5px solid #3498DB; }
 
-/* Modal classes */
+.content-area {
+  margin-top: 70px; }
+
+.about-area,
+.services-area,
+.portfolio-area,
+.testimonals-area,
+.contact-area {
+  border: 1px solid #aaa;
+  padding: 50px 40px; }
+
+h1 {
+  font-family: sans-serif;
+  color: #3498DB; }
+
+h1:before {
+  display: block;
+  content: " ";
+  margin-top: -70px;
+  height: 70px;
+  visibility: hidden; }
+
+.about-area .row {
+  margin: 0px; }
+
+.top-line {
+  background-color: #F4F4F4;
+  height: 50px;
+  width: 100%;
+  border-bottom: 1px solid #3498DB; }
+
+.right-line {
+  background-color: #F4F4F4;
+  height: 100%;
+  width: 50px; }
+
+.about-area img {
+  float: right;
+  padding: 0px 0px 20px 20px; }
+
+.about-area .title {
+  float: left; }
+
+.services-area i {
+  border: 3px solid #3498DB;
+  border-radius: 50%;
+  color: #3498DB;
+  font-size: 4rem;
+  margin: 30px;
+  padding: 20px; }
+
 .modal {
   overflow: hidden;
   background-color: #334A55; }
@@ -87,3 +116,6 @@ h1:before {
 
 .modal-footer {
   border: none; }
+
+.border {
+  border: 1px solid #ccc; }

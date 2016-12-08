@@ -57,7 +57,7 @@ $soft-grey: #676767;        // normal text
 
 // ____________________________________________
 //
-//      Stylesheet for Portfolio Page
+//      General styles
 // ____________________________________________
 
 body {
@@ -72,37 +72,6 @@ body {
 //  background: rgba(0, 0, 0, 0) url($white-background-striped) repeat scroll center center;
 //  background: rgba(0, 0, 0, 0) url($white-background-striped) repeat scroll center center;
   //background-color: $primary-color;// #989898;
-}
-
-.content-area{
-  margin-top: 70px;
-}
-
-.about-area,
-.services-area,
-.portfolio-area,
-.testimonals-area,
-.contact-area{
-  border: 1px solid #aaa;
-  padding: 20px;
-}
-
-h1{
-  font-family: sans-serif;
-  color: $primary-color;
-
-}
-
-h1:before {
-  display: block;
-  content: " ";
-  margin-top: -70px;
-  height: 70px;
-  visibility: hidden;
-}
-
-a {
-
 }
 
 .landing {
@@ -120,10 +89,10 @@ a {
   width: 100%;
 }
 
-.sticky-wrapper {
+.sticky-wrapper {         // used to stick the nav menu to the top of the page
   width: 100%;
+    z-index: 999;
 }
-
 
 .navbar,
 .navbar-default {
@@ -152,7 +121,82 @@ a {
   border-bottom: 5px solid $primary-color;
 }
 
-/* Modal classes */
+.content-area{                  // used for each section of the page
+  margin-top: 70px;
+}
+
+.about-area,
+.services-area,
+.portfolio-area,
+.testimonals-area,
+.contact-area{
+  border: 1px solid #aaa;
+  padding: 50px 40px;
+}
+
+h1{
+  font-family: sans-serif;
+  color: $primary-color;
+
+}
+
+h1:before {
+  display: block;
+  content: " ";
+  margin-top: -70px;
+  height: 70px;
+  visibility: hidden;
+}
+
+// ____________________________________________
+//
+//      About area
+// ____________________________________________
+
+.about-area .row {
+  margin: 0px;
+}
+.top-line {
+  background-color: $soft-white;
+  height: 50px;
+  width: 100%;
+  border-bottom: 1px solid $primary-color;
+}
+
+.right-line {
+  background-color: $soft-white;
+  height: 100%;
+  width: 50px;
+}
+
+.about-area img {
+  float: right;
+  padding: 0px 0px 20px 20px;
+
+}
+
+.about-area .title {
+  float: left;
+}
+
+// ____________________________________________
+//
+//      Services Area
+// ____________________________________________
+
+.services-area i {
+  border: 3px solid $primary-color;
+  border-radius: 50%;
+  color: $primary-color;
+  font-size: 4rem;
+  margin: 30px;
+  padding: 20px;
+}
+
+// ____________________________________________
+//
+//      Modal styles
+// ____________________________________________
 
 .modal{
   overflow: hidden;
@@ -196,4 +240,14 @@ a {
 
 .modal-footer {
   border: none;
+}
+
+
+// ____________________________________________
+//
+//      development (temp)
+// ____________________________________________
+
+.border {
+  border: 1px solid #ccc;
 }
