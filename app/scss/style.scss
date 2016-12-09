@@ -1,16 +1,5 @@
 // --------------------------------------
 
-//
-// retro-overlay::after {
-//     background: rgba(0, 0, 0, 0) url("images/retro-overlay.png") repeat scroll 0 0;
-//     content: "";
-//     height: 100%;
-//     left: 0;
-//     position: absolute;
-//     top: 0;
-//     width: 100%;
-//
-
 // color bases
 // http://bootstraplovers.com/templates/assan-v2.5/main-template/buttons.html
 // http://bootstraplovers.com/templates/assan-v2.5/main-template/index.html#
@@ -60,6 +49,9 @@ $soft-grey: #676767;        // normal text
 //      General styles
 // ____________________________________________
 
+Bootstrap
+// http://getbootstrap.com/components/#navbar-fixed-top
+
 body {
   background-color: $white;
   color: $soft-grey;
@@ -81,12 +73,22 @@ body {
   background-position: center center;
   background-size: cover;
   color: #fff;
-  max-height: 20vh;
-  min-height: 20vh;
+  max-height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   padding: 0;
   position: relative;
   width: 100%;
+}
+
+.landing::after {
+    background: rgba(0, 0, 0, 0) url("../images/retro-overlay.png") repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 .sticky-wrapper {         // used to stick the nav menu to the top of the page
@@ -163,10 +165,23 @@ h1:before {
   border-bottom: 1px solid $primary-color;
 }
 
-.right-line {
+.container-flex{
+  display: flex;
+  align-items: stretch;
+}
+.main-flex{
+  display: flex;
+  width: 100%;
+  border: 1px solid #ccc;
+  // background-color: $primary-color;
+}
+
+.right-line-flex {
   background-color: $soft-white;
-  height: 100%;
+  border-left: 1px solid $primary-color;
+
   width: 50px;
+  min-width: 50px;
 }
 
 .about-area img {
