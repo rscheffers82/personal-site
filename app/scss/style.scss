@@ -168,20 +168,55 @@ h1:before {
 .container-flex{
   display: flex;
   align-items: stretch;
-}
-.main-flex{
-  display: flex;
-  width: 100%;
-  border: 1px solid #ccc;
-  // background-color: $primary-color;
-}
 
-.right-line-flex {
-  background-color: $soft-white;
-  border-left: 1px solid $primary-color;
+  .main-flex{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
 
-  width: 50px;
-  min-width: 50px;
+    border: 1px solid #ccc;
+    // background-color: $primary-color;
+
+    .header-flex{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+
+      width: 100%;
+      background-color: tomato;
+
+      .title-flex {
+        margin: auto 5px;
+        border: 3px dashed #111;
+
+      }
+      .img-flex {
+        margin: auto 5px;
+        border: 3px dashed #111;
+      }
+
+
+    } // header flex
+
+  } // main flex
+
+  .right-line-flex {
+    background-color: $soft-white;
+    border-left: 1px solid $primary-color;
+
+    width: 50px;
+    min-width: 50px;
+  } // right-line-flex
+
+} // container-flex
+
+@media (max-width: 500px){
+  .container-flex .main-flex .header-flex .img-flex {
+    margin: 5px auto 5px auto;
+  }
+  .container-flex .main-flex .header-flex .title-flex {
+    margin: 5px auto 5px auto;
+  }
 }
 
 .about-area img {

@@ -90,17 +90,34 @@ h1:before {
 .container-flex {
   display: flex;
   align-items: stretch; }
+  .container-flex .main-flex {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    border: 1px solid #ccc; }
+    .container-flex .main-flex .header-flex {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      width: 100%;
+      background-color: tomato; }
+      .container-flex .main-flex .header-flex .title-flex {
+        margin: auto 5px;
+        border: 3px dashed #111; }
+      .container-flex .main-flex .header-flex .img-flex {
+        margin: auto 5px;
+        border: 3px dashed #111; }
+  .container-flex .right-line-flex {
+    background-color: #F4F4F4;
+    border-left: 1px solid #3498DB;
+    width: 50px;
+    min-width: 50px; }
 
-.main-flex {
-  display: flex;
-  width: 100%;
-  border: 1px solid #ccc; }
-
-.right-line-flex {
-  background-color: #F4F4F4;
-  border-left: 1px solid #3498DB;
-  width: 50px;
-  min-width: 50px; }
+@media (max-width: 500px) {
+  .container-flex .main-flex .header-flex .img-flex {
+    margin: 5px auto 5px auto; }
+  .container-flex .main-flex .header-flex .title-flex {
+    margin: 5px auto 5px auto; } }
 
 .about-area img {
   float: right;
