@@ -165,6 +165,18 @@ h1:before {
   border-bottom: 1px solid $primary-color;
 }
 
+.top-line::after {
+  content: '';
+  background-color: red;
+}
+
+.top-line-right-block {
+  float: right;
+  background-color: #e4e4e4;
+  width: 50px;
+  height: 50px;
+}
+
 .container-flex{
   display: flex;
   align-items: stretch;
@@ -183,16 +195,26 @@ h1:before {
       justify-content: space-between;
 
       width: 100%;
-      background-color: tomato;
+      // background-color: tomato;
 
       .title-flex {
-        margin: auto 5px;
-        border: 3px dashed #111;
+        margin: auto;
+        // border: 3px dashed #111;
+        padding: 0px 15px;
 
+        p {
+          text-align: center;
+        }
       }
       .img-flex {
-        margin: auto 5px;
-        border: 3px dashed #111;
+        margin: auto 0px;
+        // border: 3px dashed #111;
+
+        img {
+          height: 200px;
+          width: 200px;
+          padding: 5px;
+        }
       }
 
 
@@ -210,7 +232,7 @@ h1:before {
 
 } // container-flex
 
-@media (max-width: 500px){
+@media (max-width: 825px){
   .container-flex .main-flex .header-flex .img-flex {
     margin: 5px auto 5px auto;
   }
@@ -219,15 +241,15 @@ h1:before {
   }
 }
 
-.about-area img {
-  float: right;
-  padding: 0px 0px 20px 20px;
-
-}
-
-.about-area .title {
-  float: left;
-}
+// .about-area img {
+//   float: right;
+//   padding: 0px 0px 20px 20px;
+//
+// }
+//
+// .about-area .title {
+//   float: left;
+// }
 
 // ____________________________________________
 //
