@@ -57,17 +57,28 @@ body {
   font-family: 'Roboto', sans-serif, serif !important;
   font-size: 1.75rem;
   line-height: 3rem;
-  // position: relative;
+  position: relative;
 }
 
 h1 {
   font-family: 'Roboto Slab', sans-serif, serif;
   color: $primary-color;
   font-size: 3.5vw;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1:before {
+  display: block;
+  content: ' ';
+  margin-top: -70px;
+  height: 70px;
+  visibility: hidden;
 }
 
 h2 {
   font-size: 2vw;
+  margin-bottom: 20px;
 }
 
 .landing {
@@ -84,6 +95,7 @@ h2 {
   position: relative;
   width: 100%;
 }
+
 
 .landing::after {
     background: rgba(0, 0, 0, 0) url("../images/retro-overlay.png") repeat scroll 0 0;
@@ -145,6 +157,7 @@ h2 {
 .contact-area{
   // border: 1px solid #aaa;
   padding: 50px 40px;
+
 }
 
 
@@ -176,9 +189,18 @@ h2 {
 //      About area
 // ____________________________________________
 
-.about-area .row {
-  margin: 0px;
+.about-area {
+  .row {
+    margin: 0px;
+  }
+  h1 {
+    margin-bottom: 15px;
+  }
+  h2 {
+    margin-top: 0px;
+  }
 }
+
 .top-line {
   position: relative;
   background-color: $soft-white;
@@ -344,10 +366,6 @@ h2 {
 
 }
 
-
-
-
-
 // ____________________________________________
 //
 //      Services Area
@@ -358,9 +376,11 @@ h2 {
   border-radius: 50%;
   color: $primary-color;
   font-size: 4rem;
-  margin: 30px;
+  margin-top: 30px;
   padding: 20px;
 }
+
+
 
 // ____________________________________________
 //

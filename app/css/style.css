@@ -3,15 +3,26 @@ body {
   color: #676767;
   font-family: 'Roboto', sans-serif, serif !important;
   font-size: 1.75rem;
-  line-height: 3rem; }
+  line-height: 3rem;
+  position: relative; }
 
 h1 {
   font-family: 'Roboto Slab', sans-serif, serif;
   color: #3498DB;
-  font-size: 3.5vw; }
+  font-size: 3.5vw;
+  text-align: center;
+  margin-bottom: 30px; }
+
+h1:before {
+  display: block;
+  content: ' ';
+  margin-top: -70px;
+  height: 70px;
+  visibility: hidden; }
 
 h2 {
-  font-size: 2vw; }
+  font-size: 2vw;
+  margin-bottom: 20px; }
 
 .landing {
   background-attachment: fixed;
@@ -89,6 +100,12 @@ h2 {
 
 .about-area .row {
   margin: 0px; }
+
+.about-area h1 {
+  margin-bottom: 15px; }
+
+.about-area h2 {
+  margin-top: 0px; }
 
 .top-line {
   position: relative;
@@ -202,7 +219,7 @@ h2 {
   border-radius: 50%;
   color: #3498DB;
   font-size: 4rem;
-  margin: 30px;
+  margin-top: 30px;
   padding: 20px; }
 
 .modal {
