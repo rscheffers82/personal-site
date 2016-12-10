@@ -188,7 +188,14 @@ h2 {
   .portfolio-area,
   .testimonals-area,
   .contact-area {
-    padding: 50px 10px; } }
+    padding: 50px 10px; }
+  .call-out {
+    padding: 50px 40px; }
+    .call-out p {
+      border-radius: 3px;
+      padding: 40px 50px;
+      font-size: 2rem;
+      line-height: 3rem; } }
 
 .services-area i {
   border: 3px solid #3498DB;
