@@ -22,8 +22,6 @@
 	<!-- <link href="css/libs/bootstrap.min.css" rel='stylesheet' type='text/css'> -->
 	<!-- <link href="css/libs/font-awesome.min.css" rel='stylesheet' type='text/css'> -->
 
-	<link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto+Slab|Roboto:300,400" rel="stylesheet">
 
 	<link href="css/style.css" rel='stylesheet' type='text/css'>
@@ -75,7 +73,7 @@
 <content class="content-area">
 
 	<!-- About section -->
-	<div class="about-area">
+	<!-- <div class="about-area">
 	  <h1 id="about"></h1>
 
 		<div class="top-line">
@@ -104,17 +102,17 @@
 			<div class="right-line-flex">&nbsp;</div>
 		</div>
 
-	</div>
+	</div> -->
 
 <!-- Call-out what I can offer -->
-	<div class=call-out>
+	<!-- <div class=call-out>
 		<p>
 			Assisting tech startups and businesses to realize their full potential and build the online tools they need to thrive.
 		</p>
-	</div>
+	</div> -->
 
 	<!-- Service section -->
-	<div class="services-area">
+	<!-- <div class="services-area">
 	  <h1 id="services">Services</h1>
 		<div class="row">
 			<div class="col-md-4 text-center">
@@ -148,14 +146,68 @@
 		<p>   Nunc laoreet ullamcorper convallis. In ultrices eros ac orci imperdiet tristique. Integer volutpat porttitor sem at pretium. Etiam porttitor nisl sed cursus hendrerit. Nulla facilisi. Donec vel orci ac ligula pulvinar elementum sit amet ac odio. Curabitur sed accumsan orci, ut gravida mauris. Quisque vehicula nisl vel eros varius, sit amet porttitor augue tincidunt. Suspendisse in risus est.</p>
 		<p>Integer tincidunt faucibus lacus, eget dapibus nisl posuere sed. Vivamus non magna risus. Fusce vulputate, orci gravida eleifend sollicitudin, lorem mi tristique dui, vitae tempor sapien dolor id elit. In gravida convallis velit, sit amet ullamcorper eros aliquam et. Vivamus orci neque, molestie ac vulputate a, viverra ullamcorper neque. Donec nec libero ex. Mauris vulputate massa nec est pellentesque dignissim. Donec eget blandit velit. Fusce tristique lectus id metus fringilla, vel aliquet sem blandit. Vestibulum eu porta metus. Nam nec justo consectetur, posuere leo ut, convallis nunc. Donec sodales fringilla eros, quis suscipit magna mollis scelerisque. Mauris facilisis, tellus egestas hendrerit luctus, orci libero rhoncus arcu, ut dictum massa urna eu nisl. Fusce molestie, urna non viverra scelerisque, arcu lorem pulvinar augue, nec dictum neque ante vel enim. Nullam imperdiet lobortis metus. Aliquam ac vulputate nunc, efficitur gravida lorem. </p>
 
-	</div>
+	</div> -->
 
 	<!-- Portfolio section -->
 	<div class="portfolio-area">
+
+		<!-- fa-info-circle -->
 	  <h1 id="portfolio">Portfolio</h1>
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec lorem iaculis, fermentum ante eget, consectetur quam. Duis venenatis velit et libero pharetra, interdum congue sem ultrices. Maecenas facilisis erat nec ante aliquam, ut lobortis risus rutrum. Aenean consectetur at lacus vel bibendum. Maecenas nec nibh eget tellus placerat condimentum. Fusce id venenatis urna. Fusce iaculis velit velit, eget tempor orci cursus vitae. Nunc laoreet ullamcorper convallis. In ultrices eros ac orci imperdiet tristique. Integer volutpat porttitor sem at pretium. Etiam porttitor nisl sed cursus hendrerit. Nulla facilisi. Donec vel orci ac ligula pulvinar elementum sit amet ac odio. Curabitur sed accumsan orci, ut gravida mauris. Quisque vehicula nisl vel eros varius, sit amet porttitor augue tincidunt. Suspendisse in risus est.</p>
-		<p>Integer tincidunt faucibus lacus, eget dapibus nisl posuere sed. Vivamus non magna risus. Fusce vulputate, orci gravida eleifend sollicitudin, lorem mi tristique dui, vitae tempor sapien dolor id elit. In gravida convallis velit, sit amet ullamcorper eros aliquam et. Vivamus orci neque, molestie ac vulputate a, viverra ullamcorper neque. Donec nec libero ex. Mauris vulputate massa nec est pellentesque dignissim. Donec eget blandit velit. Fusce tristique lectus id metus fringilla, vel aliquet sem blandit. Vestibulum eu porta metus. Nam nec justo consectetur, posuere leo ut, convallis nunc. Donec sodales fringilla eros, quis suscipit magna mollis scelerisque. Mauris facilisis, tellus egestas hendrerit luctus, orci libero rhoncus arcu, ut dictum massa urna eu nisl. Fusce molestie, urna non viverra scelerisque, arcu lorem pulvinar augue, nec dictum neque ante vel enim. Nullam imperdiet lobortis metus. Aliquam ac vulputate nunc, efficitur gravida lorem. </p>
+		<div class="btn-group filter-btn-group">
+			<button class="btn is-checked" data-filter=".featured">Featured</button>
+			<button class="btn" data-filter=".frontend">Frontend</button>
+			<button class="btn" data-filter=".backend">Backend</button>
+			<button class="btn" data-filter=".design">Design</button>
+			<button class="btn" data-filter="*">All</button>
+		</div>
+
+		<!--<div class="project-grid">
+		  <div class="project1">empty</div>
+		  <div class="project1 design">Design</div>
+		  <div class="project1 featured">Feat</div>
+		  <div class="project1 backend">BE</div>
+		  <div class="project1 frontend">FE</div>
+		  <div class="project1 frontend">FE</div>
+		  <div class="project1">empty</div>
+		</div> -->
+
+		<div class="project-grid">
+
+			<div class="project featured">
+				<div class="project-innerwrapper">
+					<div class="title">React Todo App</div>
+
+					<div class="img-wrapper"><img class="img-responsive" src="../images/react-todo-app.jpg"></div>
+
+					<div class="info"><i class="fa fa-info-circle"></i> More info</div>
+					<div class="code"><i class="fa fa-github"></i> View code</div>
+				</div>
+			</div>
+
+			<div class="project design">
+				<div class="project-innerwrapper">
+					<div class="title">Black Belt Proofreader</div>
+
+					<div class="img-wrapper"><img class="img-responsive" src="../images/blackbeltproofreader.jpg"></div>
+
+					<div class="info"><i class="fa fa-info-circle"></i> More info</div>
+					<div class="code"><i class="fa fa-github"></i> View code</div>
+				</div>
+			</div>
+
+			<div class="project design">
+				<div class="project-innerwrapper">
+					<div class="title">Brilliant Message</div>
+
+					<div class="img-wrapper"><img class="img-responsive" src="../images/jolita-brilliant.jpg"></div>
+
+					<div class="info"><i class="fa fa-info-circle"></i>More info</div>
+					<div class="code"><i class="fa fa-github"></i> View code</div>
+				</div>
+			</div>
+
+		</div>
 
 	</div>
 
@@ -188,6 +240,7 @@
 		<script type="text/javascript" src="js/libs/jquery.min.js"></script>
 		<script type="text/javascript" src="js/libs/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/libs/jquery.sticky.js"></script>
+		<script type="text/javascript" src="js/libs/isotope-pkgd.js"></script>
 
     <script type="text/javascript" src="js/project-data.js"></script>
     <script type="text/javascript" src="js/main_script.js"></script>

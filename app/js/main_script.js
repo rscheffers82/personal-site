@@ -2,6 +2,12 @@
 $( document ).ready(function() {
   // add all projects into portfolio part of the page
   // $('.projects').append( p.showProjects() );
+
+  // $grid.isotope({ filter: '.featured' });
+  //
+  // var $items = $grid.find('.grid-item');
+  // $grid.isotope( 'revealItemElements', $items );
+
   $(".sticky-wrapper").sticky({topSpacing:0});
 
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -14,10 +20,49 @@ $( document ).ready(function() {
 
 });
 
-//$('body').scrollspy({target: ".navbar", offset: 120});
 
 $(document).on('click','.navbar-collapse.in',function(e) {
     if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
         $(this).collapse('hide');
     }
+});
+
+$grid = $('.project-grid').isotope({
+  // options
+  itemSelector: '.project',
+  layoutMode: 'fitRows',
+  percentPosition: true,
+  // filter: '.featured'
+  filter: '*',
+  masonry: {
+    columnWidth: '.project'
+}
+});
+
+$('.filter-btn-group').on('click', '.btn', function() {
+  var filterValue = $( this ).attr('data-filter');
+  $grid.isotope({ filter: filterValue });
+});
+
+
+// // add or remove is-checked class
+// $('.btn-group').on( 'click', 'button', function() {
+//   console.log( 'this', this );
+//   console.log('hello');
+//   $.each( $( this ), function (index, element){
+//     console.log('button ', element);
+//
+//     //$('.btn-group').find('.show').removeClass('show');
+//     //$( this ).addClass('show');
+//
+//   });
+// });
+
+// change is-checked class on buttons
+$('.btn-group').each( function( i, buttonGroup ) {
+  var $buttonGroup = $( buttonGroup );
+  $buttonGroup.on( 'click', '.btn', function() {
+    $buttonGroup.find('.is-checked').removeClass('is-checked');
+    $( this ).addClass('is-checked');
+  });
 });

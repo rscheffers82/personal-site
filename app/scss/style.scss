@@ -36,9 +36,9 @@ $white: #FFFFFF;
 $soft-white: #F4F4F4; //#f7f7f7;
 
 // Text colors, gray block
-$grey-white: #8f8f8f;      // slightly lighter for less attention to items #f7f7f7;
-$dark-grey: #3f3f3f;        // header text
-$soft-grey: #676767;        // normal text
+$grey-soft: #8f8f8f;        // slightly lighter for less attention to items #f7f7f7;
+$grey-dark: #3f3f3f;        // header text
+$grey-medium: #676767;      // normal text
 
 // Fonts to consider for headers
 // "Montserrat",sans-serif
@@ -51,9 +51,14 @@ $soft-grey: #676767;        // normal text
 // Bootstrap
 // http://getbootstrap.com/components/#navbar-fixed-top
 
+:before,
+:after {
+  content: '';
+}
+
 body {
   background-color: $white;
-  color: $soft-grey;
+  color: $grey-medium;
   font-family: 'Roboto', sans-serif, serif !important;
   font-size: 1.75rem;
   line-height: 3rem;
@@ -157,6 +162,7 @@ h2 {
 .contact-area{
   // border: 1px solid #aaa;
   padding: 50px 40px;
+  display: block;
 
 }
 
@@ -380,6 +386,94 @@ h2 {
   padding: 20px;
 }
 
+
+// ____________________________________________
+//
+//      Portfolio Styles
+// ____________________________________________
+
+.portfolio-area {
+
+  .btn-group{
+    width: 100%;
+    text-align: center;
+    // margin: 0 auto
+    margin-bottom: 25px;
+  }
+
+  .btn {
+    border: 1px solid $grey-medium;
+    font-size: 1.5rem;
+    background-color: $white;
+    float: none;
+
+    &:hover {
+      color: $call-to-action;
+    }
+  }
+
+  .is-checked {
+    border: 1px solid $primary-color;
+    color: $white;
+    background-color: $primary-color;
+    // margin: 0px;
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .project-grid {
+    display: block;
+  }
+
+  .project {
+    color: $grey-dark;
+    width: 33%;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .project-innerwrapper {
+    background-color: $soft-white;
+    overflow: hidden;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    padding: 10px 0;
+  }
+
+  .info,
+  .code {
+    width: 40%;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.7rem;
+    padding: 5px 0;
+  }
+  .fa {
+    display: block;
+    font-size: 2.5rem;
+  }
+  .img-wrapper {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      left: 0;
+      width: 100%;
+      background-color: rgba(250,250,250, 0.7);
+    }
+  }
+
+
+
+
+}
+ .project1 { width: 25%; border: 1px solid #aaa; text-align: center; background-color: #ddd;}
+//.grid-item--width2 { width: 50%; }
 
 
 // ____________________________________________
