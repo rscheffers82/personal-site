@@ -175,11 +175,12 @@ var p = (function () {
 			}
 
 
-
-
-			var data = '';
+// Currently I don't add elements correctly to the page. See the below two examples
+// http://isotope.metafizzy.co/methods.html
+// http://codepen.io/desandro/pen/ECKiw
+			var data = [];
 			for ( i = 0; i < projects.length; i++ ){
-			data += '<div class="project ' + getCategories(i) + '">' +
+			data.push( $('<div class="project ' + getCategories(i) + '">' +
 			 	'<div class="project-innerwrapper">' +
 			 		'<div class="title">' + projects[i].name + '</div>' +
 			//
@@ -189,8 +190,8 @@ var p = (function () {
 					'</a>' +
 					(projects[i].url[1] ? projectIcon(i) : '' ) +
 			 	'</div>' +
-			'</div>'
-
+			'</div>') );
+			// data[i] = $(data[i]);
 			}
 
 		return data;

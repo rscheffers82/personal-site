@@ -1,16 +1,12 @@
 // Global grid var used in the project area
-$grid = {}
+$grid = {};
 
 
 $( document ).ready(function() {
   // add all projects into project grid on the portfolio
-  $('.project-grid').append( p.showProjects() );
-
-  // once all data is loaded filter the results again on featured to ensure the margins are correctly set
-  // This is needed, because projects are dynamically loaded.
-  setTimeout( () => {
-      $grid.isotope({ filter: '.featured' });
-  },100);
+  //$('.project-grid').append( p.showProjects() );
+  var $projectData = p.showProjects();
+  console.log($projectData);
 
   $grid = $('.project-grid').isotope({
     // options
@@ -24,6 +20,22 @@ $( document ).ready(function() {
       columnWidth: '.project'
     }
   });
+
+  $grid.append( $projectData )
+     // add and lay out newly appended items
+     .isotope( 'appended', $projectData );
+
+
+  // $grid.isotope('insert', temp);
+
+
+
+  // once all data is loaded filter the results again on featured to ensure the margins are correctly set
+  // This is needed, because projects are dynamically loaded.
+  // setTimeout( () => {
+  //     $grid.isotope({ filter: '.featured' });
+  // },100);
+
 
   $(".sticky-wrapper").sticky({topSpacing:0});
 
@@ -45,7 +57,10 @@ $(document).on('click','.navbar-collapse.in',function(e) {
 
 
 
+ // portfolio-area events \\
+//-------------------------\\
 
+// Filter projects based on button click
 $('.filter-btn-group').on('click', '.btn', function() {
   var filterValue = $( this ).attr('data-filter');
   $grid.isotope({ filter: filterValue });
