@@ -255,6 +255,10 @@ h2 {
   width: 100%;
   text-align: center;
   padding: 4% 2%; }
+  .portfolio-area .project a {
+    color: #3f3f3f; }
+    .portfolio-area .project a:hover {
+      color: #3498DB; }
 
 .portfolio-area .project-innerwrapper {
   background-color: #F4F4F4;

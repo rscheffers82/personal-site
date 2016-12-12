@@ -1,12 +1,29 @@
-// Javascript
-$( document ).ready(function() {
-  // add all projects into portfolio part of the page
-  // $('.projects').append( p.showProjects() );
+// Global grid var used in the project area
+$grid = {}
 
-  // $grid.isotope({ filter: '.featured' });
-  //
-  // var $items = $grid.find('.grid-item');
-  // $grid.isotope( 'revealItemElements', $items );
+
+$( document ).ready(function() {
+  // add all projects into project grid on the portfolio
+  $('.project-grid').append( p.showProjects() );
+
+  // once all data is loaded filter the results again on featured to ensure the margins are correctly set
+  // This is needed, because projects are dynamically loaded.
+  setTimeout( () => {
+      $grid.isotope({ filter: '.featured' });
+  },100);
+
+  $grid = $('.project-grid').isotope({
+    // options
+    itemSelector: '.project',
+    // resizable: false,
+    layoutMode: 'fitRows',
+    percentPosition: true,
+    filter: '.featured',
+    // filter: '*',
+    masonry: {
+      columnWidth: '.project'
+    }
+  });
 
   $(".sticky-wrapper").sticky({topSpacing:0});
 
@@ -20,37 +37,12 @@ $( document ).ready(function() {
 
 });
 
-
 $(document).on('click','.navbar-collapse.in',function(e) {
     if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
         $(this).collapse('hide');
     }
 });
 
-$grid = $('.project-grid').isotope({
-  // options
-  itemSelector: '.project',
-  // resizable: false,
-  layoutMode: 'fitRows',
-  percentPosition: true,
-  // filter: '.featured'
-  filter: '*',
-  masonry: {
-    columnWidth: '.project'
-  }
-});
-
-// $(window).resize(function() {
-//   var width = $(window).width();
-//   console.log('width: ', width);
-//   if (width < 768) {
-//     console.log('smaller: ', width);
-//     $grid.isotope( {masonry: { columns: 2 } });
-//   } else {
-//     console.log('larger: ', width);
-//     $grid.isotope( {masonry: { columns: 3 } });
-//   }
-// });
 
 
 
@@ -59,20 +51,6 @@ $('.filter-btn-group').on('click', '.btn', function() {
   $grid.isotope({ filter: filterValue });
 });
 
-
-// // add or remove is-checked class
-// $('.btn-group').on( 'click', 'button', function() {
-//   console.log( 'this', this );
-//   console.log('hello');
-//   $.each( $( this ), function (index, element){
-//     console.log('button ', element);
-//
-//     //$('.btn-group').find('.show').removeClass('show');
-//     //$( this ).addClass('show');
-//
-//   });
-// });
-
 // change is-checked class on buttons
 $('.btn-group').each( function( i, buttonGroup ) {
   var $buttonGroup = $( buttonGroup );
@@ -80,4 +58,11 @@ $('.btn-group').each( function( i, buttonGroup ) {
     $buttonGroup.find('.is-checked').removeClass('is-checked');
     $( this ).addClass('is-checked');
   });
+});
+
+
+$( '.project-grid' ).on("click", 'a', function(e){
+  console.log( $(this)[0] );
+  console.log( $(this).data('number') );
+  p.modal( $(this).data('number') );
 });
