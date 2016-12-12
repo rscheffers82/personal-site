@@ -162,7 +162,7 @@ var p = (function () {
 				$(".code").addClass("hide-btn");
 			}
 		},
-		showProjects: function () {
+		loadProjectsInto: function ($grid) {
 
 			var getCategories = function (number) {
 				return projects[number].category.join(' ');
@@ -178,9 +178,9 @@ var p = (function () {
 // Currently I don't add elements correctly to the page. See the below two examples
 // http://isotope.metafizzy.co/methods.html
 // http://codepen.io/desandro/pen/ECKiw
-			var data = [];
+
 			for ( i = 0; i < projects.length; i++ ){
-			data.push( $('<div class="project ' + getCategories(i) + '">' +
+			$project = $('<div class="project ' + getCategories(i) + '">' +
 			 	'<div class="project-innerwrapper">' +
 			 		'<div class="title">' + projects[i].name + '</div>' +
 			//
@@ -190,26 +190,12 @@ var p = (function () {
 					'</a>' +
 					(projects[i].url[1] ? projectIcon(i) : '' ) +
 			 	'</div>' +
-			'</div>') );
-			// data[i] = $(data[i]);
+			'</div>');
+			$grid.append( $project )
+		     // add and lay out newly appended items
+		     .isotope( 'appended', $project );
 			}
-
-		return data;
 		}
 	}
-
-	//	 Data from the prior site
-	//   if ( i === 0 ) data += '<div class="row">'
-	//   data += '<div class="col-xs-4 text-center">' +
-	//                 '<div class="project">' +
-	//                   '<a data-number="' + i + '"  data-toggle="modal" data-target=".bd-example-modal-lg">' +
-	//                     '<h4>'+projects[i].name+'</h4>' +
-	//                     '<img class="img-responsive" src="'+projects[i].img+'" alt="'+projects[i].name+'">' +
-	//                   '</a>' +
-	//                 '</div>' +
-	//              '</div>';
-	//   if ( i > 0 && (i+1)%3 === 0 ) data += '</div><div class="row">'
-
-	// data += getCategories(i);
 
 })();

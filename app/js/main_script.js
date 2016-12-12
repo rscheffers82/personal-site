@@ -3,38 +3,29 @@ $grid = {};
 
 
 $( document ).ready(function() {
-  // add all projects into project grid on the portfolio
-  //$('.project-grid').append( p.showProjects() );
-  var $projectData = p.showProjects();
-  console.log($projectData);
 
+  // Tie .project-grid to an isotope grid
   $grid = $('.project-grid').isotope({
     // options
     itemSelector: '.project',
     // resizable: false,
     layoutMode: 'fitRows',
     percentPosition: true,
-    filter: '.featured',
-    // filter: '*',
+    // filter: '.featured',
+    filter: '*',
     masonry: {
       columnWidth: '.project'
     }
   });
 
-  $grid.append( $projectData )
-     // add and lay out newly appended items
-     .isotope( 'appended', $projectData );
-
-
-  // $grid.isotope('insert', temp);
-
-
+  // load all data into the grid
+  p.loadProjectsInto($grid);
 
   // once all data is loaded filter the results again on featured to ensure the margins are correctly set
   // This is needed, because projects are dynamically loaded.
-  // setTimeout( () => {
-  //     $grid.isotope({ filter: '.featured' });
-  // },100);
+  setTimeout( () => {
+      $grid.isotope({ filter: '.featured' });
+  },100);
 
 
   $(".sticky-wrapper").sticky({topSpacing:0});
@@ -74,7 +65,6 @@ $('.btn-group').each( function( i, buttonGroup ) {
     $( this ).addClass('is-checked');
   });
 });
-
 
 $( '.project-grid' ).on("click", 'a', function(e){
   console.log( $(this)[0] );
