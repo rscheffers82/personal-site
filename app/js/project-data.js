@@ -23,7 +23,7 @@ var p = (function () {
 		'description' : 'Wordpress website build in collaboration with <a href="http://www.thinkupdesign.ca" target="_blank">ThinkUp Design</a>. We incorporated two websites of the client into on professional SEO optimised and visual appealing website. While I mainly worked on the setup and functionality of the site, ThinkUp Design led the design aspect.',
 		'url': ['http://jolitabrilliant.com'],
 		'img' : 'jolita-brilliant.jpg',
-		'tech' : ['Wordpress','Visual Composer','HTML','CSS','Photoshop'],
+		'tech' : ['Wordpress','Photoshop','HTML','CSS'],
 		'category' : ['featured', 'design']
 	},{
 		'name': 'React Countdown App',
@@ -44,7 +44,7 @@ var p = (function () {
 		'description' : 'WordPress based website build in collaboration with the owner.',
 		'url': ['http://blackbeltproofreader.com'],
 		'img' : 'blackbeltproofreader.jpg',
-		'tech' : ['Wordpress','Divi Builder','HTML','CSS','Photoshop'],
+		'tech' : ['Wordpress','Photoshop','HTML','CSS'],
 		'category' : ['featured', 'frontend', 'design']
 	},{
 		'name': 'Simon',
@@ -157,10 +157,10 @@ var p = (function () {
 
 			// console.log( url[1] );
 			if ( url[1] ) {
-				$(".code").removeClass("hide-btn");
+				$(".code").removeClass("hide");
 				$(".code").attr('href', url[1]);
 			} else {
-				$(".code").addClass("hide-btn");
+				$(".code").addClass("hide");
 			}
 		},
 
