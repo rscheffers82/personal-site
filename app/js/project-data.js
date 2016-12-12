@@ -163,6 +163,7 @@ var p = (function () {
 			}
 		},
 		loadProjectsInto: function ($grid) {
+			var imgBaseDir = 'images/'
 
 			var getCategories = function (number) {
 				return projects[number].category.join(' ');
@@ -184,7 +185,7 @@ var p = (function () {
 			 	'<div class="project-innerwrapper">' +
 			 		'<div class="title">' + projects[i].name + '</div>' +
 			//
-					'<div class="img-wrapper"><img class="img-responsive" src="../images/' + projects[i].img + '"></div>' +
+					'<div class="img-wrapper"><img class="img-responsive" src="' + imgBaseDir + projects[i].img + '"></div>' +
 					'<a data-number="' + i + '"  data-toggle="modal" data-target=".bd-example-modal-lg">' +
 						'<div class="info"><i class="fa fa-info-circle"></i>More info</div>' +
 					'</a>' +
