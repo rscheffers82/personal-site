@@ -269,13 +269,18 @@ h2 {
   font-size: 2.25rem;
   padding: 15px 0; }
 
-.portfolio-area .info,
-.portfolio-area .code {
-  width: 40%;
-  display: inline-block;
-  text-align: center;
-  font-size: 1.7rem;
-  padding: 10px 0 5px 0; }
+.portfolio-area .project-action-icons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around; }
+  .portfolio-area .project-action-icons a {
+    text-decoration: none;
+    padding: 10px 0 5px 0;
+    margin: auto;
+    display: block;
+    align-items: center;
+    text-align: center;
+    width: 100%; }
 
 .portfolio-area .fa {
   display: block;
@@ -283,13 +288,6 @@ h2 {
 
 .portfolio-area .img-wrapper {
   position: relative; }
-  .portfolio-area .img-wrapper:after {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    left: 0;
-    width: 100%;
-    background-color: rgba(250, 250, 250, 0.3); }
 
 @media (min-width: 640px) {
   .portfolio-area .project {
@@ -309,23 +307,67 @@ h2 {
 
 .modal {
   overflow: hidden;
-  background-color: #334455; }
+  background: rgba(250, 250, 250, 0.65) repeat scroll center center;
+  color: #676767; }
+  .modal .btn {
+    cursor: pointer; }
+  .modal .tech-wrapper {
+    display: block;
+    text-align: center;
+    margin: 10px 0; }
+  .modal .tech {
+    display: inline-block;
+    padding: 0px 10px;
+    margin-left: 3px;
+    background-color: #c2c2c2;
+    color: #FFFFFF; }
+    .modal .tech:first-child {
+      margin-left: 0px;
+      border-radius: 3px 0 0 3px; }
+    .modal .tech:last-child {
+      border-radius: 0 3px 3px 0; }
+
+.modal-content {
+  border-radius: 0;
+  padding-bottom: 0; }
+
+.modal-header {
+  border-bottom: medium #334455;
+  background-color: #3498DB; }
+  .modal-header h2 {
+    color: #F4F4F4; }
+  .modal-header .close {
+    font-size: 4rem;
+    margin: 0; }
 
 .modal-title {
-  border-bottom: 1px solid #222223;
   font-size: 3rem;
-  line-height: 5rem;
-  text-align: center; }
+  color: #676767;
+  text-align: center;
+  padding: 0;
+  border-bottom: none; }
 
 .modal-img-wrapper img {
-  border-radius: 5px;
-  margin: 10px auto;
+  border-radius: 2px;
+  margin: 10px auto 20px;
+  cursor: pointer;
   -webkit-box-shadow: 2px 2px 5px #ccc;
   -moz-box-shadow: 2px 2px 5px #ccc;
   box-shadow: 2px 2px 5px #ccc; }
 
 .modal-footer {
-  border: none; }
+  border: none;
+  text-align: center;
+  padding-top: 0; }
+  .modal-footer .fa {
+    display: block;
+    font-size: 3.5rem; }
+  .modal-footer .fa-plus-circle {
+    transform: rotate(45deg); }
+  .modal-footer .btn {
+    font-size: 2rem; }
+  .modal-footer a:hover {
+    color: #ed7669; }
 
 .border {
   border: 1px solid #ccc; }

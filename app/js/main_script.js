@@ -92,7 +92,7 @@ $('.btn-group').each( function( i, buttonGroup ) {
 });
 
 $( '.project-grid' ).on("click", 'a', function(e){
-  console.log( $(this)[0] );
-  console.log( $(this).data('number') );
+  // console.log( $(this)[0] );
+  // console.log( $(this).data('number') );
   p.modal( $(this).data('number') );
 });

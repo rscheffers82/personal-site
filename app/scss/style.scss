@@ -462,14 +462,21 @@ h2 {
     padding: 15px 0;
   }
 
-  .info,
-  .code {
-    width: 40%;
-    display: inline-block;
-    text-align: center;
-    font-size: 1.7rem;
-    // font-size: 2vw;
-    padding: 10px 0 5px 0;
+  .project-action-icons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+
+    a {
+      // border: 1px solid #444;
+      text-decoration: none;
+      padding: 10px 0 5px 0;
+      margin: auto;
+      display: block;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+    }
   }
   .fa {
     display: block;
@@ -478,15 +485,17 @@ h2 {
   }
   .img-wrapper {
     position: relative;
+    // cursor: pointer;
 
-    &:after {
-      position: absolute;
-      top: 0;
-      height: 100%;
-      left: 0;
-      width: 100%;
-      background-color: rgba(250,250,250, 0.3);
-    }
+    // &:after {
+    //   position: absolute;
+    //   top: 0;
+    //   height: 100%;
+    //   left: 0;
+    //   width: 100%;
+    //   background-color: rgba(250,250,250, 0.3);
+    //
+    // }
   }
 
   @media (min-width: 640px){
@@ -517,39 +526,74 @@ h2 {
 
 .modal{
   overflow: hidden;
-  background-color: background: rgba(250, 250, 250, 0.65) repeat scroll center center;
+  background: rgba(250, 250, 250, 0.65) repeat scroll center center;
   // background: url($white-background-striped);
-   //background: rgba(250, 250, 250, 0.95) url($white-background-striped) repeat scroll center center;
-  // color: $text-color-grey;
-
-   a {
-    // color: $text-color-dark;
-   }
-
-   .btn .code {
+   //background: rgba(50, 50, 50, 0.75) url($white-background-striped) repeat scroll center center;
+  color: $grey-medium;
+  .btn {
+    cursor: pointer;
+  }
+  .btn .code {
   //   color: $blue;
-   }
-   .btn .site {
+  }
+  .btn .site {
 //     color: $text-color-grey;
-   }
-   .btn .myclose {
+  }
+  .btn .myclose {
   //   color: $call-to-action;
-   }
+  }
 
+  .tech-wrapper {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+  }
+  .tech {
+    display: inline-block;
+    padding: 0px 10px;
+    margin-left: 3px;
+    background-color: lighten($grey-soft, 20%);
+    color: $white;
+    &:first-child{
+      margin-left: 0px;
+      border-radius: 3px 0 0 3px;
+    }
+    &:last-child{
+      border-radius: 0 3px 3px 0;
+    }
+  }
+}
+
+.modal-content {
+  border-radius: 0;
+  padding-bottom: 0;
+
+}
+
+.modal-header{
+  border-bottom: medium $secondary-color;
+  background-color: $primary-color;
+  h2 {
+    color: $soft-white;
+  }
+  .close {
+    font-size: 4rem;
+    margin: 0;
+  }
 }
 
 .modal-title {
-//  background: $blue;
-  border-bottom: 1px solid #222223;
   font-size: 3rem;
-  line-height: 5rem;
-//  color: $grey;
+  color: $grey-medium;
   text-align: center;
+  padding: 0;
+  border-bottom: none;
 }
 
 .modal-img-wrapper img{
-  border-radius: 5px;
-  margin: 10px auto;
+  border-radius: 2px;
+  margin: 10px auto 20px;
+  cursor: pointer;
   -webkit-box-shadow: 2px 2px 5px #ccc;
   -moz-box-shadow: 2px 2px 5px #ccc;
   box-shadow: 2px 2px 5px #ccc;
@@ -557,6 +601,21 @@ h2 {
 
 .modal-footer {
   border: none;
+  text-align: center;
+  padding-top: 0;
+  .fa {
+    display: block;
+    font-size: 3.5rem;
+  }
+  .fa-plus-circle {
+    transform: rotate(45deg);
+  }
+  .btn {
+    font-size: 2rem;
+  }
+  a:hover{
+    color: lighten($call-to-action, 10%);
+  }
 }
 
 

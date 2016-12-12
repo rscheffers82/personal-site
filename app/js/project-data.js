@@ -10,6 +10,7 @@ Format:
 */
 
 var p = (function () {
+	var imgBaseDir = 'images/';
 	var projects = [{
 		'name': 'React Todo App',
 		'description' : 'Todo Application build on React and Redux which let\'s you add new tasks to the list and search existing todo items. Completed tasks are automatically archieved and can be made visible with the select box. Data is stored locally in the browser',
@@ -126,6 +127,7 @@ var p = (function () {
 			var img = projects[number].img;
 			var url = projects[number].url
 			var tech = projects[number].tech;
+			// console.log('imgBaseDir: ', imgBaseDir);
 
 			function showTech() {
 				var data = '<div class="tech-wrapper">';
@@ -138,10 +140,9 @@ var p = (function () {
 			function showImg() {
 				var data = '<div class="modal-img-wrapper">' +
 					'<a href="' + url[0] +'" target="_blank">' +
-					'<img class="img-responsive" src="' + img + '" alt="' + name + '"></a>' +
+					'<img class="img-responsive" src="' + imgBaseDir + img + '" alt="' + name + '"></a>' +
 		        '</div>'
 				return data;
-
 
 			}
 			function showDescription() {
@@ -154,7 +155,7 @@ var p = (function () {
 			$(".project-image").attr('href', url[0]);
 
 
-			console.log( url[1] );
+			// console.log( url[1] );
 			if ( url[1] ) {
 				$(".code").removeClass("hide-btn");
 				$(".code").attr('href', url[1]);
@@ -162,8 +163,9 @@ var p = (function () {
 				$(".code").addClass("hide-btn");
 			}
 		},
+
+
 		loadProjectsInto: function ($grid) {
-			var imgBaseDir = 'images/'
 
 			var getCategories = function (number) {
 				return projects[number].category.join(' ');
@@ -171,7 +173,7 @@ var p = (function () {
 
 			var projectIcon = function (number) {
 				return '<a href="' + projects[number].url[1] + '" target="_blank">' +
-									'<div class="code"><i class="fa fa-github"></i> View code</div>' +
+									'<i class="fa fa-github"></i> View code' +
 							 '</a>';
 			}
 
@@ -186,12 +188,14 @@ var p = (function () {
 			 		'<div class="title">' + projects[i].name + '</div>' +
 			//
 					'<div class="img-wrapper"><img class="img-responsive" src="' + imgBaseDir + projects[i].img + '"></div>' +
-					'<a data-number="' + i + '"  data-toggle="modal" data-target=".bd-example-modal-lg">' +
-						'<div class="info"><i class="fa fa-info-circle"></i>More info</div>' +
-					'</a>' +
-					(projects[i].url[1] ? projectIcon(i) : '' ) +
-			 	'</div>' +
-			'</div>');
+						'<div class="project-action-icons">' +
+							'<a data-number="' + i + '"  data-toggle="modal" data-target=".bd-example-modal-lg">' +
+								'<i class="fa fa-info-circle"></i>More info' +
+							'</a>' +
+							(projects[i].url[1] ? projectIcon(i) : '' ) +
+						'</div>' +
+			 		'</div>' +
+				'</div>');
 			$grid.append( $project )
 		     // add and lay out newly appended items
 		     .isotope( 'appended', $project );
