@@ -30,14 +30,29 @@ $(document).on('click','.navbar-collapse.in',function(e) {
 $grid = $('.project-grid').isotope({
   // options
   itemSelector: '.project',
+  // resizable: false,
   layoutMode: 'fitRows',
   percentPosition: true,
   // filter: '.featured'
   filter: '*',
   masonry: {
     columnWidth: '.project'
-}
+  }
 });
+
+// $(window).resize(function() {
+//   var width = $(window).width();
+//   console.log('width: ', width);
+//   if (width < 768) {
+//     console.log('smaller: ', width);
+//     $grid.isotope( {masonry: { columns: 2 } });
+//   } else {
+//     console.log('larger: ', width);
+//     $grid.isotope( {masonry: { columns: 3 } });
+//   }
+// });
+
+
 
 $('.filter-btn-group').on('click', '.btn', function() {
   var filterValue = $( this ).attr('data-filter');

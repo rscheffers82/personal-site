@@ -58,17 +58,17 @@ h2 {
 .navbar,
 .navbar-default {
   width: 100%;
-  background-color: #334A55;
+  background-color: #334455;
   border: none;
   border-radius: 0; }
 
 .navbar-right {
-  color: #334A55; }
+  color: #334455; }
 
 .navbar-nav li a {
   color: #F4F4F4 !important;
   background-color: inherit !important;
-  border-bottom: 5px solid #334A55; }
+  border-bottom: 5px solid #334455; }
 
 .navbar-nav li a:hover {
   border-bottom: 5px solid #3498DB; }
@@ -193,6 +193,12 @@ h2 {
     margin: 5px auto 5px auto; } }
 
 @media (max-width: 640px) {
+  .about-area,
+  .services-area,
+  .portfolio-area,
+  .testimonals-area,
+  .contact-area {
+    padding: 50px 10px; }
   .right-line-flex {
     width: 15px;
     min-width: 15px !important; }
@@ -205,12 +211,6 @@ h2 {
     font-size: 2.5rem; }
   h2 {
     font-size: 1.5rem; }
-  .about-area,
-  .services-area,
-  .portfolio-area,
-  .testimonals-area,
-  .contact-area {
-    padding: 50px 10px; }
   .call-out {
     padding: 50px 40px; }
     .call-out p {
@@ -252,17 +252,18 @@ h2 {
 
 .portfolio-area .project {
   color: #3f3f3f;
-  width: 33%;
+  width: 100%;
   text-align: center;
-  padding: 0 10px; }
+  padding: 4% 2%; }
 
 .portfolio-area .project-innerwrapper {
   background-color: #F4F4F4;
   overflow: hidden; }
 
 .portfolio-area .title {
-  font-size: 2.5rem;
-  padding: 10px 0; }
+  font-family: 'Roboto Slab', sans-serif, serif;
+  font-size: 2.25rem;
+  padding: 15px 0; }
 
 .portfolio-area .info,
 .portfolio-area .code {
@@ -270,7 +271,7 @@ h2 {
   display: inline-block;
   text-align: center;
   font-size: 1.7rem;
-  padding: 5px 0; }
+  padding: 10px 0 5px 0; }
 
 .portfolio-area .fa {
   display: block;
@@ -284,7 +285,17 @@ h2 {
     height: 100%;
     left: 0;
     width: 100%;
-    background-color: rgba(250, 250, 250, 0.7); }
+    background-color: rgba(250, 250, 250, 0.3); }
+
+@media (min-width: 640px) {
+  .portfolio-area .project {
+    width: 50%;
+    font-size: 1rem; } }
+
+@media (min-width: 768px) {
+  .portfolio-area .project {
+    width: 33.33%;
+    font-size: 2rem; } }
 
 .project1 {
   width: 25%;
@@ -294,7 +305,7 @@ h2 {
 
 .modal {
   overflow: hidden;
-  background-color: #334A55; }
+  background-color: #334455; }
 
 .modal-title {
   border-bottom: 1px solid #222223;
