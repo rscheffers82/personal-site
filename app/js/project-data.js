@@ -196,6 +196,9 @@ var p = (function () {
 		     // add and lay out newly appended items
 		     .isotope( 'appended', $project );
 			}
+			window.setTimeout( function() {
+				$grid.isotope('layout');
+			},250);
 		}
 	}
 

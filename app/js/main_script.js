@@ -18,14 +18,39 @@ $( document ).ready(function() {
     }
   });
 
+
+  // for (i = 0; i < 3; i++){
+  //   (function() {
+  //
+  //     var $project = $(
+  //     '<div class="project featured">' +
+  //       '<div class="project-innerwrapper">' +
+  //         '<div class="title">React Todo App</div>' +
+  //
+  //         '<div class="img-wrapper"><img class="img-responsive" src="../images/react-todo-app.jpg"></div>' +
+  //
+  //         '<div class="info"><i class="fa fa-info-circle"></i> More info</div>' +
+  //         '<div class="code"><i class="fa fa-github"></i> View code</div>' +
+  //       '</div>' +
+  //     '</div>');
+  //     $grid.append( $project )
+  //        // add and lay out newly appended items
+  //        .isotope( 'appended', $project );
+  //
+  //   })();
+  // }
+
+
   // load all data into the grid
   p.loadProjectsInto($grid);
 
   // once all data is loaded filter the results again on featured to ensure the margins are correctly set
   // This is needed, because projects are dynamically loaded.
-  setTimeout( () => {
-      $grid.isotope({ filter: '.featured' });
-  },100);
+  // window.setTimeout( function() {
+  // //     // $grid.isotope({ filter: '.featured' });
+  //     $grid.isotope('layout');
+  //     // alert($grid);
+  // },250);
 
 
   $(".sticky-wrapper").sticky({topSpacing:0});
