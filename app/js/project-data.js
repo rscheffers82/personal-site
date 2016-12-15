@@ -189,10 +189,10 @@ var p = (function () {
 			//
 					'<div class="img-wrapper"><img class="img-responsive" src="' + imgBaseDir + projects[i].img + '"></div>' +
 						'<div class="project-action-icons">' +
+							(projects[i].url[1] ? projectIcon(i) : '' ) +
 							'<a data-number="' + i + '"  data-toggle="modal" data-target=".bd-example-modal-lg">' +
 								'<i class="fa fa-info-circle"></i>More info' +
 							'</a>' +
-							(projects[i].url[1] ? projectIcon(i) : '' ) +
 						'</div>' +
 			 		'</div>' +
 				'</div>');

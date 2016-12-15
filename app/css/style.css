@@ -160,7 +160,7 @@ h2 {
 .img-flex {
   margin: auto 0px; }
   .img-flex img {
-    padding: 5px; }
+    padding: 10px; }
 
 .about-me {
   padding: 10px 20px; }
@@ -227,6 +227,9 @@ h2 {
   margin-top: 30px;
   padding: 20px; }
 
+.portfolio-area img {
+  width: 100%; }
+
 .portfolio-area .btn-group {
   width: 100%;
   text-align: center;
@@ -259,6 +262,8 @@ h2 {
     color: #3f3f3f; }
     .portfolio-area .project a:hover {
       color: #3498DB; }
+  .portfolio-area .project .col-md-4 {
+    padding: 0 30px; }
 
 .portfolio-area .project-innerwrapper {
   background-color: #F4F4F4;
