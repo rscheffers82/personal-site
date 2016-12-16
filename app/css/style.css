@@ -60,7 +60,8 @@ h2 {
   width: 100%;
   background-color: rgba(47, 64, 82, 0.95);
   border: none;
-  border-radius: 0; }
+  border-radius: 0;
+  z-index: 999; }
 
 .navbar-right {
   color: #2F4052; }
@@ -360,7 +361,7 @@ img {
   display: inline-block; }
 
 .contact-area {
-  padding: 0 15rem; }
+  padding: 0 15rem 3rem; }
   .contact-area .row {
     margin: 0; }
   .contact-area .btn-primary {
@@ -390,8 +391,25 @@ label {
     border: 1px solid #0379C4;
     box-shadow: 1px 1px 0 #ccc inset; }
 
+.success-background {
+  display: flex;
+  height: 150px;
+  width: 100%;
+  z-index: 99; }
+
+.success-message {
+  font-size: 2.25rem;
+  text-align: center;
+  max-width: 650px;
+  margin: auto;
+  background-color: #eeffee;
+  padding: 20px; }
+
 .border {
   border: 1px solid #ccc; }
+
+.hide {
+  display: none; }
 
 @media (max-width: 900px) {
   .top-flex .title-text-flex {
@@ -435,7 +453,9 @@ label {
     width: 50%;
     font-size: 1rem; }
   .contact-area {
-    padding: 50px 2rem; } }
+    padding: 50px 2rem; }
+  .success-message {
+    font-size: 2rem; } }
 
 @media (min-width: 768px) {
   .portfolio-area .project {

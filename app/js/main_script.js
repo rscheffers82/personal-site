@@ -21,15 +21,6 @@ $( document ).ready(function() {
   // load all data into the grid
   // p.loadProjectsInto($grid);
 
-  // once all data is loaded filter the results again on featured to ensure the margins are correctly set
-  // This is needed, because projects are dynamically loaded.
-  // window.setTimeout( function() {
-  // //     // $grid.isotope({ filter: '.featured' });
-  //     $grid.isotope('layout');
-  //     // alert($grid);
-  // },250);
-
-
   $(".sticky-wrapper").sticky({topSpacing:0});
 
   $('#roycode-contact-form').validate({
@@ -56,14 +47,25 @@ var submitValidatedForm = function() {
   var data = $('form').serialize();
   $.ajax({
     type: 'POST',
-    url: 'http://royscheffers.com/contact-form.php',
+    url: 'http://royscheffers.com/contact-form.php',      // use for development
+    // url: 'php/contact-form.php',                       // use when live
     data: data,
-    crossDomain: true,
-    success: function (response) {
-      alert(response);
-      console.log('Success: ',response);
-    }
-  });
+    crossDomain: true
+  })
+  .done (function() {
+    $('.success-container').val('Message sent successfully');
+    $('.success-container').removeClass('hide');
+    $('#roycode-contact-form').addClass('hide');
+  })
+  .fail (function(jqXHR, textStatus, errorThrown) {
+    // php script not reached or invalid response
+    console.log('failed reason: ' + errorThrown.toString());
+    console.log(jqXHR);
+    $('.success-message').html('Message failed...<br>Please email <a href="mailto:r.scheffers@gmail.com">r.scheffers@gmail.com</a>');
+    $('.success-message').css('background-color','#ffeeee');
+    $('.success-container').removeClass('hide');
+    $('#roycode-contact-form').addClass('hide');
+  })
 }
 
 
