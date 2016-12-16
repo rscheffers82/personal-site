@@ -19,7 +19,7 @@ $( document ).ready(function() {
   });
 
   // load all data into the grid
-  p.loadProjectsInto($grid);
+  // p.loadProjectsInto($grid);
 
   // once all data is loaded filter the results again on featured to ensure the margins are correctly set
   // This is needed, because projects are dynamically loaded.
@@ -31,6 +31,10 @@ $( document ).ready(function() {
 
 
   $(".sticky-wrapper").sticky({topSpacing:0});
+
+  $('#roycode-contact-form').validate({
+    submitHandler: submitValidatedForm
+  });
 
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -48,6 +52,19 @@ $(document).on('click','.navbar-collapse.in',function(e) {
     }
 });
 
+var submitValidatedForm = function() {
+  var data = $('form').serialize();
+  $.ajax({
+    type: 'POST',
+    url: 'http://royscheffers.com/contact-form.php',
+    data: data,
+    crossDomain: true,
+    success: function (response) {
+      alert(response);
+      console.log('Success: ',response);
+    }
+  });
+}
 
 
  // portfolio-area events \\
@@ -74,26 +91,33 @@ $( '.project-grid' ).on("click", 'a', function(e){
   p.modal( $(this).data('number') );
 });
 
+
+
 // Contact Form events \\
 //----------------------\\
 
-$('#submit').on('click', function(e) {
-  e.preventDefault();
-
-  var data = $('form').serializeArray();
-  console.log(data);
-  var data = $('form').serialize();
-  console.log(data);
-
-  $.ajax({
-    type: 'POST',
-    url: 'http://royscheffers.com/contact-form.php',
-    data: data,
-    crossDomain: true,
-    success: function (response) {
-      alert(response);
-      console.log('Success: ',response);
-    }
-  });
-
-});
+// $('#submit').on('click', function(e) {
+//   e.preventDefault();
+//
+//
+//   $('.form-group').find('input, textarea').each(function(index, el) {
+//     if (el.name != 'phone') {
+//       $('#' + el.name + '-error').html( el.value ? '' : 'Provide ' + el.name );
+//     }
+//     console.log(el.value);
+//     console.log(el.name);
+//   });
+//
+//   console.log('missingValue: ', missingValue);
+//   var data = $('form').serialize();
+//   $.ajax({
+//     type: 'POST',
+//     url: 'http://royscheffers.com/contact-form.php',
+//     data: data,
+//     crossDomain: true,
+//     success: function (response) {
+//       alert(response);
+//       console.log('Success: ',response);
+//     }
+//   });
+// });

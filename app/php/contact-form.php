@@ -16,6 +16,7 @@ $body = "Hey, \n\n" .
 				"Somebody reached out to you from http://royscheffers.com.\n" .
 				"From: $name\nE-Mail: $email\nPhone: $phone\nMessage:\n$message";
 
+// $result = 'script called...';
 if (mail ($to, $subject, $body, $from)) {
 	$result='<div class="alert alert-success">Thank You! I will be in touch</div>';
 } else {

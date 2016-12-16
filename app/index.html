@@ -277,32 +277,32 @@
 	<div class="contact-area">
 	  <h1 id="contact">Contact</h1>
 
-		<form class="form-horizontal" role="form" method="post" action="contact-form.php">
+		<form id="roycode-contact-form" class="form-horizontal" role="form" method="post" action="contact-form.php">
 			<div class="form-group">
 				<div class="col-md-4">
-					<input type="text" class="form-control" id="name" name="name" placeholder="Name">
-					<label id= "name-error" class="text-danger">
+					<input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+					<!-- <label id= "name-error" class="text-danger"> -->
 				</div>
 
 				<div class="col-md-4">
-					<input type="email" class="form-control" id="email" name="email" placeholder="Email">
-					<label id="email-error" class='text-danger'></label>
+					<input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+					<!-- <label id="email-error" class='text-danger'></label> -->
 				</div>
 
 				<div class="col-md-4">
 					<input type="text" class="form-control" id="phone" name="phone" placeholder="Phone">
-					<label id= "phone-error" class="text-danger">
+					<!-- <label id= "phone-error" class="text-danger"> -->
 				</div>
 
 				<div class="col-md-12">
-					<textarea class="form-control" rows="4" name="message" placeholder="Message"></textarea>
-					<label id="message-error" class='text-danger'></label>
+					<textarea class="form-control" rows="4" name="message" placeholder="Message" required></textarea>
+					<!-- <label id="message-error" class='text-danger'></label> -->
 				</div>
 
 			<div class="row">
 				<div class="col-sm-4">
-					<input type="text" class="form-control" id="human" name="human" placeholder="2 + 3 =">
-					<label id="human-error" class='text-danger'></label>
+					<input type="text" class="form-control" id="check" name="check" placeholder="2 + 3 =" required>
+					<!-- <label id="check-error" class='text-danger'></label> -->
 				</div>
 			</div>
 
@@ -325,6 +325,7 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
 		<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
 		<script type="text/javascript" src="js/libs/jquery.min.js"></script>
+		<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
 		<script type="text/javascript" src="js/libs/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/libs/jquery.sticky.js"></script>
 		<script type="text/javascript" src="js/libs/isotope-pkgd.js"></script>
