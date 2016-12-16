@@ -104,6 +104,15 @@
 <content class="content-area">
 
 	<!-- About section -->
+	<!-- structure
+	  .container-flex
+	    .main-block
+				.top-flex
+					.title-text-flex
+	        .img-flex
+	      .about-me
+	    .right-line-flex -->
+
 	<div class="about-area">
 		<h1 id="about"></h1>
 
@@ -113,41 +122,37 @@
 		<div class="container-flex">
 
 			<div class="main-flex">
-
-				<div class="header-flex">
-					<div class="title-flex">
-						<h1>Front-end Web Developer</h1>
-						<h2>Creating beautiful and responsive web apps</h2>
-
+				<div class="main-block">
+					<div class="top-flex">
+						<div class="title-text-flex">
+							<h1>Front-end Web Developer</h1>
+							<h2>Creating beautiful and responsive web apps</h2>
+							<img class="img-mobile img-responsive" src="images/RoyScheffers-Front-end-Web-Developer.jpg" />
+							<p>
+								Every project is unique and that's how they should be treated. Hi, my name is Roy Scheffers. I work with clients and small businesses to make their next web project a success by provinding them with the skills they need and the service they can rely on.
+							</p>
+						</div>
+						<!-- <div class="img-flex border"> -->
+							<img src="images/RoyScheffers-Front-end-Web-Developer.jpg">
+						<!-- </div> -->
 					</div>
-					<div class="img-flex">
-						<img class="img-responsive" src="images/RoyScheffers-Front-end-Web-Developer.jpg">
-					</div>
+					<!-- <div class="more-block">
+						<p>one</p>
+						<p>two</p>
+						<p>three</p>
+					</div> -->
 				</div>
-				<div class="about-me">
-					<p style="width: 70%">
-						Every project is unique and that's how it should be treated. Hi, my name is Roy Scheffers, a Front-end Web Developer. I work with clients and small businesses making your next web project a success by provinding them with the skills they need and a service they can rely on.
-					</p>
-				</div>
+
 			</div>
 			<div class="right-line-flex">&nbsp;</div>
 		</div>
 
 	</div>
 
-	<!-- Call-out what I can offer -->
-	<!-- <div class=call-out data-parallax="scroll" data-image-src="images/call-out.jpg">
-		<p>
-			Assisting tech startups and businesses to realize their full potential and build the online tools they need to thrive.
-		</p>
-	</div> -->
-
 	<div class="parallax-call-out-background">
-
 		<div class="parallax-call-out-overlay">
 			Assisting tech startups and businesses to realize their full potential and build the online tools they need to thrive.
 		</div>
-
 	</div>
 
 
@@ -252,46 +257,7 @@
 					<div class="code"><i class="fa fa-github"></i> View code</div>
 				</div>
 			</div>
-
-
-
-			<div class="project featured">
-				<div class="project-innerwrapper">
-					<div class="title">React Todo App</div>
-
-					<div class="img-wrapper"><img class="img-responsive" src="../images/react-todo-app.jpg"></div>
-
-					<div class="info"><i class="fa fa-info-circle"></i> More info</div>
-					<div class="code"><i class="fa fa-github"></i> View code</div>
-				</div>
-			</div>
-
-			<div class="project design">
-				<div class="project-innerwrapper">
-					<div class="title">Black Belt Proofreader</div>
-
-					<div class="img-wrapper"><img class="img-responsive" src="../images/blackbeltproofreader.jpg"></div>
-
-					<div class="info"><i class="fa fa-info-circle"></i> More info</div>
-					<div class="code"><i class="fa fa-github"></i> View code</div>
-				</div>
-			</div>
-
-			<div class="project design">
-				<div class="project-innerwrapper">
-					<div class="title">Brilliant Message</div>
-
-					<div class="img-wrapper"><img class="img-responsive" src="../images/jolita-brilliant.jpg"></div>
-
-					<div class="info"><i class="fa fa-info-circle"></i>More info</div>
-					<div class="code"><i class="fa fa-github"></i> View code</div>
-				</div>
-			</div>
 -->
-
-
-
-
 
 		</div>
 
@@ -323,7 +289,6 @@
 		<script type="text/javascript" src="js/libs/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/libs/jquery.sticky.js"></script>
 		<script type="text/javascript" src="js/libs/isotope-pkgd.js"></script>
-		<script type="text/javascript" src="js/libs/parallax.min.js"></script>
 
     <script type="text/javascript" src="js/project-data.js"></script>
     <script type="text/javascript" src="js/main_script.js"></script>
