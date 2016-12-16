@@ -29,8 +29,8 @@
 // ________________________________________
 
 $call-to-action: #E74C3C;
-$primary-color: #3498DB;   //nice blue 306d9f
-$secondary-color: #334455; //#334A55;
+$primary-color: #0379C4; //#3498DB; (original)  //nice blue 306d9f
+$secondary-color: #2F4052;//#0A286B; //#334455;(original)  //#334A55;
 
 $white: #FFFFFF;
 $soft-white: #F4F4F4; //#f7f7f7;
@@ -127,7 +127,7 @@ h2 {
 .navbar,
 .navbar-default {
   width: 100%;
-  background-color: $secondary-color;
+  background-color: rgba(47, 64, 82, 0.95);
   border: none;
   border-radius: 0;
 }
@@ -169,33 +169,12 @@ h2 {
 
 // ____________________________________________
 //
-//      Call out box styles
-// ____________________________________________
-
-.call-out {
-  margin: 80px 0px;
-  padding: 100px 90px;
-  background-image: url(../images/call-out.jpg);
-  background-color: $primary-color;
-  color: $soft-white;
-
-  p {
-    background-color: rgba(75,75,75,0.6);
-    font-family: "Roboto Slab",sans-serif,serif;
-    border-radius: 3px;
-    padding: 50px 70px;
-    font-size: 2.5rem;
-    line-height: 5rem;
-    text-align: center;
-  }
-}
-
-// ____________________________________________
-//
 //      About area
 // ____________________________________________
 
 .about-area {
+  padding: 60px 40px 70px 40px;
+  
   .row {
     margin: 0px;
   }
@@ -289,7 +268,8 @@ h2 {
 }
 
 .about-me {
-  padding: 10px 20px;
+  padding: 0 20px;
+  text-align: center;
 }
 
 .right-line-flex {
@@ -393,6 +373,58 @@ h2 {
 
 // ____________________________________________
 //
+//      Call out box styles
+// ____________________________________________
+
+.call-out {
+  margin: 80px 0px;
+  padding: 100px 90px;
+  // background-image: url(../images/call-out.jpg);
+  // background-color: $primary-color;
+  // background-color: rgba(75,75,75,0.6);
+  // color: $secondary-color;
+
+  p {
+    background-color: rgba(250,250,250,0.8);
+      // background-image: url(../images/call-out.jpg);
+    font-family: "Roboto Slab",sans-serif,serif;
+    border-radius: 3px;
+    padding: 50px 70px;
+    font-size: 2.5rem;
+    line-height: 5rem;
+    text-align: center;
+  }
+}
+
+.parallax-call-out-background {
+    // The image used
+    background-image: url(../images/call-out.jpg);
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    // Set a specific height
+    display: flex;
+    height: 400px;
+
+
+}
+.parallax-call-out-overlay {
+  width: 70%;
+  margin: auto;
+
+  font-size: 3.5rem;
+  line-height: 6rem;
+  text-align: center;
+  color: $soft-white;
+}
+
+
+// ____________________________________________
+//
 //      Portfolio Styles
 // ____________________________________________
 
@@ -408,7 +440,7 @@ h2 {
     width: 100%;
     text-align: center;
     // margin: 0 auto
-    margin-bottom: 25px;
+    margin: 25px 0;
   }
 
   .btn {
