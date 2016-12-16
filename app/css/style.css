@@ -181,39 +181,6 @@ img {
   background-image: linear-gradient(0deg, white, transparent 100px);
   z-index: 3; }
 
-@media (max-width: 900px) {
-  .top-flex .title-text-flex {
-    display: block; }
-  .top-flex .img-mobile {
-    display: inline-block;
-    margin: 0px auto 10px auto;
-    border-radius: 50%; }
-  .top-flex img {
-    display: none; } }
-
-@media (max-width: 640px) {
-  .about-area,
-  .services-area,
-  .portfolio-area,
-  .testimonals-area,
-  .contact-area {
-    padding: 50px 10px; }
-  .right-line-flex {
-    width: 15px;
-    min-width: 15px !important; }
-  .top-line-right-block {
-    width: 15px;
-    height: 15px; }
-  .top-line {
-    height: 15px; }
-  h1 {
-    font-size: 2.5rem; }
-  h2 {
-    font-size: 1.5rem; }
-  .main-block p {
-    text-align: left;
-    padding: 0; } }
-
 .services-area i {
   border: 3px solid #0379C4;
   border-radius: 50%;
@@ -314,22 +281,6 @@ img {
     width: 100%;
     background-color: rgba(250, 250, 250, 0.3); }
 
-@media (min-width: 640px) {
-  .portfolio-area .project {
-    width: 50%;
-    font-size: 1rem; } }
-
-@media (min-width: 768px) {
-  .portfolio-area .project {
-    width: 33.33%;
-    font-size: 2rem; } }
-
-.project1 {
-  width: 25%;
-  border: 1px solid #aaa;
-  text-align: center;
-  background-color: #ddd; }
-
 .modal {
   overflow: hidden;
   background: rgba(250, 250, 250, 0.65) repeat scroll center center;
@@ -408,5 +359,68 @@ img {
 .code {
   display: inline-block; }
 
+.contact-area {
+  padding: 0 15rem; }
+  .contact-area .row {
+    margin: 0; }
+
+.form-control {
+  font-size: 1.75rem;
+  border-radius: 0px;
+  height: 45px;
+  padding: 10px; }
+  .form-control:focus {
+    border: 1px solid #0379C4;
+    box-shadow: 1px 1px 0 #ccc inset; }
+
 .border {
   border: 1px solid #ccc; }
+
+@media (max-width: 900px) {
+  .top-flex .title-text-flex {
+    display: block; }
+  .top-flex .img-mobile {
+    display: inline-block;
+    margin: 0px auto 10px auto;
+    border-radius: 50%; }
+  .top-flex img {
+    display: none; }
+  .contact-area {
+    padding: 50px 10rem; } }
+
+@media (max-width: 640px) {
+  .about-area,
+  .services-area,
+  .portfolio-area,
+  .testimonals-area {
+    padding: 50px 10px; }
+  .right-line-flex {
+    width: 15px;
+    min-width: 15px !important; }
+  .top-line-right-block {
+    width: 15px;
+    height: 15px; }
+  .top-line {
+    height: 15px; }
+  h1 {
+    font-size: 2.5rem; }
+  h2 {
+    font-size: 1.5rem; }
+  .main-block p {
+    text-align: left;
+    padding: 0; }
+  .parallax-call-out-background {
+    height: 300px; }
+  .parallax-call-out-overlay {
+    font-size: 2.25rem;
+    line-height: 3.5rem; }
+  .project {
+    width: 50%;
+    font-size: 1rem; }
+  .contact-area {
+    padding: 50px 2rem; } }
+
+@media (min-width: 768px) {
+  .project {
+    width: 33.33%;
+    font-size: 2rem; } }

@@ -7,7 +7,8 @@
 	<title>Front-end Web Developer | Roy Scheffers</title>
 <!-- Required meta tags always come first -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <meta property="og:type" content="website" />
@@ -275,7 +276,45 @@
 	<!-- contact section -->
 	<div class="contact-area">
 	  <h1 id="contact">Contact</h1>
-		<p>r.scheffers@gmail.com</p>
+
+		<form class="form-horizontal" role="form" method="post" action="contact-form.php">
+			<div class="form-group">
+				<div class="col-md-4">
+					<input type="text" class="form-control" id="name" name="name" placeholder="Name">
+					<label id= "name-error" class="text-danger">
+				</div>
+
+				<div class="col-md-4">
+					<input type="email" class="form-control" id="email" name="email" placeholder="Email">
+					<label id="email-error" class='text-danger'></label>
+				</div>
+
+				<div class="col-md-4">
+					<input type="text" class="form-control" id="phone" name="phone" placeholder="Phone">
+					<label id= "phone-error" class="text-danger">
+				</div>
+
+				<div class="col-md-12">
+					<textarea class="form-control" rows="4" name="message" placeholder="Message"></textarea>
+					<label id="message-error" class='text-danger'></label>
+				</div>
+
+			<div class="row">
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="human" name="human" placeholder="2 + 3 =">
+					<label id="human-error" class='text-danger'></label>
+				</div>
+			</div>
+
+				<div class="col-sm-4">
+					<input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+				</div>
+
+			</div>
+
+		</form>
+
+
 	</div>
 </content>
 

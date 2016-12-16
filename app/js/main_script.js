@@ -18,29 +18,6 @@ $( document ).ready(function() {
     }
   });
 
-
-  // for (i = 0; i < 3; i++){
-  //   (function() {
-  //
-  //     var $project = $(
-  //     '<div class="project featured">' +
-  //       '<div class="project-innerwrapper">' +
-  //         '<div class="title">React Todo App</div>' +
-  //
-  //         '<div class="img-wrapper"><img class="img-responsive" src="../images/react-todo-app.jpg"></div>' +
-  //
-  //         '<div class="info"><i class="fa fa-info-circle"></i> More info</div>' +
-  //         '<div class="code"><i class="fa fa-github"></i> View code</div>' +
-  //       '</div>' +
-  //     '</div>');
-  //     $grid.append( $project )
-  //        // add and lay out newly appended items
-  //        .isotope( 'appended', $project );
-  //
-  //   })();
-  // }
-
-
   // load all data into the grid
   p.loadProjectsInto($grid);
 
@@ -95,4 +72,28 @@ $( '.project-grid' ).on("click", 'a', function(e){
   // console.log( $(this)[0] );
   // console.log( $(this).data('number') );
   p.modal( $(this).data('number') );
+});
+
+// Contact Form events \\
+//----------------------\\
+
+$('#submit').on('click', function(e) {
+  e.preventDefault();
+
+  var data = $('form').serializeArray();
+  console.log(data);
+  var data = $('form').serialize();
+  console.log(data);
+
+  $.ajax({
+    type: 'POST',
+    url: 'http://royscheffers.com/contact-form.php',
+    data: data,
+    crossDomain: true,
+    success: function (response) {
+      alert(response);
+      console.log('Success: ',response);
+    }
+  });
+
 });

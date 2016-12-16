@@ -307,61 +307,6 @@ img {
     z-index: 3;
 }
 
-@media (max-width: 900px){
-  // about
-  .top-flex {
-    .title-text-flex {
-      display: block;
-    }
-    .img-mobile {
-      display: inline-block;
-      margin: 0px auto 10px auto;
-      border-radius: 50%;
-    }
-    img {
-      display: none;
-    }
-  }
-
-}
-
-@media (max-width: 640px){
-
-  // general
-  .about-area,
-  .services-area,
-  .portfolio-area,
-  .testimonals-area,
-  .contact-area{
-    padding: 50px 10px;
-  }
-
-  // about
-  .right-line-flex {
-    width: 15px;
-    min-width: 15px !important;
-  }
-  .top-line-right-block {
-    width: 15px;
-    height: 15px;
-  }
-  .top-line {
-    height: 15px;
-  }
-  h1 {
-    font-size: 2.5rem;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .main-block p{
-    text-align: left;
-    padding: 0;
-  }
-
-}
-
 
 // ____________________________________________
 //
@@ -522,26 +467,7 @@ img {
     }
   }
 
-  @media (min-width: 640px){
-    .project {
-      width: 50%;
-      font-size: 1rem;
-    }
-  }
-
-
-  @media (min-width: 768px){
-    .project {
-      width: 33.33%;
-      font-size: 2rem;
-    }
-  }
-
-
 }
- .project1 { width: 25%; border: 1px solid #aaa; text-align: center; background-color: #ddd;}
-//.grid-item--width2 { width: 50%; }
-
 
 // ____________________________________________
 //
@@ -658,6 +584,31 @@ img {
   display: inline-block;
 }
 
+
+// ____________________________________________
+//
+//      Contact area
+// ____________________________________________
+
+.contact-area {
+  padding: 0 15rem;
+  .row {
+    margin: 0;
+  }
+}
+.form-control{
+  font-size: 1.75rem;
+  border-radius: 0px;
+  height: 45px;
+  padding: 10px;
+
+  &:focus {
+    border: 1px solid $primary-color;
+    box-shadow: 1px 1px 0 #ccc inset;
+  }
+}
+
+
 // ____________________________________________
 //
 //      development (temp)
@@ -665,4 +616,94 @@ img {
 
 .border {
   border: 1px solid #ccc;
+}
+
+
+// ____________________________________________
+//
+//      Media queries
+// ____________________________________________
+
+@media (max-width: 900px){
+  // about
+  .top-flex {
+    .title-text-flex {
+      display: block;
+    }
+    .img-mobile {
+      display: inline-block;
+      margin: 0px auto 10px auto;
+      border-radius: 50%;
+    }
+    img {
+      display: none;
+    }
+  }
+  // contact
+  .contact-area {
+    padding: 50px 10rem;
+  }
+
+}
+
+@media (max-width: 640px) {
+  // general
+  .about-area,
+  .services-area,
+  .portfolio-area,
+  .testimonals-area{
+    padding: 50px 10px;
+  }
+
+  // about
+  .right-line-flex {
+    width: 15px;
+    min-width: 15px !important;
+  }
+  .top-line-right-block {
+    width: 15px;
+    height: 15px;
+  }
+  .top-line {
+    height: 15px;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .main-block p {
+    text-align: left;
+    padding: 0;
+  }
+
+  .parallax-call-out-background {
+    height: 300px;
+  }
+  .parallax-call-out-overlay {
+    font-size: 2.25rem;
+    line-height: 3.5rem;
+  }
+
+  // Portfolio
+  .project {
+    width: 50%;
+    font-size: 1rem;
+  }
+
+  // contact
+  .contact-area {
+    padding: 50px 2rem;
+  }
+}
+
+// Portfolio
+@media (min-width: 768px){
+  .project {
+    width: 33.33%;
+    font-size: 2rem;
+  }
+
 }
