@@ -1,9 +1,9 @@
 // Global grid var used in the project area
 $grid = {};
 
+$( document ).foundation();
 
 $( document ).ready(function() {
-
   // Tie .project-grid to an isotope grid
   $grid = $('.project-grid').isotope({
     // options
@@ -19,9 +19,9 @@ $( document ).ready(function() {
   });
 
   // load all data into the grid
-  // p.loadProjectsInto($grid);
+  p.loadProjectsInto($grid);
 
-  $(".sticky-wrapper").sticky({topSpacing:0});
+  // $(".sticky-wrapper").sticky({topSpacing:0});
 
   $('#roycode-contact-form').validate({
     submitHandler: submitValidatedForm
