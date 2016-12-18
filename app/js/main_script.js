@@ -53,7 +53,7 @@ var submitValidatedForm = function() {
     // crossDomain: true
   })
   .done (function() {
-    $('.success-container').val('Message sent successfully');
+    $('.success-message').html('Message sent successfully');
     $('.success-container').removeClass('hide');
     $('#roycode-contact-form').addClass('hide');
   })
@@ -123,3 +123,20 @@ $( '.project-grid' ).on("click", 'a', function(e){
 //     }
 //   });
 // });
+
+ // Smooth scrolling \\
+//  ----------------  \\
+
+$("#main-nav a, .down-arrow, .cta-buttons .btn").on('click', function(event) {
+  event.preventDefault();   // Prevent default anchor click behavior
+  var hash = this.hash;     // Store hash
+
+  // Using jQuery's animate() method to add smooth page scroll
+  // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+  $('html, body').animate({
+    scrollTop: $(hash).offset().top
+  }, 900, function(){
+    // Add hash (#) to URL when done scrolling (default click behavior)
+    window.location.hash = hash;
+  });
+});
