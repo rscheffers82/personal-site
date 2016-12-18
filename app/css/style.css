@@ -25,7 +25,7 @@ h2 {
   margin-bottom: 20px; }
 
 .landing {
-  background-attachment: fixed;
+  background-attachment: initial;
   background-color: #111;
   background-image: url("../images/working-on-laptop-sun.jpg");
   background-position: center center;
@@ -157,7 +157,7 @@ h2 {
   left: 0;
   height: 105%;
   width: 100px;
-  background-image: linear-gradient(90deg, white, transparent 100px);
+  background-image: linear-gradient(90deg, white, rgba(255, 255, 255, 0) 100px);
   z-index: 3; }
 
 .top-line-right-block {
@@ -223,7 +223,7 @@ h2 {
   left: -1px;
   height: 100px;
   width: 105%;
-  background-image: linear-gradient(0deg, white, transparent 100px);
+  background-image: linear-gradient(0deg, white, rgba(255, 255, 255, 0) 100px);
   z-index: 3; }
 
 .services-area i {

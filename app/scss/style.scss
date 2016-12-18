@@ -85,12 +85,8 @@ h2 {
   margin-bottom: 20px;
 }
 
-h3 {
-
-}
-
 .landing {
-  background-attachment: fixed;
+  background-attachment: initial;
   background-color: #111;
   background-image: url('../images/working-on-laptop-sun.jpg');
   background-position: center center;
@@ -268,7 +264,7 @@ h3 {
     linear-gradient(
       90deg,
       rgba(255,255,255,1),
-      rgba(0,0,0,0) 100px
+      rgba(255,255,255,0) 100px
 
     );
   z-index: 3;
@@ -364,7 +360,7 @@ h3 {
       linear-gradient(
         0deg,
         rgba(255,255,255,1),
-        rgba(0,0,0,0) 100px
+        rgba(255,255,255,0) 100px
 
       );
     z-index: 3;

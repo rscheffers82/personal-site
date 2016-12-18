@@ -4,6 +4,11 @@ $grid = {};
 // $( document ).foundation();
 
 $( document ).ready(function() {
+
+  if (getMobileOperatingSystem() !== 'iOS') {
+    $('.landing').css('background-attachment','fixed');
+  }
+
   // Tie .project-grid to an isotope grid
   $grid = $('.project-grid').isotope({
     // options
@@ -115,3 +120,27 @@ $("#main-nav a, .down-arrow, .cta-buttons .btn").on('click', function(event) {
     window.location.hash = hash;
   });
 });
+
+
+ // Detect IOS or mobile \\
+//  --------------------  \\
+
+function getMobileOperatingSystem() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+        return "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+        return "Android";
+    }
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "iOS";
+    }
+
+    return "unknown";
+}
