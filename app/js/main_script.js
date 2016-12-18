@@ -94,36 +94,6 @@ $( '.project-grid' ).on("click", 'a', function(e){
 });
 
 
-
-// Contact Form events \\
-//----------------------\\
-
-// $('#submit').on('click', function(e) {
-//   e.preventDefault();
-//
-//
-//   $('.form-group').find('input, textarea').each(function(index, el) {
-//     if (el.name != 'phone') {
-//       $('#' + el.name + '-error').html( el.value ? '' : 'Provide ' + el.name );
-//     }
-//     console.log(el.value);
-//     console.log(el.name);
-//   });
-//
-//   console.log('missingValue: ', missingValue);
-//   var data = $('form').serialize();
-//   $.ajax({
-//     type: 'POST',
-//     url: 'http://royscheffers.com/contact-form.php',
-//     data: data,
-//     crossDomain: true,
-//     success: function (response) {
-//       alert(response);
-//       console.log('Success: ',response);
-//     }
-//   });
-// });
-
  // Smooth scrolling \\
 //  ----------------  \\
 

@@ -197,7 +197,8 @@ h2 {
   display: none;
   margin-bottom: 10px; }
 
-img {
+.about-area img,
+.portfolio-area img {
   padding: 10px; }
 
 .about-me {

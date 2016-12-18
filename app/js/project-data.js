@@ -151,7 +151,7 @@ var p = (function () {
 
 			$('.modal-title').html(name);
 			$('.modal-body').html( showImg() + showTech() + showDescription() );
-			$(".site").attr('href', url[0]);
+			$(".info").attr('href', url[0]);
 			$(".project-image").attr('href', url[0]);
 
 
@@ -187,7 +187,10 @@ var p = (function () {
 			 	'<div class="project-innerwrapper">' +
 			 		'<div class="title">' + projects[i].name + '</div>' +
 			//
-					'<div class="img-wrapper"><img class="img-responsive" src="' + imgBaseDir + projects[i].img + '"></div>' +
+					'<div class="img-wrapper">' +
+						'<a href="' + projects[i].url[0] + '" target="_blank">' +
+							'<img class="img-responsive" src="' + imgBaseDir + projects[i].img + '"></div>' +
+						'</a>' +
 						'<div class="project-action-icons">' +
 							(projects[i].url[1] ? projectIcon(i) : '' ) +
 							'<a data-number="' + i + '"  data-toggle="modal" data-target=".bd-example-modal-lg">' +
