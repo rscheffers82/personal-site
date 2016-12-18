@@ -305,7 +305,8 @@ h2 {
 .portfolio-area .project-action-icons {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around; }
+  justify-content: space-around;
+  font-size: 1.75rem; }
   .portfolio-area .project-action-icons a {
     text-decoration: none;
     padding: 10px 0 5px 0;

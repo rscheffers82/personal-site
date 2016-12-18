@@ -205,7 +205,7 @@ var p = (function () {
 			}
 			window.setTimeout( function() {
 				$grid.isotope('layout');
-			},250);
+			},750);
 		}
 	}
 
