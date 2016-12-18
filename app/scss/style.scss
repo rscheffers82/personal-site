@@ -28,7 +28,7 @@
 // Theme main colors
 // ________________________________________
 
-$call-to-action: #E74C3C;
+$call-to-action: rgba(224,153,0,0.65);
 $primary-color: #0379C4; //#3498DB; (original)  //nice blue 306d9f
 $secondary-color: #2F4052;//#0A286B; //#334455;(original)  //#334A55;
 
@@ -144,7 +144,7 @@ h3 {
 
   button {
     padding: 5px 20px;
-    background-color: #ccae73;
+    background-color: $call-to-action;
     border: 0px solid $primary-color;
     color: $grey-dark;
     font-family: 'Roboto', sans-serif, serif;
@@ -191,8 +191,9 @@ h3 {
 .navbar-right{
   color: $secondary-color;
 }
-.navbar-brand{
-
+.navbar-default .navbar-brand{
+  padding-left: 20px;
+  color: $soft-white;
 }
 
 .navbar-nav li a{
@@ -435,20 +436,24 @@ img {
   }
 
   .btn {
-    border: 1px solid $grey-medium;
+    border: 1px solid $grey-soft;
     font-size: 1.5rem;
     background-color: $white;
     float: none;
+    margin-top: 3px;
 
     &:hover {
       color: $call-to-action;
     }
+    &:focus {
+      outline: none;
+    }
   }
 
   .is-checked {
-    border: 1px solid $primary-color;
+    border: 1px solid $call-to-action;
     color: $white;
-    background-color: $primary-color;
+    background-color: $call-to-action;
     // margin: 0px;
     &:hover {
       color: $white;
@@ -655,11 +660,18 @@ img {
     margin: 0;
   }
   .btn-primary{
-    background-color: $primary-color;
+    background-color: $call-to-action;
+    border: 1px solid transparent;
     font-size: 1.75rem;
     padding: 5px 30px;
     border-radius: 0px;
     margin-top: -5px;
+
+    &:hover {
+      border: 1px solid $call-to-action;
+      background-color: $white;
+      color: $grey-dark;
+    }
   }
 }
 
@@ -703,6 +715,24 @@ label {
   margin: auto;
   background-color: #eeffee;
   padding: 20px;
+}
+
+
+// ____________________________________________
+//
+//      Footer
+// ____________________________________________
+
+.footer {
+  height: 200px;
+  background-color: $grey-dark;
+  color: darken($soft-white,20%);
+  font-size: 2rem;
+  display:flex;
+
+  p{
+    margin: auto;
+  }
 }
 
 // ____________________________________________
@@ -779,7 +809,7 @@ label {
     font-size: 2.5rem;
   }
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   .main-block p {

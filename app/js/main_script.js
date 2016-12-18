@@ -1,7 +1,7 @@
 // Global grid var used in the project area
 $grid = {};
 
-$( document ).foundation();
+// $( document ).foundation();
 
 $( document ).ready(function() {
   // Tie .project-grid to an isotope grid
@@ -21,7 +21,7 @@ $( document ).ready(function() {
   // load all data into the grid
   p.loadProjectsInto($grid);
 
-  // $(".sticky-wrapper").sticky({topSpacing:0});
+  $(".sticky-wrapper").sticky({topSpacing:0});
 
   $('#roycode-contact-form').validate({
     submitHandler: submitValidatedForm
@@ -47,10 +47,10 @@ var submitValidatedForm = function() {
   var data = $('form').serialize();
   $.ajax({
     type: 'POST',
-    url: 'http://royscheffers.com/contact-form.php',      // use for development
-    // url: 'php/contact-form.php',                       // use when live
+    url: 'http://royscheffers.com/php/contact-form.php',      // use for development
+    // url: '../php/contact-form.php',                       // use when live
     data: data,
-    crossDomain: true
+    // crossDomain: true
   })
   .done (function() {
     $('.success-container').val('Message sent successfully');

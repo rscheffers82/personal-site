@@ -69,7 +69,7 @@ h2 {
   margin-top: 40px; }
   .cta-buttons button {
     padding: 5px 20px;
-    background-color: #ccae73;
+    background-color: rgba(224, 153, 0, 0.65);
     border: 0px solid #0379C4;
     color: #3f3f3f;
     font-family: 'Roboto', sans-serif, serif;
@@ -102,6 +102,10 @@ h2 {
 
 .navbar-right {
   color: #2F4052; }
+
+.navbar-default .navbar-brand {
+  padding-left: 20px;
+  color: #F4F4F4; }
 
 .navbar-nav li a {
   color: #F4F4F4 !important;
@@ -254,17 +258,20 @@ img {
   margin: 25px 0; }
 
 .portfolio-area .btn {
-  border: 1px solid #676767;
+  border: 1px solid #8f8f8f;
   font-size: 1.5rem;
   background-color: #FFFFFF;
-  float: none; }
+  float: none;
+  margin-top: 3px; }
   .portfolio-area .btn:hover {
-    color: #E74C3C; }
+    color: rgba(224, 153, 0, 0.65); }
+  .portfolio-area .btn:focus {
+    outline: none; }
 
 .portfolio-area .is-checked {
-  border: 1px solid #0379C4;
+  border: 1px solid rgba(224, 153, 0, 0.65);
   color: #FFFFFF;
-  background-color: #0379C4; }
+  background-color: rgba(224, 153, 0, 0.65); }
   .portfolio-area .is-checked:hover {
     color: #FFFFFF; }
 
@@ -389,7 +396,7 @@ img {
     font-size: 2rem;
     display: inline-block; }
   .modal-footer a:hover {
-    color: #ed7669; }
+    color: rgba(255, 181, 20, 0.65); }
 
 .hide {
   display: none !important; }
@@ -402,11 +409,16 @@ img {
   .contact-area .row {
     margin: 0; }
   .contact-area .btn-primary {
-    background-color: #0379C4;
+    background-color: rgba(224, 153, 0, 0.65);
+    border: 1px solid transparent;
     font-size: 1.75rem;
     padding: 5px 30px;
     border-radius: 0px;
     margin-top: -5px; }
+    .contact-area .btn-primary:hover {
+      border: 1px solid rgba(224, 153, 0, 0.65);
+      background-color: #FFFFFF;
+      color: #3f3f3f; }
 
 label {
   display: block;
@@ -441,6 +453,15 @@ label {
   margin: auto;
   background-color: #eeffee;
   padding: 20px; }
+
+.footer {
+  height: 200px;
+  background-color: #3f3f3f;
+  color: #c1c1c1;
+  font-size: 2rem;
+  display: flex; }
+  .footer p {
+    margin: auto; }
 
 .border {
   border: 1px solid #ccc; }
@@ -483,7 +504,7 @@ label {
   h1 {
     font-size: 2.5rem; }
   h2 {
-    font-size: 1.5rem; }
+    font-size: 1.7rem; }
   .main-block p {
     text-align: left;
     padding: 0; }
