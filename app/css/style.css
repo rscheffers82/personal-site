@@ -287,7 +287,8 @@ h2 {
   text-align: center;
   padding: 4% 2%; }
   .portfolio-area .project a {
-    color: #3f3f3f; }
+    color: #3f3f3f;
+    cursor: pointer; }
     .portfolio-area .project a:hover {
       color: #0379C4; }
   .portfolio-area .project .col-md-4 {
@@ -475,7 +476,8 @@ label {
 
 @media (max-width: 900px) {
   .top-flex .title-text-flex {
-    display: block; }
+    display: block;
+    padding: 0 10px; }
   .top-flex .img-mobile {
     display: inline-block;
     margin: 0px auto 10px auto;
@@ -529,3 +531,41 @@ label {
   .portfolio-area .project {
     width: 33.33%;
     font-size: 2rem; } }
+
+.bounce {
+  animation: bounce 4s infinite;
+  -webkit-animation: bounce 4s infinite;
+  -moz-animation: bounce 4s infinite;
+  -o-animation: bounce 4s infinite; }
+
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-30px); }
+  60% {
+    -webkit-transform: translateY(-15px); } }
+
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0); }
+  40% {
+    -moz-transform: translateY(-30px); }
+  60% {
+    -moz-transform: translateY(-15px); } }
+
+@-o-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -o-transform: translateY(0); }
+  40% {
+    -o-transform: translateY(-30px); }
+  60% {
+    -o-transform: translateY(-15px); } }
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0); }
+  40% {
+    transform: translateY(-30px); }
+  60% {
+    transform: translateY(-15px); } }

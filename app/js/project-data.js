@@ -188,7 +188,7 @@ var p = (function () {
 			 		'<div class="title">' + projects[i].name + '</div>' +
 			//
 					'<div class="img-wrapper">' +
-						'<a href="' + projects[i].url[0] + '" target="_blank">' +
+						'<a data-number="' + i + '"  data-toggle="modal" data-target=".bd-example-modal-lg">' +
 							'<img class="img-responsive" src="' + imgBaseDir + projects[i].img + '"></div>' +
 						'</a>' +
 						'<div class="project-action-icons">' +
@@ -205,7 +205,7 @@ var p = (function () {
 			}
 			window.setTimeout( function() {
 				$grid.isotope('layout');
-			},750);
+			},1000);
 		}
 	}
 
