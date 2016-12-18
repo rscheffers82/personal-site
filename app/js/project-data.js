@@ -13,94 +13,94 @@ var p = (function () {
 	var imgBaseDir = 'images/';
 	var projects = [{
 		'name': 'React Todo App',
-		'description' : 'Todo Application build on React and Redux which let\'s you add new tasks to the list and search existing todo items. Completed tasks are automatically archieved and can be made visible with the select box. Data is stored locally in the browser',
+		'description' : 'A personal project used to sharpen my skills in React and Redux. This app lets you add tasks to a list and search existing todo items. Completed tasks are automatically archieved and can be made visible again with the Show completed select box. Data is stored locally in the browser.', // Prior to this version, data was stored locally in the browser. Now data is stored in a Firebase database.',
 		'url': ['http://thawing-river-94231.herokuapp.com','https://github.com/rscheffers82/React-ToDo'],
 		'img' : 'react-todo-app.jpg',
-		'tech' : ['React', 'Redux', 'Javscript','JSX','SCSS','HTML'],
+		'tech' : ['React', 'Redux','JSX','Sass','HTML', 'Foundation'],
 		'category' : ['featured', 'frontend']
 	},{
 		'name': 'Brilliant Massage Therapy',
-		'description' : 'Wordpress website build in collaboration with <a href="http://www.thinkupdesign.ca" target="_blank">ThinkUp Design</a>. We incorporated two websites of the client into on professional SEO optimised and visual appealing website. While I mainly worked on the setup and functionality of the site, ThinkUp Design led the design aspect.',
+		'description' : 'This is a client project in which I merged two sites into one in collaboration with Andrew from <a href="http://www.thinkupdesign.ca" target="_blank">ThinkUp Design</a>. After having done market research regarding local massage businesses and competing WordPress templates, we presented the client with the possible designs. The <a href="http://jacqueline.themerex.net" target="_blank">Jacqueline theme</a> was chosen.<br/> I migrated the current blog to a new WordPress site and installed the theme. After having styled most of the content and the revolution slider, Andrew took care of the intricate design fixes. The final result; a professional, SEO optimised, mobile ready and visual appealing site.',
 		'url': ['http://jolitabrilliant.com'],
 		'img' : 'jolita-brilliant.jpg',
-		'tech' : ['Wordpress','Photoshop','HTML','CSS'],
+		'tech' : ['Wordpress','Photoshop','CSS','HTML'],
 		'category' : ['featured', 'design']
 	},{
 		'name': 'React Countdown App',
-		'description' : 'Countdown and Timer app build on React',
+		'description' : 'This is one of my personal projects used to become familiar with re-using React components. In this timer app the countdown and timer parts of the application use the same components but slightly different logic is used in each. Building this app helped me to understand how props are passed down to child components and how application states are managed by a main parent container component. The application is styled using the <a href="foundation.zurb.com" target="_blank">Foundation</a> framework and deployed live on Heroku.',
 		'url': ['http://blooming-brushlands-69434.herokuapp.com','https://github.com/rscheffers82/ReactTimerApp'],
 		'img' : 'react-timer-app.jpg',
-		'tech' : ['React','Javscript','JSX','SCSS','HTML'],
+		'tech' : ['React','JSX','Sass','HTML', 'Foundation'],
 		'category' : ['frontend']
 	},{
 		'name': 'React Weather App',
-		'description' : 'Weather App build on React using the Open Weather Map API',
+		'description' : 'This is one of my first apps build on React. The application uses the Axios library to retrieve weather data from the <a href="http://openweathermap.org" target="_blank">Open Weather Map API</a> and shows the temperature based on the city provided. I use the React Router component to create a single window multi page app. The Get Weather page shows the weather based on the city entered. The Favorites page shows a list of cities which, when clicked, provide data through the URL to the main weather component and then displays the weather. Error handling is incorporated in case the API fails.',
 		'url': ['http://desolate-sierra-89528.herokuapp.com/','https://github.com/rscheffers82/ReactWeatherApp'],
 		'img' : 'react-weather-app.jpg',
-		'tech' : ['React','Javscript','JSX','SCSS','HTML', 'API'],
-		'category' : ['featured', 'frontend']
+		'tech' : ['React','JSX','Sass','HTML','API'],
+		'category' : ['frontend']
 	},{
 		'name': 'Black Belt Proofreader',
-		'description' : 'WordPress based website build in collaboration with the owner.',
+		'description' : 'This project was build in collaboration with the business owner. Zorana started her own business as a legal transcript proofreader and needed a website to advertise her services. I provided her with the hosting and installed WordPress with the <a href="https://www.elegantthemes.com/gallery/divi" target="_blank">Divi theme</a>. She took care of the content and rough layout, while I assisted her with the finer CSS styling and made sure the site was supported by various mobile devices.',
 		'url': ['http://blackbeltproofreader.com'],
 		'img' : 'blackbeltproofreader.jpg',
-		'tech' : ['Wordpress','Photoshop','HTML','CSS'],
-		'category' : ['featured', 'frontend', 'design']
+		'tech' : ['Wordpress','Photoshop','CSS','HTML'],
+		'category' : ['featured', 'design']
 	},{
 		'name': 'Simon',
-		'description' : 'Simon: an electronic retro game build on mainly jQuery, Javascript, SCSS and HTML. This assignment was part of FreeCodeCamp\'s curriculum.',
+		'description' : 'This is my graduation project for the Front-end Program from <a href="https://www.freecodecamp.com" target="_blank">FreeCodeCamp</a>. Simon is an electronic retro game initially launched in 1978 where after it quickly became a pop culture symbol of the 70s and 80s.<br/>To recreate this game, I started of by creating the interface in Photoshop. Once done I transferred this to a simple page using HTML and Sass. The game logic was added using jQuery and JavaScript. For example, Simon will not accept input until it is switched on. By pressing start button a random sequence of 20 steps is generated and the first move is displayed by lighting up the corresponding color. The user much match this and as the game progresses the sequence becomes more complex. The game is eventually won after all 20 steps in the sequence are completed. This project helped me to program game logic into an application as well as make it look visually appealing on all devices.',
 		'url': ['https://rscheffers82.github.io/Simon-game/','https://github.com/rscheffers82/Simon-game'],
 		'img' : 'simon.jpg',
-		'tech' : ['HTML','SCSS','Gulp','Javascript','Photoshop'],
+		'tech' : ['Javascript','Sass','HTML','Photoshop'],
 		'category' : ['featured', 'frontend', 'design']
 	},{
 		'name': 'Tic Tac Toe',
 		'description' : 'Classic Tic Tac Toe game that has two player and single player mode gameplay. Several levels of AI are build in that rely on the NegaMax algoritm to calculate the score of a future moves.',
 		'url': ['https://rscheffers82.github.io/Tic-Tac-Toe-JS-game/','https://github.com/rscheffers82/Tic-Tac-Toe-JS-game'],
 		'img' : 'tic-tac-toe.jpg',
-		'tech' : ['HTML','SCSS','Gulp','Javascript', 'negaMax algoritm', 'Photoshop'],
+		'tech' : ['Javascript','Sass', 'HTML','negaMax algoritm','Photoshop'],
 		'category' : ['featured', 'frontend']
 	},{
 		'name': 'Sand Timer',
 		'description' : 'Sand Timer application designed to boost productivity by setting a focused work and break time. Both times can be regulated by sliders and the timer is in a continues loop. The base concept was taken from the pomodoro timer. The app is displayed on HTML Canvas element and build modular, making it easy to integrate on other sites.',
 		'url': ['https://codepen.io/roycode/full/rLyZgm','https://github.com/rscheffers82/Pomodoro-Timer'],
 		'img' : 'sand-timer.jpg',
-		'tech' : ['HTML','canvas','CSS','Javascript'],
+		'tech' : ['Javascript','CSS','HTML','HTML Canvas'],
 		'category' : ['featured', 'frontend']
 	},{
 		'name': 'Calculator',
 		'description' : 'Solar Calculator build on jQuery and Javascript',
 		'url': ['http://codepen.io/roycode/full/qNapgw','https://github.com/rscheffers82/calculator-html-css-js'],
 		'img' : 'calculator-js.jpg',
-		'tech' : ['HTML','CSS','jQuery','Javascript','Photoshop'],
+		'tech' : ['Javascript','CSS','HTML','Photoshop'],
 		'category' : ['featured', 'frontend']
 	},{
 		'name': 'Weather App',
 		'description' : 'Weather Application which based on the user\'s IP or browser information displays their local weather using the <a href="https://darksky.net/dev" target="_blank">Dark Sky API</a>.',
 		'url': ['http://codepen.io/roycode/full/WwqYrB','http://codepen.io/roycode/pen/WwqYrB'],
 		'img' : 'Weather-application-in-javascript.jpg',
-		'tech' : ['HTML','SCSS','Bootstrap','Javascript','API'],
+		'tech' : ['Javascript','Sass','HTML','Bootstrap','API'],
 		'category' : ['featured', 'frontend']
 	},{
 		'name': 'Wikimedia Viewer',
 		'description' : 'The Wikimedia Viewer application uses the Wikimedia Web API to retrieve information from WikiPedia and displays it.',
 		'url': ['http://codepen.io/roycode/full/VjZZvw','http://codepen.io/roycode/pen/VjZZvw'],
 		'img' : 'wikipedia-viewer.jpg',
-		'tech' : ['HTML','CSS','Bootstrap','Javascript','API'],
+		'tech' : ['Javascript','CSS','HTML','Bootstrap','API'],
 		'category' : ['frontend']
 	},{
 		'name': 'Quote Generator',
 		'description' : 'Be inspired by some of the world most beautiful quotes. This application uses an AJAX request to load in quotes that the reader can share via Twitter.',
 		'url': ['http://codepen.io/roycode/full/NNJzmG','http://codepen.io/roycode/pen/NNJzmG'],
 		'img' : 'random-quote-generator-javascript.jpg',
-		'tech' : ['HTML','CSS','Bootstrap','Javascript'],
+		'tech' : ['Javascript','CSS','HTML','Bootstrap'],
 		'category' : []
 	},{
 		'name': 'Tribute page',
 		'description' : 'One of my earlier projects which aim was to build a tribute page using HTML and CSS. ',
 		'url': ['http://codepen.io/roycode/full/BKPamX','http://codepen.io/roycode/pen/BKPamX'],
 		'img' : 'Project-StevenGreer.jpg',
-		'tech' : ['HTML','CSS'],
+		'tech' : ['CSS','HTML'],
 		'category' : []
 	}]
 
