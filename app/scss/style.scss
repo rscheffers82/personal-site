@@ -810,11 +810,14 @@ label {
       display: none;
     }
   }
+  .title-text-flex h2 {
+    font-size: 2.2vw;
+  }
+
   // contact
   .contact-area {
     padding: 50px 10rem;
   }
-
 }
 
 @media (max-width: 640px) {
@@ -850,6 +853,10 @@ label {
   h1 {
     font-size: 2.5rem;
   }
+  .title-text-flex h2 {
+    font-size: 1.7rem;
+  }
+
   h2 {
     font-size: 1.7rem;
   }

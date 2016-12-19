@@ -5,6 +5,7 @@ $grid = {};
 
 $( document ).ready(function() {
 
+  // disable certain effects on iOS that cause issues
   if (getMobileOperatingSystem() !== 'iOS') {
     $('.landing').css('background-attachment','fixed');
   }

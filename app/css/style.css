@@ -524,6 +524,8 @@ label {
     border-radius: 50%; }
   .top-flex img {
     display: none; }
+  .title-text-flex h2 {
+    font-size: 2.2vw; }
   .contact-area {
     padding: 50px 10rem; } }
 
@@ -549,6 +551,8 @@ label {
     height: 15px; }
   h1 {
     font-size: 2.5rem; }
+  .title-text-flex h2 {
+    font-size: 1.7rem; }
   h2 {
     font-size: 1.7rem; }
   .main-block p {
