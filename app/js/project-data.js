@@ -76,7 +76,7 @@ var p = (function () {
 		'category' : ['featured', 'frontend']
 	},{
 		'name': 'Weather App',
-		'description' : 'a weather application which, based on the user\'s IP or browser information, displays the local weather using the <a href="https://darksky.net/dev" target="_blank">Dark Sky API</a>. This was a simple API project that I loved building, due to the creativity I could put into it. The various weather conditions each have their own background and the weather icon changes based on the current weather. The location is retreived in multiple ways depending on the available information, either via browser info or via <a href="http://ip-api.com" target=_blank">ip-api.com</a>',
+		'description' : 'a weather application which, based on the user\'s IP or browser information, displays the local weather using the <a href="https://darksky.net/dev" target="_blank">Dark Sky API</a>. This was a simple API project that I loved building, due to the creativity I could put into it. The various weather conditions each have their own background and the weather icon changes based on the current weather. The location is retrieved in multiple ways depending on the available information, either via browser info or via <a href="http://ip-api.com" target=_blank">ip-api.com</a>.',
 		'url': ['http://codepen.io/roycode/full/WwqYrB','http://codepen.io/roycode/pen/WwqYrB'],
 		'img' : 'Weather-application-in-javascript.jpg',
 		'tech' : ['Javascript','Sass','HTML','Bootstrap','API'],
