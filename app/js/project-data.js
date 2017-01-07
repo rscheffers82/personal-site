@@ -13,7 +13,7 @@ var p = (function () {
 	var imgBaseDir = 'images/';
 	var projects = [{
 		'name': 'React Todo App',
-		'description' : 'A personal project used to sharpen my skills in React and Redux. This app lets you add tasks to a list and search existing todo items. Completed tasks are automatically archieved and can be made visible again with the Show completed select box. Data is stored locally in the browser.', // Prior to this version, data was stored locally in the browser. Now data is stored in a Firebase database.',
+		'description' : 'A personal project used to sharpen my skills in React and Redux. This app lets you add tasks to a list and search existing todo items. Completed tasks are automatically archived and can be made visible again with the Show completed select box. Prior to this version, data was stored locally in the browser. Now, data is stored in Firebase using google authentication.',
 		'url': ['http://thawing-river-94231.herokuapp.com','https://github.com/rscheffers82/React-ToDo'],
 		'img' : 'react-todo-app.jpg',
 		'tech' : ['React', 'Redux','JSX','Sass','HTML', 'Foundation'],

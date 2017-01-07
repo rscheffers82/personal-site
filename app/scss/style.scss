@@ -130,6 +130,11 @@ h2 {
   h2 {
     font-weight: 300;
   }
+  a:hover,
+  a:active,
+  a:focus {
+    color: $white;
+  }
 }
 
 .cta-buttons {
@@ -139,18 +144,30 @@ h2 {
   margin-top: 40px;
 
   .btn {
-    padding: 5px 20px;
+    padding: 10px 25px;
     background-color: $call-to-action;
-    border: 0px solid $primary-color;
+    border: 0px solid $call-to-action;
+    // border-bottom: 5px solid $call-to-action;
     color: $grey-dark;
     font-family: 'Roboto', sans-serif, serif;
     font-weight: 400;
     font-size: 2.25rem;
     margin-bottom: 5px;
+    // padding: 5px 0;
+    transition-property: color, border-color;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+
+    &:hover {
+      color: $white;
+      // border-bottom: 5px solid darken($call-to-action,10%);
+      // border-right: 5px solid darken($call-to-action,10%);
+    }
   }
   .btn:first-child {
     margin-right: 5px;
   }
+
 
 }
 
@@ -229,7 +246,7 @@ h2 {
 // ____________________________________________
 
 .about-area {
-  padding: 60px 40px 70px 40px;
+  padding: 80px 40px 90px 40px;
 
   .row {
     margin: 0px;
