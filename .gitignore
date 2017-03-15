@@ -1,4 +1,5 @@
 node_modules/
 app/certificates/
 app/fonts/
+npm-debug.log
 personal-site-backup/

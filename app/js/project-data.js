@@ -26,18 +26,18 @@ var p = (function () {
 		'tech' : ['Wordpress','Photoshop','CSS','HTML'],
 		'category' : ['featured', 'design']
 	},{
+		'name': 'Five API projects',
+		'description' : 'This is one of my pet projects used to become familiar with Node, Express and MongoDB. I build five API apps that take input through either POST or GET and return JSON data. My favorite project was the Exercise Tracker. Here users can register, track their exercises and view logs. I added a front-end UI using Materialize CSS, although the Add user and Add Exercise POST routes will return JSON data for demonstration purposes.',
+		'url': ['https://rs82.herokuapp.com/','https://github.com/rscheffers82/API-microservices'],
+		'img' : 'API-collection.jpg',
+		'tech' : ['Node','Express','MongoDB', 'JavaScript', 'MaterializeCSS'],
+		'category' : ['featured','backend']
+	},{
 		'name': 'React Countdown App',
 		'description' : 'This is one of my personal projects used to become familiar with re-using React components. In this timer app the countdown and timer parts of the application use the same components but slightly different logic is used in each. Building this app helped me to understand how props are passed down to child components and how application states are managed by a main parent container component. The application is styled using the <a href="foundation.zurb.com" target="_blank">Foundation</a> framework and deployed live on Heroku.',
 		'url': ['http://blooming-brushlands-69434.herokuapp.com','https://github.com/rscheffers82/ReactTimerApp'],
 		'img' : 'react-timer-app.jpg',
 		'tech' : ['React','JSX','Sass','HTML', 'Foundation'],
-		'category' : ['frontend']
-	},{
-		'name': 'React Weather App',
-		'description' : 'This is one of my first apps build on React. The application uses the Axios library to retrieve weather data from the <a href="http://openweathermap.org" target="_blank">Open Weather Map API</a> and shows the temperature based on the city provided. I use the React Router component to create a single window multi page app. The Get Weather page shows the weather based on the city entered. The Favorites page shows a list of cities which, when clicked, provide data through the URL to the main weather component and then displays the weather. Error handling is incorporated in case the API fails.',
-		'url': ['http://desolate-sierra-89528.herokuapp.com/','https://github.com/rscheffers82/ReactWeatherApp'],
-		'img' : 'react-weather-app.jpg',
-		'tech' : ['React','JSX','Sass','HTML','API'],
 		'category' : ['frontend']
 	},{
 		'name': 'Black Belt Proofreader',
@@ -46,6 +46,13 @@ var p = (function () {
 		'img' : 'blackbeltproofreader.jpg',
 		'tech' : ['Wordpress','Photoshop','CSS','HTML'],
 		'category' : ['featured', 'design']
+	},{
+		'name': 'React Weather App',
+		'description' : 'This is one of my first apps build on React. The application uses the Axios library to retrieve weather data from the <a href="http://openweathermap.org" target="_blank">Open Weather Map API</a> and shows the temperature based on the city provided. I use the React Router component to create a single window multi page app. The Get Weather page shows the weather based on the city entered. The Favorites page shows a list of cities which, when clicked, provide data through the URL to the main weather component and then displays the weather. Error handling is incorporated in case the API fails.',
+		'url': ['http://desolate-sierra-89528.herokuapp.com/','https://github.com/rscheffers82/ReactWeatherApp'],
+		'img' : 'react-weather-app.jpg',
+		'tech' : ['React','JSX','Sass','HTML','API'],
+		'category' : ['frontend']
 	},{
 		'name': 'Simon',
 		'description' : 'This is my graduation project for the Front-end Program from <a href="https://www.freecodecamp.com" target="_blank">FreeCodeCamp</a>. Simon is an electronic retro game initially launched in 1978 where after it quickly became a pop culture symbol of the 70s and 80s.<br/>To recreate this game, I started of by creating the interface in Photoshop. Once done I transferred this to a simple page using HTML and Sass. The game logic was added using jQuery and JavaScript. For example, Simon will not accept input until it is switched on. By pressing start button a random sequence of 20 steps is generated and the first move is displayed by lighting up the corresponding color. The user much match this and as the game progresses the sequence becomes more complex. The game is eventually won after all 20 steps in the sequence are completed. This project helped me to program game logic into an application as well as make it look visually appealing on all devices.',
@@ -204,7 +211,8 @@ var p = (function () {
 		     .isotope( 'appended', $project );
 			}
 			window.setTimeout( function() {
-				$grid.isotope('layout');
+				// $grid.isotope('layout');
+				$grid.isotope({ filter: '.featured' });
 			},1000);
 		}
 	}

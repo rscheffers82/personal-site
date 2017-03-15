@@ -116,7 +116,7 @@ $("#main-nav a, .down-arrow, .cta-buttons .btn").on('click', function(event) {
   // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
   $('html, body').animate({
     scrollTop: $(hash).offset().top
-  }, 900, function(){
+  }, 1500, function(){
     // Add hash (#) to URL when done scrolling (default click behavior)
     window.location.hash = hash;
   });

@@ -60,7 +60,7 @@ body {
   color: $grey-medium;
   font-family: 'Roboto', sans-serif, serif !important;
   font-size: 1.75rem;
-  line-height: 3rem;
+  line-height: 2.5rem;
   position: relative;
 }
 
@@ -120,8 +120,8 @@ h2 {
     display: inline-block;
     padding: 10px 12% 40px;
     margin: 75px auto auto;
-    // margin: auto;
     z-index: 10;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3);
   }
   hr {
     margin: -10px 0 0 0;
@@ -504,6 +504,7 @@ h2 {
   .project-innerwrapper {
     background-color: $soft-white;
     overflow: hidden;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3);
   }
 
   .title {
