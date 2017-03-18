@@ -40,6 +40,8 @@ $grey-soft: #8f8f8f;        // slightly lighter for less attention to items #f7f
 $grey-dark: #3f3f3f;        // header text
 $grey-medium: #676767;      // normal text
 
+
+$shadow: 0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3);
 // Fonts to consider for headers
 // "Montserrat",sans-serif
 
@@ -121,7 +123,9 @@ h2 {
     padding: 10px 12% 40px;
     margin: 75px auto auto;
     z-index: 10;
-    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3);
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
   }
   hr {
     margin: -10px 0 0 0;
@@ -256,6 +260,7 @@ h2 {
   }
   h2 {
     margin-top: 0px;
+    margin-bottom: 30px;
   }
 }
 
@@ -313,6 +318,7 @@ h2 {
   display: flex;
   flex-flow: column;
   width: 100%;
+  padding: 25px 25px 0px 0px;
 }
 
 .main-block {
@@ -342,7 +348,6 @@ h2 {
   margin-bottom: 10px;
 }
 
-.about-area img,
 .portfolio-area img {
   padding: 10px;
 }
@@ -504,7 +509,7 @@ h2 {
   .project-innerwrapper {
     background-color: $soft-white;
     overflow: hidden;
-    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3);
+    box-shadow: $shadow;
   }
 
   .title {
@@ -628,13 +633,13 @@ h2 {
   border-bottom: none;
 }
 
-.modal-img-wrapper img{
+.modal-img-wrapper {
   border-radius: 2px;
   margin: 10px auto 20px;
   cursor: pointer;
-  -webkit-box-shadow: 2px 2px 5px #ccc;
-  -moz-box-shadow: 2px 2px 5px #ccc;
-  box-shadow: 2px 2px 5px #ccc;
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
 }
 
 .modal-footer {
@@ -678,6 +683,13 @@ h2 {
   .row {
     margin: 0;
   }
+  .intro {
+    margin-bottom: 2em;
+    text-align: center;
+  }
+  input[type=text], textarea.form-control {
+    transition: all 0.25s ease-in-out !important;
+  }
   .btn-primary{
     background-color: $call-to-action;
     border: 1px solid transparent;
@@ -685,12 +697,53 @@ h2 {
     padding: 5px 30px;
     border-radius: 0px;
     margin-top: -5px;
+    transition: all 0.5s ease-in-out;
 
     &:hover {
       border: 1px solid $call-to-action;
       background-color: $white;
       color: $grey-dark;
     }
+  }
+  .social {
+    width: 49.5%;
+    // border: 1px solid blue;
+    padding: 10px;
+    margin: 0 auto;
+
+    .social-icons {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+    a {
+      font-size: 1.65em;
+      overflow: hidden;
+      border-radius: 3px;
+      border: 1px solid $primary-color;
+      display: table;
+      float: left;
+      margin-right: 10px;
+      text-decoration: none;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    i {
+      height: 50px;
+      width: 50px;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .fa { transition: all 0.5s ease-in-out; color: $primary-color; }
+    .fa:hover { border: 1px solid transparent; }
+    .fa-github:hover { background-color: #222; color: #fafafc; }
+    .fa-linkedin:hover { background-color: #0077b5; color: #fafafc; }
+    .fa-twitter:hover { background-color: #4099FF; color: #fafafc; }
+    .fa-free-code-camp:hover { background-color: #006400; color: #fafafc; }
+    .fa-codepen:hover { background-color: #222; color: #fafafc; }
   }
 }
 
@@ -714,9 +767,10 @@ label {
 
   &:focus {
     border: 1px solid $primary-color;
-    box-shadow: 1px 1px 0 #ccc inset;
+    // -webkit-box-shadow: $shadow;
+    // -moz-box-shadow: $shadow;
+    // box-shadow: $shadow;
   }
-
 }
 
 .success-background {
@@ -916,3 +970,64 @@ label {
   }
 
 }
+
+// .outerbox {
+//   width: 200px;
+//   height: 200px;
+//   border: 1px solid orange;
+//   overflow: hidden;
+//   position: relative;
+// }
+//
+//
+// .innerbox {
+//   width: 100%;
+//   height: 100%;
+//   background-color: $white;
+//   background: url(../images/RoyScheffers-Front-end-Web-Developer.jpg) center center;
+//   background-size: cover;
+//   transition: all .5s ease-in-out;
+// }
+//
+// .outerbox:hover .innerbox,
+// .outerbox.focus .innerbox {
+//   transform: scale(1.2);
+// }
+//
+// .outerbox:hover .innerbox:before,
+// .outerbox.focus .innerbox:before {
+//   opacity: 1;
+// }
+//
+// .outerbox:hover,
+// .outerbox.focus  {
+//   display: block;
+// }
+//
+// .innerbox::before {
+//   content: '';
+//   display: block;
+//   height: 100%;
+//   width: 100%;
+//   position: absolute;
+//   top: 0; left: 0;
+//   background-color: rgba(52, 73, 94, 0.3);
+//   opacity: 0;
+//   transition: all .5s ease-in-out;
+// }
+//
+// span {
+//   color: #fafafc;
+//   font-size: 200%;
+//   padding: 43% 33%;
+//   position: absolute;
+//   opacity: 1;
+//   display: none;
+//   transition: all .5s ease-in-out;
+// }
+//
+// .outerbox:hover span,
+// .outerbox:focus span {
+//   opacity: 1;
+//   display: block;
+// }
