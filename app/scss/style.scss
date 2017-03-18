@@ -134,11 +134,8 @@ h2 {
   h2 {
     font-weight: 300;
   }
-  a:hover,
-  a:active,
-  a:focus {
-    color: $white;
-  }
+  a { transition: all 0.5s ease-in-out; }
+  a:hover, a:active, a:focus { color: $white; }
 }
 
 .cta-buttons {
@@ -462,6 +459,7 @@ h2 {
     background-color: $white;
     float: none;
     margin-top: 3px;
+    transition: all 0.25s ease-in-out;
 
     &:hover {
       color: $call-to-action;
@@ -495,12 +493,11 @@ h2 {
     a {
       color: $grey-dark;
       cursor: pointer;
-
-      &:hover{
-        color: $primary-color;
-      }
+      transition: all 0.5 ease-in-out;
     }
-
+    .project-action-icons a:hover {
+      color: $primary-color;
+    }
     .col-md-4 {
       padding: 0 30px;
     }
@@ -526,9 +523,8 @@ h2 {
     font-size: 1.75rem;
 
     a {
-      // border: 1px solid #444;
       text-decoration: none;
-      padding: 10px 5px 5px;
+      padding: 15px 5px 10px;
       margin: auto;
       display: block;
       align-items: center;
@@ -539,7 +535,6 @@ h2 {
   .fa {
     display: block;
     font-size: 2.5rem;
-    // font-size: 3vw;
   }
   .img-wrapper {
     position: relative;
@@ -555,6 +550,55 @@ h2 {
     }
   }
 
+}
+
+
+// ____________________________________________
+//
+//      Portfolio - on hover zoom effect
+// ____________________________________________
+
+div.img-responsive {
+  width: 425px;
+  height: 266px;
+  position: relative;
+  margin: 0 auto;
+  background-size: cover;
+  transition: all 7.5s ease-in-out;
+  background-position: center;
+}
+
+.img-wrapper {
+  overflow: hidden;
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.project-innerwrapper:hover div.img-responsive {
+  transform: scale(1.1);
+}
+
+div.img-responsive::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 40, 40, 0.22);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.project-innerwrapper:hover div.img-responsive::before {
+  opacity: 1;
+}
+
+.project-innerwrapper a {
+  text-decoration: none;
 }
 
 // ____________________________________________
@@ -699,10 +743,12 @@ h2 {
     margin-top: -5px;
     transition: all 0.5s ease-in-out;
 
+    .fa-paper-plane { margin: 0 5px 0 -5px; }
+
     &:hover {
       border: 1px solid $call-to-action;
-      background-color: $white;
-      color: $grey-dark;
+      background-color: $white !important;
+      color: $call-to-action;
     }
   }
   .social {
@@ -739,6 +785,7 @@ h2 {
     }
     .fa { transition: all 0.5s ease-in-out; color: $primary-color; }
     .fa:hover { border: 1px solid transparent; }
+
     .fa-github:hover { background-color: #222; color: #fafafc; }
     .fa-linkedin:hover { background-color: #0077b5; color: #fafafc; }
     .fa-twitter:hover { background-color: #4099FF; color: #fafafc; }
@@ -970,64 +1017,3 @@ label {
   }
 
 }
-
-// .outerbox {
-//   width: 200px;
-//   height: 200px;
-//   border: 1px solid orange;
-//   overflow: hidden;
-//   position: relative;
-// }
-//
-//
-// .innerbox {
-//   width: 100%;
-//   height: 100%;
-//   background-color: $white;
-//   background: url(../images/RoyScheffers-Front-end-Web-Developer.jpg) center center;
-//   background-size: cover;
-//   transition: all .5s ease-in-out;
-// }
-//
-// .outerbox:hover .innerbox,
-// .outerbox.focus .innerbox {
-//   transform: scale(1.2);
-// }
-//
-// .outerbox:hover .innerbox:before,
-// .outerbox.focus .innerbox:before {
-//   opacity: 1;
-// }
-//
-// .outerbox:hover,
-// .outerbox.focus  {
-//   display: block;
-// }
-//
-// .innerbox::before {
-//   content: '';
-//   display: block;
-//   height: 100%;
-//   width: 100%;
-//   position: absolute;
-//   top: 0; left: 0;
-//   background-color: rgba(52, 73, 94, 0.3);
-//   opacity: 0;
-//   transition: all .5s ease-in-out;
-// }
-//
-// span {
-//   color: #fafafc;
-//   font-size: 200%;
-//   padding: 43% 33%;
-//   position: absolute;
-//   opacity: 1;
-//   display: none;
-//   transition: all .5s ease-in-out;
-// }
-//
-// .outerbox:hover span,
-// .outerbox:focus span {
-//   opacity: 1;
-//   display: block;
-// }

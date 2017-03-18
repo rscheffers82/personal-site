@@ -148,7 +148,7 @@ var p = (function () {
 				var data = '<div class="modal-img-wrapper">' +
 					'<a href="' + url[0] +'" target="_blank">' +
 					'<img class="img-responsive" src="' + imgBaseDir + img + '" alt="' + name + '"></a>' +
-		        '</div>'
+ 		    '</div>'
 				return data;
 
 			}
@@ -192,19 +192,19 @@ var p = (function () {
 			for ( i = 0; i < projects.length; i++ ){
 			$project = $('<div class="project ' + getCategories(i) + '">' +
 			 	'<div class="project-innerwrapper">' +
-			 		'<div class="title">' + projects[i].name + '</div>' +
-			//
-					'<div class="img-wrapper">' +
+					'<a data-number="' + i + '"  data-toggle="modal" data-target=".bd-example-modal-lg">' +
+			 			'<div class="title">' + projects[i].name + '</div>' +
+							'<div class="img-wrapper">' +
+								// '<img class="img-responsive" src="' + imgBaseDir + projects[i].img + '"></div>' +
+								'<div class="img-responsive" style="background-image: url(' + imgBaseDir + projects[i].img + ');"></div>' +
+				 		'</div>' +
+					'</a>' +
+					'<div class="project-action-icons">' +
+						(projects[i].url[1] ? projectIcon(i) : '' ) +
 						'<a data-number="' + i + '"  data-toggle="modal" data-target=".bd-example-modal-lg">' +
-							'<img class="img-responsive" src="' + imgBaseDir + projects[i].img + '"></div>' +
+							'<i class="fa fa-info-circle"></i>More info' +
 						'</a>' +
-						'<div class="project-action-icons">' +
-							(projects[i].url[1] ? projectIcon(i) : '' ) +
-							'<a data-number="' + i + '"  data-toggle="modal" data-target=".bd-example-modal-lg">' +
-								'<i class="fa fa-info-circle"></i>More info' +
-							'</a>' +
-						'</div>' +
-			 		'</div>' +
+					'</div>' +
 				'</div>');
 			$grid.append( $project )
 		     // add and lay out newly appended items
