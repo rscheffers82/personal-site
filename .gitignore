@@ -1,6 +1,7 @@
 node_modules/
 app/certificates/
 app/fonts/
-app/css/style.css.map
-npm-debug.log
+app/css/
 personal-site-backup/
+dist/
+npm-debug.log
