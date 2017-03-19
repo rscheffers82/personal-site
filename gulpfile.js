@@ -106,6 +106,11 @@ gulp.task('contact-form', function() {
 	.pipe(gulp.dest('dist/php'))
 });
 
+gulp.task('htaccess', function() {
+	return gulp.src('app/.htaccess')
+	.pipe(gulp.dest('dist/'))
+});
+
 gulp.task('clean:dist', function() {
 	return del.sync('dist');
 });
@@ -117,7 +122,7 @@ gulp.task('cache:clear', function (callback) {
 gulp.task('build', function(callback) {
 	runSequence(
 		'clean:dist',
-		['sass', 'useref', 'images', 'fonts', 'contact-form'],
+		['sass', 'useref', 'images', 'fonts', 'contact-form', 'htaccess'],
 		callback
 	);
 });
