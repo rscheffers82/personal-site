@@ -1,10 +1,12 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync').create();
+const gulp = require('gulp');
+const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('gulp-autoprefixer');
+const sass = require('gulp-sass');
+const browserSync = require('browser-sync').create();
 
-var plumber = require('gulp-plumber');
-var gutil = require('gulp-util');
-var notify = require('gulp-notify');
+const plumber = require('gulp-plumber');
+const gutil = require('gulp-util');
+const notify = require('gulp-notify');
 
 // var gulp_src = gulp.src;
 // gulp.src = function() {
@@ -20,8 +22,10 @@ var notify = require('gulp-notify');
 
 gulp.task('sass', function(){
 	return gulp.src('app/scss/**/*.scss')
-		// Converts Sass to CSS with gulp-sass
+		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
+		.pipe(autoprefixer())
+		.pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('app/css/'))
     .pipe(browserSync.reload({
       stream: true
