@@ -107,31 +107,38 @@ h2 {
 .navbar,
 .navbar-default {
   width: 100%;
-  background-color: rgba(47, 64, 82, 0.95);
+  background-color: #2F4052;
+  opacity: 0.95;
   border: none;
   border-radius: 0;
-  z-index: 999; }
+  z-index: 999;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3); }
 
 .navbar-right {
-  color: #2F4052; }
+  color: #0379C4; }
 
 .navbar-default .navbar-brand {
   padding-left: 20px;
-  color: #F4F4F4;
+  color: #F4F4F4 !important;
   font-family: 'Roboto Slab', sans-serif, serif;
   font-size: 2.5rem; }
 
 .navbar-nav li a {
   color: #F4F4F4 !important;
   background-color: inherit !important;
-  border-bottom: 5px solid #2F4052; }
+  border-bottom: 3px solid transparent;
+  text-transform: uppercase;
+  font-weight: 300;
+  transition: all 0.5s ease-in-out; }
 
 .navbar-nav li a:hover {
-  border-bottom: 5px solid #0379C4; }
+  color: #31adfc !important;
+  border-bottom: 3px solid #0379C4; }
 
 .navbar-nav > .active > a,
 .navbar-nav > .active > a:hover {
-  border-bottom: 5px solid #0379C4; }
+  color: #31adfc !important;
+  border-bottom: 3px solid #0379C4; }
 
 .content-area {
   margin-top: 70px; }
@@ -353,7 +360,7 @@ div.img-responsive {
   position: relative;
   margin: 0 auto;
   background-size: cover;
-  transition: all 7.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
   background-position: center; }
 
 .img-wrapper {
@@ -486,11 +493,12 @@ div.img-responsive::before {
       background-color: #FFFFFF !important;
       color: rgba(224, 153, 0, 0.65); }
   .contact-area .social {
-    width: 49.5%;
+    width: 100%;
     padding: 10px;
     margin: 0 auto; }
     .contact-area .social .social-icons {
       display: flex;
+      flex-flow: row wrap;
       width: 100%;
       justify-content: center; }
     .contact-area .social a {
@@ -500,7 +508,7 @@ div.img-responsive::before {
       border: 1px solid #0379C4;
       display: table;
       float: left;
-      margin-right: 10px;
+      margin: 0 10px 10px 0;
       text-decoration: none;
       transition: all 0.5s ease-in-out; }
       .contact-area .social a:hover {
@@ -620,6 +628,10 @@ label {
   60% {
     transform: translateY(-15px); } }
 
+@media (max-width: 950px) {
+  .social-icons {
+    margin-top: 2em; } }
+
 @media (max-width: 900px) {
   .top-flex .title-text-flex {
     display: block;
@@ -634,6 +646,28 @@ label {
     font-size: 2.2vw; }
   .contact-area {
     padding: 50px 10rem; } }
+
+@media (min-width: 768px) {
+  .portfolio-area .project {
+    width: 33.33%;
+    font-size: 2rem; } }
+
+@media (max-width: 767px) {
+  .portfolio-area .project {
+    width: 50%;
+    font-size: 1rem; } }
+
+@media (min-width: ) and (max-width: 640px) {
+  .portfolio-area .project {
+    width: 60%;
+    margin: 0 20%;
+    font-size: 1rem; } }
+
+@media (max-width: 480px) {
+  .portfolio-area .project {
+    width: 95%;
+    margin: 0 2.5%;
+    padding: 2em 5px; } }
 
 @media (max-width: 640px) {
   .about-area,
@@ -669,15 +703,7 @@ label {
   .parallax-call-out-overlay {
     font-size: 2.25rem;
     line-height: 3.5rem; }
-  .portfolio-area .project {
-    width: 50%;
-    font-size: 1rem; }
   .contact-area {
     padding: 50px 2rem; }
   .success-message {
-    font-size: 2rem; } }
-
-@media (min-width: 768px) {
-  .portfolio-area .project {
-    width: 33.33%;
     font-size: 2rem; } }

@@ -197,17 +197,19 @@ h2 {
 .navbar,
 .navbar-default {
   width: 100%;
-  background-color: rgba(47, 64, 82, 0.95);
+  background-color: $secondary-color;
+  opacity: 0.95;
   border: none;
   border-radius: 0;
   z-index: 999;
+  box-shadow: $shadow;
 }
 .navbar-right{
-  color: $secondary-color;
+  color: $primary-color;
 }
 .navbar-default .navbar-brand{
   padding-left: 20px;
-  color: $soft-white;
+  color: $soft-white !important;
   font-family: 'Roboto Slab', sans-serif, serif;
   font-size: 2.5rem;
 }
@@ -215,14 +217,19 @@ h2 {
 .navbar-nav li a{
   color: $soft-white !important;
   background-color: inherit !important;
-  border-bottom: 5px solid $secondary-color;
+  border-bottom: 3px solid transparent;
+  text-transform: uppercase;
+  font-weight: 300;
+  transition: all 0.5s ease-in-out;
 }
 .navbar-nav li a:hover{
-  border-bottom: 5px solid $primary-color;
+  color: lighten($primary-color,20%) !important;
+  border-bottom: 3px solid $primary-color;
 }
 .navbar-nav > .active > a,
-.navbar-nav > .active > a:hover {
-  border-bottom: 5px solid $primary-color;
+  .navbar-nav > .active > a:hover {
+  color: lighten($primary-color,20%) !important;
+  border-bottom: 3px solid $primary-color;
 }
 
 .content-area{                  // used for each section of the page
@@ -564,7 +571,7 @@ div.img-responsive {
   position: relative;
   margin: 0 auto;
   background-size: cover;
-  transition: all 7.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
   background-position: center;
 }
 
@@ -752,13 +759,14 @@ div.img-responsive::before {
     }
   }
   .social {
-    width: 49.5%;
+    width: 100%;
     // border: 1px solid blue;
     padding: 10px;
     margin: 0 auto;
 
     .social-icons {
       display: flex;
+      flex-flow: row wrap;
       width: 100%;
       justify-content: center;
     }
@@ -769,7 +777,7 @@ div.img-responsive::before {
       border: 1px solid $primary-color;
       display: table;
       float: left;
-      margin-right: 10px;
+      margin: 0 10px 10px 0;
       text-decoration: none;
       transition: all 0.5s ease-in-out;
       &:hover {
@@ -913,6 +921,12 @@ label {
 //      Media queries
 // ____________________________________________
 
+@media (max-width: 950px){
+  .social-icons {
+    margin-top: 2em;
+  }
+}
+
 @media (max-width: 900px){
   // about
   .top-flex {
@@ -936,6 +950,37 @@ label {
   // contact
   .contact-area {
     padding: 50px 10rem;
+  }
+}
+
+// Portfolio
+@media (min-width: 768px) {
+  .portfolio-area .project {
+    width: 33.33%;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .portfolio-area .project {
+    width: 50%;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: ) and (max-width: 640px) {
+  .portfolio-area .project {
+    width: 60%;
+    margin: 0 20%;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-area .project {
+    width: 95%;
+    margin: 0 2.5%;
+    padding: 2em 5px;
   }
 }
 
@@ -993,12 +1038,6 @@ label {
     line-height: 3.5rem;
   }
 
-  // Portfolio
-  .portfolio-area .project {
-    width: 50%;
-    font-size: 1rem;
-  }
-
   // contact
   .contact-area {
     padding: 50px 2rem;
@@ -1007,13 +1046,4 @@ label {
   .success-message {
     font-size: 2rem;
   }
-}
-
-// Portfolio
-@media (min-width: 768px){
-  .portfolio-area .project {
-    width: 33.33%;
-    font-size: 2rem;
-  }
-
 }
