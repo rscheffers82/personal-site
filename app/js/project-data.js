@@ -9,7 +9,7 @@ Format:
 
 */
 
-var p = (function () {
+var p = (function () {				// eslint-disable-line
 	var imgBaseDir = 'images/';
 	var projects = [{
 		'name': 'React Todo App',
@@ -109,7 +109,7 @@ var p = (function () {
 		'img' : 'Project-StevenGreer.jpg',
 		'tech' : ['CSS','HTML'],
 		'category' : []
-	}]
+	}];
 
 /*	},{			fix app, currently not displaying anything
 		'name': 'TwitchTV JSON API data',
@@ -132,9 +132,8 @@ var p = (function () {
 			var name = projects[number].name;
 			var description = projects[number].description;
 			var img = projects[number].img;
-			var url = projects[number].url
+			var url = projects[number].url;
 			var tech = projects[number].tech;
-			// console.log('imgBaseDir: ', imgBaseDir);
 
 			function showTech() {
 				var data = '<div class="tech-wrapper">';
@@ -148,12 +147,12 @@ var p = (function () {
 				var data = '<div class="modal-img-wrapper">' +
 					'<a href="' + url[0] +'" target="_blank">' +
 					'<img class="img-responsive" src="' + imgBaseDir + img + '" alt="' + name + '"></a>' +
- 		    '</div>'
+				'</div>';
 				return data;
 
 			}
 			function showDescription() {
-				return '<div class="description-wrapper"><p>' + description + '</p></div>'
+				return '<div class="description-wrapper"><p>' + description + '</p></div>';
 			}
 
 			$('.modal-title').html(name);
@@ -176,28 +175,28 @@ var p = (function () {
 
 			var getCategories = function (number) {
 				return projects[number].category.join(' ');
-			}
+			};
 
 			var projectIcon = function (number) {
 				return '<a href="' + projects[number].url[1] + '" target="_blank">' +
 									'<i class="fa fa-github"></i> View code' +
-							 '</a>';
-			}
+								'</a>';
+			};
 
 
 // Currently I don't add elements correctly to the page. See the below two examples
 // http://isotope.metafizzy.co/methods.html
 // http://codepen.io/desandro/pen/ECKiw
 
-			for ( i = 0; i < projects.length; i++ ){
-			$project = $('<div class="project ' + getCategories(i) + '">' +
-			 	'<div class="project-innerwrapper">' +
+			for ( var i = 0; i < projects.length; i++ ){
+			let $project = $('<div class="project ' + getCategories(i) + '">' +
+				'<div class="project-innerwrapper">' +
 					'<a data-number="' + i + '"  data-toggle="modal" data-target=".bd-example-modal-lg">' +
-			 			'<div class="title">' + projects[i].name + '</div>' +
+						'<div class="title">' + projects[i].name + '</div>' +
 							'<div class="img-wrapper">' +
 								// '<img class="img-responsive" src="' + imgBaseDir + projects[i].img + '"></div>' +
 								'<div class="img-responsive" style="background-image: url(' + imgBaseDir + projects[i].img + ');"></div>' +
-				 		'</div>' +
+							'</div>' +
 					'</a>' +
 					'<div class="project-action-icons">' +
 						(projects[i].url[1] ? projectIcon(i) : '' ) +
@@ -207,14 +206,12 @@ var p = (function () {
 					'</div>' +
 				'</div>');
 			$grid.append( $project )
-		     // add and lay out newly appended items
-		     .isotope( 'appended', $project );
+				.isotope( 'appended', $project );
 			}
 			window.setTimeout( function() {
 				// $grid.isotope('layout');
 				$grid.isotope({ filter: '.featured' });
 			},1000);
 		}
-	}
-
+	};
 })();
