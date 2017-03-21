@@ -1,4 +1,9 @@
-## EXPIRES CACHING ##
+“Header unset Pragma
+
+FileETag None
+
+Header unset ETag”
+
 <IfModule mod_expires.c>
 ExpiresActive On
 ExpiresByType image/jpg "access 1 year"
