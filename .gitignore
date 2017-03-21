@@ -3,5 +3,6 @@ app/certificates/
 app/fonts/
 app/css/
 personal-site-backup/
+reports/
 dist/
 npm-debug.log
