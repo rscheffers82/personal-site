@@ -12,19 +12,19 @@ Format:
 var p = (function () {				// eslint-disable-line
 	var imgBaseDir = 'images/';
 	var projects = [{
-		'name': 'React Todo App',
-		'description' : 'A personal project used to sharpen my skills in React and Redux. This app lets you add tasks to a list and search existing todo items. Completed tasks are automatically archived and can be made visible again with the Show completed select box. Prior to this version, data was stored locally in the browser. Now, data is stored in Firebase using google authentication.',
+		'name': 'React To-Do List',
+		'description' : 'A personal project used to sharpen my skills in React and Redux. This app lets you add tasks to a list and search existing to-do items. Completed tasks are automatically archived and can be made visible again with the Show completed select box. Prior to this version, data was stored locally in the browser. Now, data is stored in Firebase using google authentication.',
 		'url': ['http://thawing-river-94231.herokuapp.com','https://github.com/rscheffers82/React-ToDo'],
 		'img' : 'react-todo-app.jpg',
 		'tech' : ['React', 'Redux','JSX','Sass','HTML', 'Foundation'],
 		'category' : ['featured', 'frontend']
 	},{
-		'name': 'Brilliant Massage Therapy',
-		'description' : 'This is a client project in which I merged two sites into one in collaboration with Andrew from <a href="http://www.thinkupdesign.ca" target="_blank">ThinkUp Design</a>. After having done market research regarding local massage businesses and competing WordPress templates, we presented the client with the possible designs. The <a href="http://jacqueline.themerex.net" target="_blank">Jacqueline theme</a> was chosen.<br/> I migrated the current blog to a new WordPress site and installed the theme. After having styled most of the content and the revolution slider, Andrew took care of the intricate design fixes. The final result; a professional, SEO optimised, mobile ready and visual appealing site.',
-		'url': ['http://jolitabrilliant.com'],
-		'img' : 'jolita-brilliant.jpg',
-		'tech' : ['Wordpress','Photoshop','CSS','HTML'],
-		'category' : ['featured', 'design']
+		'name': 'Meteor Score Keep',
+		'description' : 'In order to explore Meteor and get familiar with its eco-system, I build this project. The requirement was to create a database that records players and their score. On the front-end, players can be added and removed and their score increased and decreased. Animations are added using the React Flip Move library. Once completed, the app was deployed to Heroku with the help of the meteor horse build pack.',
+		'url': ['https://score-keep11.herokuapp.com','https://github.com/rscheffers82/score-keeper'],
+		'img' : 'score-keep.jpg',
+		'tech' : ['Meteor', 'React', 'JSX', 'Sass','HTML'],
+		'category' : ['featured', 'fullstack']
 	},{
 		'name': 'Five API projects',
 		'description' : 'This is one of my pet projects used to become familiar with Node, Express and MongoDB. I build five API apps that take input through either POST or GET and return JSON data. My favorite project was the Exercise Tracker. Here users can register, track their exercises and view logs. I added a front-end UI using Materialize CSS, although the Add user and Add Exercise POST routes will return JSON data for demonstration purposes.',
@@ -32,6 +32,13 @@ var p = (function () {				// eslint-disable-line
 		'img' : 'API-collection.jpg',
 		'tech' : ['Node','Express','MongoDB', 'JavaScript', 'MaterializeCSS'],
 		'category' : ['featured','backend']
+	},{
+		'name': 'Brilliant Massage Therapy',
+		'description' : 'This is a client project in which I merged two sites into one in collaboration with Andrew from <a href="http://www.thinkupdesign.ca" target="_blank">ThinkUp Design</a>. After having done market research regarding local massage businesses and competing WordPress templates, we presented the client with the possible designs. The <a href="http://jacqueline.themerex.net" target="_blank">Jacqueline theme</a> was chosen.<br/> I migrated the current blog to a new WordPress site and installed the theme. After having styled most of the content and the revolution slider, Andrew took care of the intricate design fixes. The final result; a professional, SEO optimised, mobile ready and visual appealing site.',
+		'url': ['http://jolitabrilliant.com'],
+		'img' : 'jolita-brilliant.jpg',
+		'tech' : ['Wordpress','Photoshop','CSS','HTML'],
+		'category' : ['featured', 'design']
 	},{
 		'name': 'React Countdown App',
 		'description' : 'This is one of my personal projects used to become familiar with re-using React components. In this timer app the countdown and timer parts of the application use the same components but slightly different logic is used in each. Building this app helped me to understand how props are passed down to child components and how application states are managed by a main parent container component. The application is styled using the <a href="foundation.zurb.com" target="_blank">Foundation</a> framework and deployed live on Heroku.',
