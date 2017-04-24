@@ -136,7 +136,7 @@ h2 {
       font-family: 'Titillium Web', sans-serif;
     font-size: 2.75rem;
     background-color: $soft-white;
-    border-radius: 3px;
+    // border-radius: 3px;
     color: $grey-dark;
     display: inline-block;
     padding: 10px 12% 40px;
@@ -152,6 +152,7 @@ h2 {
   }
   h2 {
     font-weight: 300;
+    color: #EEAB3A;
   }
   a { transition: all 0.5s ease-in-out; }
   a:hover, a:active, a:focus { color: $white; }
@@ -231,7 +232,7 @@ h2 {
 .navbar-default .navbar-brand{
   padding-left: 20px;
   color: $call-to-action !important;
-  font-family: 'Roboto Slab', sans-serif, serif;
+  font-family: 'Titillium Web', sans-serif;
   font-size: 2.5rem;
 }
 
@@ -239,10 +240,10 @@ h2 {
   color: $call-to-action !important;
   background-color: inherit !important;
   border-bottom: 3px solid transparent;
-  text-transform: uppercase;
   font-weight: 300;
   transition: all 0.5s ease-in-out;
 }
+
 .navbar-nav > .active > a,
 .navbar-nav > .active > a:hover,
 .navbar-nav li a:hover{
@@ -432,20 +433,18 @@ h2 {
 
 .parallax-call-out-background {
     // The image used
-    background-image: url(../images/call-out.jpg);
-    background: url("https://scopeschool.com/wp-content/themes/rise/images/patterns/brushed_alu_dark.png"); background-repeat: repeat;
+    background: url("../images/brushed_aluminium_darkened.png"); background-repeat: repeat;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
 
     // Set a specific height
     display: flex;
     height: 300px;
-
-
+    margin: 50px 0;
+    font-family: 'Titillium Web', sans-serif;
 }
+
 .parallax-call-out-overlay {
   width: 70%;
   margin: auto;
@@ -478,28 +477,26 @@ h2 {
   }
 
   .btn {
-    border: 1px solid $grey-soft;
+    border: 1px solid transparent;
     font-size: 1.5rem;
-    background-color: $white;
+    background-color: $primary-color;
+    color: $call-to-action;
     float: none;
     margin-top: 3px;
     transition: all 0.25s ease-in-out;
 
     &:hover {
-      color: $call-to-action;
+      color: $primary-color;
     }
-    &:focus {
-      outline: none;
-    }
-  }
 
-  .is-checked {
-    border: 1px solid $call-to-action;
-    color: $white;
-    background-color: $call-to-action;
-    // margin: 0px;
-    &:hover {
-      color: $white;
+    &:hover,
+    &:focus,
+    &:active,
+    .is-checked {
+      color: $primary-color;
+      background-color: $white;
+      border: 1px solid $primary-color;
+
     }
   }
 
@@ -520,7 +517,7 @@ h2 {
       transition: all 0.5 ease-in-out;
     }
     .project-action-icons a:hover {
-      color: $primary-color;
+      color: $call-to-action;
     }
     .col-md-4 {
       padding: 0 30px;
@@ -534,9 +531,8 @@ h2 {
   }
 
   .title {
-    font-family: 'Roboto Slab', sans-serif, serif;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 2.25rem;
-    // font-size: 2vw;
     padding: 15px 0;
   }
 

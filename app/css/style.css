@@ -59,7 +59,6 @@ h2 {
     font-family: 'Titillium Web', sans-serif;
     font-size: 2.75rem;
     background-color: #F4F4F4;
-    border-radius: 3px;
     color: #3f3f3f;
     display: inline-block;
     padding: 10px 12% 40px;
@@ -70,7 +69,8 @@ h2 {
     margin: -10px 0 0 0;
     border: 1px solid #cfcfcf; }
   .landing h2 {
-    font-weight: 300; }
+    font-weight: 300;
+    color: #EEAB3A; }
   .landing a {
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out; }
@@ -141,14 +141,13 @@ h2 {
 .navbar-default .navbar-brand {
   padding-left: 20px;
   color: #FFC600 !important;
-  font-family: 'Roboto Slab', sans-serif, serif;
+  font-family: 'Titillium Web', sans-serif;
   font-size: 2.5rem; }
 
 .navbar-nav li a {
   color: #FFC600 !important;
   background-color: inherit !important;
   border-bottom: 3px solid transparent;
-  text-transform: uppercase;
   font-weight: 300;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out; }
@@ -306,8 +305,7 @@ h2 {
   padding: 20px; }
 
 .parallax-call-out-background {
-  background-image: url(../images/call-out.jpg);
-  background: url("https://scopeschool.com/wp-content/themes/rise/images/patterns/brushed_alu_dark.png");
+  background: url("../images/brushed_aluminium_darkened.png");
   background-repeat: repeat;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -315,7 +313,9 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 300px; }
+  height: 300px;
+  margin: 50px 0;
+  font-family: 'Titillium Web', sans-serif; }
 
 .parallax-call-out-overlay {
   width: 70%;
@@ -334,24 +334,21 @@ h2 {
   margin: 25px 0; }
 
 .portfolio-area .btn {
-  border: 1px solid #8f8f8f;
+  border: 1px solid transparent;
   font-size: 1.5rem;
-  background-color: #FFFFFF;
+  background-color: #3c6090;
+  color: #FFC600;
   float: none;
   margin-top: 3px;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out; }
   .portfolio-area .btn:hover {
-    color: #FFC600; }
-  .portfolio-area .btn:focus {
-    outline: none; }
-
-.portfolio-area .is-checked {
-  border: 1px solid #FFC600;
-  color: #FFFFFF;
-  background-color: #FFC600; }
-  .portfolio-area .is-checked:hover {
-    color: #FFFFFF; }
+    color: #3c6090; }
+  .portfolio-area .btn:hover, .portfolio-area .btn:focus, .portfolio-area .btn:active,
+  .portfolio-area .btn .is-checked {
+    color: #3c6090;
+    background-color: #FFFFFF;
+    border: 1px solid #3c6090; }
 
 .portfolio-area .project-grid {
   display: block; }
@@ -367,7 +364,7 @@ h2 {
     -webkit-transition: all 0.5 ease-in-out;
     transition: all 0.5 ease-in-out; }
   .portfolio-area .project .project-action-icons a:hover {
-    color: #3c6090; }
+    color: #FFC600; }
   .portfolio-area .project .col-md-4 {
     padding: 0 30px; }
 
@@ -377,7 +374,7 @@ h2 {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3); }
 
 .portfolio-area .title {
-  font-family: 'Roboto Slab', sans-serif, serif;
+  font-family: 'Titillium Web', sans-serif;
   font-size: 2.25rem;
   padding: 15px 0; }
 
