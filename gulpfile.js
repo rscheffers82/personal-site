@@ -12,9 +12,9 @@ const cache = require('gulp-cache');
 const del = require('del');
 const runSequence = require('run-sequence');
 
-const plumber = require('gulp-plumber');
-const gutil = require('gulp-util');
-const notify = require('gulp-notify');
+// const plumber = require('gulp-plumber');
+// const gutil = require('gulp-util');
+// const notify = require('gulp-notify');
 
 const useref = require('gulp-useref');
 
@@ -65,11 +65,11 @@ gulp.task('sass', function(){
 
 gulp.task('serve', ['sass'], function() {
 
-		browserSync.init({
-	    server: {
-	      baseDir: 'app'
-	    },
-	  });
+	browserSync.init({
+		server: {
+			baseDir: 'app'
+		},
+	});
 
 
   gulp.watch('app/scss/**/*.scss', ['sass']);
@@ -78,14 +78,14 @@ gulp.task('serve', ['sass'], function() {
   //gulp.watch('app/**/*.js', browserSync.reload);
   // Other watchers
 	// add babel support - https://www.npmjs.com/package/gulp-babel
-})
+});
 
 gulp.task('useref', function() {
 	return gulp.src('app/*.html')
 		.pipe(useref())
-		.pipe(gulpIf('*.js', uglify()))
+		// .pipe(gulpIf('*.js', uglify()))
 		.pipe(gulpIf('*.css', cssnano()))
-		.pipe(gulp.dest('dist'))
+		.pipe(gulp.dest('dist'));
 });
 
 gulp.task('images', function() {
@@ -93,22 +93,22 @@ gulp.task('images', function() {
 		.pipe(cache(imagemin({
 			interlaced: true
 		})))
-		.pipe(gulp.dest('dist/images'))
+		.pipe(gulp.dest('dist/images'));
 });
 
 gulp.task('fonts', function() {
 	return gulp.src('app/fonts/**/*')
-	.pipe(gulp.dest('dist/fonts'))
+	.pipe(gulp.dest('dist/fonts'));
 });
 
 gulp.task('contact-form', function() {
 	return gulp.src('app/php/**/*')
-	.pipe(gulp.dest('dist/php'))
+	.pipe(gulp.dest('dist/php'));
 });
 
 gulp.task('htaccess', function() {
 	return gulp.src('app/.htaccess')
-	.pipe(gulp.dest('dist/'))
+	.pipe(gulp.dest('dist/'));
 });
 
 gulp.task('clean:dist', function() {
@@ -116,7 +116,7 @@ gulp.task('clean:dist', function() {
 });
 
 gulp.task('cache:clear', function (callback) {
-	return cache.clearAll(callback)
+	return cache.clearAll(callback);
 });
 
 gulp.task('build', function(callback) {

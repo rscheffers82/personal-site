@@ -28,9 +28,17 @@
 // Theme main colors
 // ________________________________________
 
-$call-to-action: rgba(224,153,0,0.65);
-$primary-color: #0379C4; //#3498DB; (original)  //nice blue 306d9f
-$secondary-color: #2F4052;//#0A286B; //#334455;(original)  //#334A55;
+// Caitlin blue: #1A1F4C;
+// Caitlin orange: #FDC245
+
+$primary-color: #3c6090; // #556892; //#3498DB; (original)  //nice blue 306d9f            // currently: #0379C4
+$secondary-color: #808080; // current: #919191;//#0A286B; //#334455;(original)  //#334A55;
+$call-to-action: #FFC600; // CV ORANGE -> #EEAB3A;
+// $call-to-action: rgba(224,153,0,0.65);
+
+
+
+
 
 $white: #FFFFFF;
 $soft-white: #F4F4F4; //#f7f7f7;
@@ -53,25 +61,34 @@ $shadow: 0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1
 // Bootstrap
 // http://getbootstrap.com/components/#navbar-fixed-top
 
+* {
+  // font-size: 66,7%;
+}
+
 html {
   // width: 98.8vw;
+    font-size: 66,7%;
 }
 
 body {
   background-color: $white;
   color: $grey-medium;
   font-family: 'Roboto', sans-serif, serif !important;
-  font-size: 1.75rem;
+  font-size: 2rem;
   line-height: 2.5rem;
   position: relative;
 }
 
 h1 {
-  font-family: 'Roboto Slab', sans-serif, serif;
+  // font-family: 'Roboto Slab', sans-serif, serif; old one
+  font-family: 'Titillium Web', sans-serif;
+  // font-family: 'Josefin Sans', sans-serif;
   color: $primary-color;
   font-size: 3.5vw;
   text-align: center;
   margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: 300;
 }
 
 h1:before {
@@ -83,6 +100,7 @@ h1:before {
 }
 
 h2 {
+  font-family: 'Titillium Web', sans-serif;
   font-size: 2vw;
   margin-bottom: 20px;
 }
@@ -104,7 +122,7 @@ h2 {
 
   &:after {
     // background: rgba(0, 0, 0, 0) url("../images/retro-overlay.png") repeat scroll 0 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.2);
     content: "";
     height: 100%;
     left: 0;
@@ -115,8 +133,9 @@ h2 {
 
   .intro-message {
     font-family: 'Roboto Slab', sans-serif, serif;
+      font-family: 'Titillium Web', sans-serif;
     font-size: 2.75rem;
-    background-color: rgba(245, 250, 255, 0.85);
+    background-color: $soft-white;
     border-radius: 3px;
     color: $grey-dark;
     display: inline-block;
@@ -145,22 +164,24 @@ h2 {
   margin-top: 40px;
 
   .btn {
+    border-radius: 0px;
     padding: 10px 25px;
-    background-color: $call-to-action;
-    border: 0px solid $call-to-action;
-    // border-bottom: 5px solid $call-to-action;
-    color: $grey-dark;
+    background-color: $primary-color;
+    border: 0px solid $white;
+    color: $call-to-action;
     font-family: 'Roboto', sans-serif, serif;
     font-weight: 400;
     font-size: 2.25rem;
     margin-bottom: 5px;
-    // padding: 5px 0;
     transition-property: color, border-color;
     transition-duration: .2s;
     transition-timing-function: ease-in-out;
+    border: 2px solid transparent;
 
     &:hover {
-      color: $white;
+      color: $primary-color;
+      background-color: $soft-white;
+      border: 2px solid $primary-color;
       // border-bottom: 5px solid darken($call-to-action,10%);
       // border-right: 5px solid darken($call-to-action,10%);
     }
@@ -197,39 +218,35 @@ h2 {
 .navbar,
 .navbar-default {
   width: 100%;
-  background-color: $secondary-color;
-  opacity: 0.95;
+  background-color: $primary-color;
+  opacity: 0.98;
   border: none;
   border-radius: 0;
   z-index: 999;
   box-shadow: $shadow;
 }
 .navbar-right{
-  color: $primary-color;
+  color: $call-to-action;
 }
 .navbar-default .navbar-brand{
   padding-left: 20px;
-  color: $soft-white !important;
+  color: $call-to-action !important;
   font-family: 'Roboto Slab', sans-serif, serif;
   font-size: 2.5rem;
 }
 
 .navbar-nav li a{
-  color: $soft-white !important;
+  color: $call-to-action !important;
   background-color: inherit !important;
   border-bottom: 3px solid transparent;
   text-transform: uppercase;
   font-weight: 300;
   transition: all 0.5s ease-in-out;
 }
-.navbar-nav li a:hover{
-  color: lighten($primary-color,20%) !important;
-  border-bottom: 3px solid $primary-color;
-}
 .navbar-nav > .active > a,
-  .navbar-nav > .active > a:hover {
-  color: lighten($primary-color,20%) !important;
-  border-bottom: 3px solid $primary-color;
+.navbar-nav > .active > a:hover,
+.navbar-nav li a:hover{
+  border-bottom: 2px solid $call-to-action;
 }
 
 .content-area{                  // used for each section of the page
@@ -416,16 +433,16 @@ h2 {
 .parallax-call-out-background {
     // The image used
     background-image: url(../images/call-out.jpg);
-
+    background: url("https://scopeschool.com/wp-content/themes/rise/images/patterns/brushed_alu_dark.png"); background-repeat: repeat;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    // background-repeat: no-repeat;
+    // background-size: cover;
 
     // Set a specific height
     display: flex;
-    height: 400px;
+    height: 300px;
 
 
 }

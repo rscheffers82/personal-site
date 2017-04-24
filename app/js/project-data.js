@@ -14,7 +14,7 @@ var p = (function () {				// eslint-disable-line
 	var projects = [{
 		'name': 'React To-Do List',
 		'description' : 'A personal project used to sharpen my skills in React and Redux. This app lets you add tasks to a list and search existing to-do items. Completed tasks are automatically archived and can be made visible again with the Show completed select box. Prior to this version, data was stored locally in the browser. Now, data is stored in Firebase using google authentication.',
-		'url': ['http://thawing-river-94231.herokuapp.com','https://github.com/rscheffers82/React-ToDo'],
+		'url': ['http://list11.herokuapp.com','https://github.com/rscheffers82/React-List-Application'],
 		'img' : 'react-todo-app.jpg',
 		'tech' : ['React', 'Redux','JSX','Sass','HTML', 'Foundation'],
 		'category' : ['featured', 'frontend']
