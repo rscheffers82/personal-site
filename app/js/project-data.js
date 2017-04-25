@@ -62,38 +62,38 @@ var p = (function () {				// eslint-disable-line
 		'category' : ['frontend']
 	},{
 		'name': 'Simon',
-		'description' : 'This is my graduation project for the Front-end Program from <a href="https://www.freecodecamp.com" target="_blank">FreeCodeCamp</a>. Simon is an electronic retro game initially launched in 1978 where after it quickly became a pop culture symbol of the 70s and 80s.<br/>To recreate this game, I started of by creating the interface in Photoshop. Once done I transferred this to a simple page using HTML and Sass. The game logic was added using jQuery and JavaScript. For example, Simon will not accept input until it is switched on. By pressing start button a random sequence of 20 steps is generated and the first move is displayed by lighting up the corresponding color. The user much match this and as the game progresses the sequence becomes more complex. The game is eventually won after all 20 steps in the sequence are completed. This project helped me to program game logic into an application as well as make it look visually appealing on all devices.',
+		'description' : 'This is my graduation project for the Front-end Program from <a href="https://www.freecodecamp.com" target="_blank">FreeCodeCamp</a>. Simon is an electronic retro game initially launched in 1978 after which it quickly became a pop culture symbol of the 70s and 80s.<br/>To recreate this game, I started of by creating the interface in Photoshop. Once done I transferred this to a simple page using HTML and Sass. The game logic was added using jQuery and JavaScript. For example, Simon will not accept input until it is switched on. By pressing start button a random sequence of 20 steps is generated and the first move is displayed by lighting up the corresponding color. The user much match this and as the game progresses the sequence becomes more complex. The game is eventually won after all 20 steps in the sequence are completed. This project helped me to program game logic into an application as well as make it look visually appealing on all devices.',
 		'url': ['https://rscheffers82.github.io/Simon-game/','https://github.com/rscheffers82/Simon-game'],
 		'img' : 'simon.jpg',
-		'tech' : ['Javascript','Sass','HTML','Photoshop'],
+		'tech' : ['JavaScript','Sass','HTML','Photoshop'],
 		'category' : ['featured', 'frontend', 'design']
 	},{
 		'name': 'Tic Tac Toe',
 		'description' : 'A classic Tic Tac Toe game that has two and single player game-play. Several levels of AI are build in that rely on the negaMax algorithm to calculate the score of future moves. It\'s one of my personal projects that I love and hate. I struggled quite a bit to understand the negaMax and MiniMax algorithms and how I can translate them into code that works. At the same time I enjoyed the larger functions I setup, which are used for each state of the game. Besides that I experimented with a modal to make it a single page app. The end result: a smooth game that entertains even the experienced Tic Tac Toe player',
 		'url': ['https://rscheffers82.github.io/Tic-Tac-Toe-JS-game/','https://github.com/rscheffers82/Tic-Tac-Toe-JS-game'],
 		'img' : 'tic-tac-toe.jpg',
-		'tech' : ['Javascript','Sass', 'HTML','negaMax algoritm','Photoshop'],
+		'tech' : ['JavaScript','Sass', 'HTML','negaMax algoritm','Photoshop'],
 		'category' : ['featured', 'frontend']
 	},{
 		'name': 'Sand Timer',
 		'description' : 'Sand Timer application designed to boost productivity by setting a focused work and break time. Both times can be regulated by sliders and the timer is in a continues loop. The base concept was taken from the pomodoro timer. The app is displayed on HTML Canvas element and build modular, which allows the app to easily be integrated on other sites.',
 		'url': ['https://codepen.io/roycode/full/rLyZgm','https://github.com/rscheffers82/Pomodoro-Timer'],
 		'img' : 'sand-timer.jpg',
-		'tech' : ['Javascript','CSS','HTML','HTML Canvas'],
+		'tech' : ['JavaScript','CSS','HTML','HTML Canvas'],
 		'category' : ['featured', 'frontend']
 	},{
 		'name': 'Calculator',
 		'description' : 'A solar calculator styled using CSS and made functional by utilizing jQuery and JavaScript. It was a pretty straigh forward project that helped me greatly to understand CSS better and how to layout various element on the screen. Because of the many input elements, I used jQuery to catch input and various functions to perform the calculations.',
 		'url': ['http://codepen.io/roycode/full/qNapgw','https://github.com/rscheffers82/calculator-html-css-js'],
 		'img' : 'calculator-js.jpg',
-		'tech' : ['Javascript','CSS','HTML','Photoshop'],
+		'tech' : ['JavaScript','CSS','HTML','Photoshop'],
 		'category' : ['featured', 'frontend']
 	},{
 		'name': 'Weather App',
 		'description' : 'A weather application which, based on the user\'s IP or browser information, displays the local weather using the <a href="https://darksky.net/dev" target="_blank">Dark Sky API</a>. This was a simple API project that I loved building, due to the creativity I could put into it. The various weather conditions each have their own background and the weather icon changes based on the current weather. The location is retrieved in multiple ways depending on the available information, either via browser info or via <a href="http://ip-api.com" target=_blank">ip-api.com</a>.',
 		'url': ['http://codepen.io/roycode/full/WwqYrB','http://codepen.io/roycode/pen/WwqYrB'],
 		'img' : 'Weather-application-in-javascript.jpg',
-		'tech' : ['Javascript','Sass','HTML','Bootstrap','API'],
+		'tech' : ['JavaScript','Sass','HTML','Bootstrap','API'],
 		'category' : ['frontend']
 	}
 	// ,{
@@ -101,14 +101,14 @@ var p = (function () {				// eslint-disable-line
 	// 	'description' : 'The Wikimedia Viewer application uses the Wikimedia Web API to retrieve information from WikiPedia and displays it.',
 	// 	'url': ['http://codepen.io/roycode/full/VjZZvw','http://codepen.io/roycode/pen/VjZZvw'],
 	// 	'img' : 'wikipedia-viewer.jpg',
-	// 	'tech' : ['Javascript','CSS','HTML','Bootstrap','API'],
+	// 	'tech' : ['JavaScript','CSS','HTML','Bootstrap','API'],
 	// 	'category' : ['frontend']
 	// },{
 	// 	'name': 'Quote Generator',
 	// 	'description' : 'Be inspired by some of the world most beautiful quotes. This application uses an AJAX request to load in quotes that the user can share via Twitter.',
 	// 	'url': ['http://codepen.io/roycode/full/NNJzmG','http://codepen.io/roycode/pen/NNJzmG'],
 	// 	'img' : 'random-quote-generator-javascript.jpg',
-	// 	'tech' : ['Javascript','CSS','HTML','Bootstrap'],
+	// 	'tech' : ['JavaScript','CSS','HTML','Bootstrap'],
 	// 	'category' : []
 	// },{
 	// 	'name': 'Tribute page',
@@ -125,7 +125,7 @@ var p = (function () {				// eslint-disable-line
 		'description' : 'Load Twitch TV data into the site',
 		'url': ['http://rscheffers82.github.io/TwitchTV','https://github.com/rscheffers82/TwitchTV'],
 		'img' : 'Weather-application-in-javascript.jpg',
-		'tech' : ['HTML','CSS','Bootstrap','Javascript','API']
+		'tech' : ['HTML','CSS','Bootstrap','JavaScript','API']
 */
 /*	},{
 		'name': '',

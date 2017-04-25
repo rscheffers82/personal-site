@@ -426,6 +426,14 @@ h2 {
     padding: 2%;
   }
 
+  h1 {
+    height: 0;
+  }
+
+  h2 {
+    color: $primary-color;
+
+  }
 }
 
 
@@ -746,7 +754,7 @@ div.img-responsive::before {
 // ____________________________________________
 
 .contact-area {
-  padding: 0 15rem 3rem;
+  padding: 5rem 15rem 3rem;
   .row {
     margin: 0;
   }
@@ -955,7 +963,7 @@ label {
     }
     .img-mobile {
       display: inline-block;
-      margin: 0px auto 10px auto;
+      margin: 5px auto 30px auto;
       border-radius: 50%;
     }
     img {

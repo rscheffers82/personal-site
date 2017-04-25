@@ -308,6 +308,12 @@ h2 {
 .services-area .col-md-4 {
   padding: 2%; }
 
+.services-area h1 {
+  height: 0; }
+
+.services-area h2 {
+  color: #3c6090; }
+
 .parallax-call-out-background {
   background: url("../images/brushed_aluminium_darkened.png");
   background-repeat: repeat;
@@ -539,7 +545,7 @@ div.img-responsive::before {
   display: inline-block; }
 
 .contact-area {
-  padding: 0 15rem 3rem; }
+  padding: 5rem 15rem 3rem; }
   .contact-area .row {
     margin: 0; }
   .contact-area .intro {
@@ -714,7 +720,7 @@ label {
     padding: 0 10px; }
   .top-flex .img-mobile {
     display: inline-block;
-    margin: 0px auto 10px auto;
+    margin: 5px auto 30px auto;
     border-radius: 50%; }
   .top-flex img {
     display: none; }
