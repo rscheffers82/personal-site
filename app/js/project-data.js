@@ -5,17 +5,17 @@ Format:
 	'description' : '',						Description of the data
 	'url' : ['',''],						1st URL is the live data, 2nd the source code
 	'img' : '',								image to display
-	'skills' : ['','','','',''],			Technologies used, HTML, CSS, PHP, Wordpress, React.js etc
+	'skills' : ['','','','',''],			Technologies used, HTML, CSS, PHP, WordPress, React.js etc
 
 */
 
 var p = (function () {				// eslint-disable-line
 	var imgBaseDir = 'images/';
 	var projects = [{
-		'name': 'React To-Do List',
+		'name': 'React List',
 		'description' : 'A personal project used to sharpen my skills in React and Redux. This app lets you add tasks to a list and search existing to-do items. Completed tasks are automatically archived and can be made visible again with the Show completed select box. Prior to this version, data was stored locally in the browser. Now, data is stored in Firebase using google authentication.',
 		'url': ['http://list11.herokuapp.com','https://github.com/rscheffers82/React-List-Application'],
-		'img' : 'react-todo-app.jpg',
+		'img' : 'react-to-do-app.jpg',
 		'tech' : ['React', 'Redux','JSX','Sass','HTML', 'Foundation'],
 		'category' : ['featured', 'frontend']
 	},{
@@ -37,7 +37,7 @@ var p = (function () {				// eslint-disable-line
 		'description' : 'This is a client project in which I merged two sites into one in collaboration with Andrew from <a href="http://www.thinkupdesign.ca" target="_blank">ThinkUp Design</a>. After having done market research regarding local massage businesses and competing WordPress templates, we presented the client with the possible designs. The <a href="http://jacqueline.themerex.net" target="_blank">Jacqueline theme</a> was chosen.<br/> I migrated the current blog to a new WordPress site and installed the theme. After having styled most of the content and the revolution slider, Andrew took care of the intricate design fixes. The final result; a professional, SEO optimised, mobile ready and visual appealing site.',
 		'url': ['http://jolitabrilliant.com'],
 		'img' : 'jolita-brilliant.jpg',
-		'tech' : ['Wordpress','Photoshop','CSS','HTML'],
+		'tech' : ['WordPress','Photoshop','CSS','HTML'],
 		'category' : ['featured', 'design']
 	},{
 		'name': 'React Countdown App',
@@ -48,10 +48,10 @@ var p = (function () {				// eslint-disable-line
 		'category' : ['frontend']
 	},{
 		'name': 'Black Belt Proofreader',
-		'description' : 'This project was build in collaboration with the business owner. Zorana started her own business as a legal transcript proofreader and needed a website to advertise her services. I provided her with the hosting and installed WordPress with the <a href="https://www.elegantthemes.com/gallery/divi" target="_blank">Divi theme</a>. She took care of the content and rough layout, while I assisted her with the finer CSS styling and made sure the site was supported by various mobile devices.',
+		'description' : 'This project was built in collaboration with the business owner. Zorana started her own business as a legal transcript proofreader and needed a website to advertise her services. I provided her with the hosting and installed WordPress with the <a href="https://www.elegantthemes.com/gallery/divi" target="_blank">Divi theme</a>. I successfully implemented the overall styling and ensured that the site was supported by various mobile devices while she took care of the content and rough layout. All customization was saved in a child theme.',
 		'url': ['http://blackbeltproofreader.com'],
 		'img' : 'blackbeltproofreader.jpg',
-		'tech' : ['Wordpress','Photoshop','CSS','HTML'],
+		'tech' : ['WordPress','Photoshop','CSS','HTML'],
 		'category' : ['featured', 'design']
 	},{
 		'name': 'React Weather App',

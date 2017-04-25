@@ -150,7 +150,8 @@ h2 {
   border-bottom: 3px solid transparent;
   font-weight: 300;
   -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out; }
+  transition: all 0.5s ease-in-out;
+  font-family: 'Titillium Web', sans-serif; }
 
 .navbar-nav > .active > a,
 .navbar-nav > .active > a:hover,
@@ -169,7 +170,7 @@ h2 {
   display: block; }
 
 .about-area {
-  padding: 80px 40px 90px 40px; }
+  padding: 80px 40px 50px 40px; }
   .about-area .row {
     margin: 0px; }
   .about-area h1 {
@@ -303,6 +304,9 @@ h2 {
   font-size: 4rem;
   margin-top: 30px;
   padding: 20px; }
+
+.services-area .col-md-4 {
+  padding: 2%; }
 
 .parallax-call-out-background {
   background: url("../images/brushed_aluminium_darkened.png");
@@ -545,10 +549,11 @@ div.img-responsive::before {
     -webkit-transition: all 0.25s ease-in-out !important;
     transition: all 0.25s ease-in-out !important; }
   .contact-area .btn-primary {
-    background-color: #FFC600;
-    border: 1px solid transparent;
+    background-color: #3c6090;
+    color: #FFC600;
+    border: 2px solid transparent;
     font-size: 1.75rem;
-    padding: 5px 30px;
+    padding: 10px 25px;
     border-radius: 0px;
     margin-top: -5px;
     -webkit-transition: all 0.5s ease-in-out;
@@ -556,9 +561,9 @@ div.img-responsive::before {
     .contact-area .btn-primary .fa-paper-plane {
       margin: 0 5px 0 -5px; }
     .contact-area .btn-primary:hover {
-      border: 1px solid #FFC600;
+      border: 2px solid #3c6090;
       background-color: #FFFFFF !important;
-      color: #FFC600; }
+      color: #3c6090; }
   .contact-area .social {
     width: 100%;
     padding: 10px;
@@ -656,6 +661,8 @@ label {
 .footer {
   height: 200px;
   background-color: #3f3f3f;
+  background: url("../images/brushed_aluminium_darkened.png");
+  background-repeat: repeat;
   color: #c1c1c1;
   font-size: 2rem;
   display: -webkit-box;

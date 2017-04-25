@@ -34,6 +34,7 @@
 $primary-color: #3c6090; // #556892; //#3498DB; (original)  //nice blue 306d9f            // currently: #0379C4
 $secondary-color: #808080; // current: #919191;//#0A286B; //#334455;(original)  //#334A55;
 $call-to-action: #FFC600; // CV ORANGE -> #EEAB3A;
+$CV-call-to-action: #EEAB3A;
 // $call-to-action: rgba(224,153,0,0.65);
 
 
@@ -152,7 +153,7 @@ h2 {
   }
   h2 {
     font-weight: 300;
-    color: #EEAB3A;
+    color: $CV-call-to-action;
   }
   a { transition: all 0.5s ease-in-out; }
   a:hover, a:active, a:focus { color: $white; }
@@ -242,6 +243,7 @@ h2 {
   border-bottom: 3px solid transparent;
   font-weight: 300;
   transition: all 0.5s ease-in-out;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 .navbar-nav > .active > a,
@@ -272,7 +274,7 @@ h2 {
 // ____________________________________________
 
 .about-area {
-  padding: 80px 40px 90px 40px;
+  padding: 80px 40px 50px 40px;
 
   .row {
     margin: 0px;
@@ -416,13 +418,23 @@ h2 {
 //      Services Area
 // ____________________________________________
 
-.services-area i {
+.services-area {
+  i {
   border: 3px solid $primary-color;
   border-radius: 50%;
   color: $primary-color;
   font-size: 4rem;
   margin-top: 30px;
   padding: 20px;
+  }
+
+  .col-md-4 {
+    padding: 2%;
+  }
+
+  h2 {
+    // color: $CV-call-to-action !important;
+  }
 }
 
 
@@ -755,10 +767,11 @@ div.img-responsive::before {
     transition: all 0.25s ease-in-out !important;
   }
   .btn-primary{
-    background-color: $call-to-action;
-    border: 1px solid transparent;
+    background-color: $primary-color;
+    color: $call-to-action;
+    border: 2px solid transparent;
     font-size: 1.75rem;
-    padding: 5px 30px;
+    padding: 10px 25px;
     border-radius: 0px;
     margin-top: -5px;
     transition: all 0.5s ease-in-out;
@@ -766,9 +779,9 @@ div.img-responsive::before {
     .fa-paper-plane { margin: 0 5px 0 -5px; }
 
     &:hover {
-      border: 1px solid $call-to-action;
+      border: 2px solid $primary-color;
       background-color: $white !important;
-      color: $call-to-action;
+      color: $primary-color;
     }
   }
   .social {
@@ -868,9 +881,10 @@ label {
 .footer {
   height: 200px;
   background-color: $grey-dark;
+  background: url("../images/brushed_aluminium_darkened.png"); background-repeat: repeat;
   color: darken($soft-white,20%);
   font-size: 2rem;
-  display:flex;
+  display: flex;
 
   p{
     margin: auto;
