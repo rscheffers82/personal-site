@@ -28,21 +28,16 @@
 // Theme main colors
 // ________________________________________
 
-// Caitlin blue: #1A1F4C;
-// Caitlin orange: #FDC245
+// C blue: #1A1F4C;
+// C orange: #FDC245
 
-$primary-color: #3c6090; // #556892; //#3498DB; (original)  //nice blue 306d9f            // currently: #0379C4
-$secondary-color: #808080; // current: #919191;//#0A286B; //#334455;(original)  //#334A55;
-$call-to-action: #FFC600; // CV ORANGE -> #EEAB3A;
+$primary-color: #3c6090;
+$secondary-color: #808080;
+$call-to-action: #FFC600;
 $CV-call-to-action: #EEAB3A;
-// $call-to-action: rgba(224,153,0,0.65);
-
-
-
-
 
 $white: #FFFFFF;
-$soft-white: #F4F4F4; //#f7f7f7;
+$soft-white: #F4F4F4;
 
 // Text colors, gray block
 $grey-soft: #8f8f8f;        // slightly lighter for less attention to items #f7f7f7;
@@ -52,7 +47,6 @@ $grey-medium: #676767;      // normal text
 
 $shadow: 0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3);
 // Fonts to consider for headers
-// "Montserrat",sans-serif
 
 // ____________________________________________
 //
@@ -232,7 +226,7 @@ h2 {
 }
 .navbar-default .navbar-brand{
   padding-left: 20px;
-  color: $call-to-action !important;
+  color: $CV-call-to-action !important;
   font-family: 'Titillium Web', sans-serif;
   font-size: 2.5rem;
 }
@@ -432,9 +426,6 @@ h2 {
     padding: 2%;
   }
 
-  h2 {
-    // color: $CV-call-to-action !important;
-  }
 }
 
 

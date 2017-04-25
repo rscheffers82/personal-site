@@ -24,7 +24,7 @@ var p = (function () {				// eslint-disable-line
 		'url': ['https://score-keep11.herokuapp.com','https://github.com/rscheffers82/score-keeper'],
 		'img' : 'score-keep.jpg',
 		'tech' : ['Meteor', 'React', 'JSX', 'Sass','HTML'],
-		'category' : ['featured', 'fullstack']
+		'category' : ['featured', 'fullstack', 'backend']
 	},{
 		'name': 'Five API projects',
 		'description' : 'This is one of my pet projects used to become familiar with Node, Express and MongoDB. I build five API apps that take input through either POST or GET and return JSON data. My favorite project was the Exercise Tracker. Here users can register, track their exercises and view logs. I added a front-end UI using Materialize CSS, although the Add user and Add Exercise POST routes will return JSON data for demonstration purposes.',
@@ -90,33 +90,35 @@ var p = (function () {				// eslint-disable-line
 		'category' : ['featured', 'frontend']
 	},{
 		'name': 'Weather App',
-		'description' : 'a weather application which, based on the user\'s IP or browser information, displays the local weather using the <a href="https://darksky.net/dev" target="_blank">Dark Sky API</a>. This was a simple API project that I loved building, due to the creativity I could put into it. The various weather conditions each have their own background and the weather icon changes based on the current weather. The location is retrieved in multiple ways depending on the available information, either via browser info or via <a href="http://ip-api.com" target=_blank">ip-api.com</a>.',
+		'description' : 'A weather application which, based on the user\'s IP or browser information, displays the local weather using the <a href="https://darksky.net/dev" target="_blank">Dark Sky API</a>. This was a simple API project that I loved building, due to the creativity I could put into it. The various weather conditions each have their own background and the weather icon changes based on the current weather. The location is retrieved in multiple ways depending on the available information, either via browser info or via <a href="http://ip-api.com" target=_blank">ip-api.com</a>.',
 		'url': ['http://codepen.io/roycode/full/WwqYrB','http://codepen.io/roycode/pen/WwqYrB'],
 		'img' : 'Weather-application-in-javascript.jpg',
 		'tech' : ['Javascript','Sass','HTML','Bootstrap','API'],
-		'category' : ['featured', 'frontend']
-	},{
-		'name': 'Wikimedia Viewer',
-		'description' : 'The Wikimedia Viewer application uses the Wikimedia Web API to retrieve information from WikiPedia and displays it.',
-		'url': ['http://codepen.io/roycode/full/VjZZvw','http://codepen.io/roycode/pen/VjZZvw'],
-		'img' : 'wikipedia-viewer.jpg',
-		'tech' : ['Javascript','CSS','HTML','Bootstrap','API'],
 		'category' : ['frontend']
-	},{
-		'name': 'Quote Generator',
-		'description' : 'Be inspired by some of the world most beautiful quotes. This application uses an AJAX request to load in quotes that the user can share via Twitter.',
-		'url': ['http://codepen.io/roycode/full/NNJzmG','http://codepen.io/roycode/pen/NNJzmG'],
-		'img' : 'random-quote-generator-javascript.jpg',
-		'tech' : ['Javascript','CSS','HTML','Bootstrap'],
-		'category' : []
-	},{
-		'name': 'Tribute page',
-		'description' : 'One of my early projects which aim was to build a tribute page for a person that inspires you. In my case that\'s <a href="http://www.siriusdisclosure.com" target="_blank">Steven Greer</a>, who has done a tremendous work for humanity by bringing forward information on the ETs and UFOs subject that has been suppressed since the 1940s. This project helped me to get back into HTML and CSS.',
-		'url': ['http://codepen.io/roycode/full/BKPamX','http://codepen.io/roycode/pen/BKPamX'],
-		'img' : 'Project-StevenGreer.jpg',
-		'tech' : ['CSS','HTML'],
-		'category' : []
-	}];
+	}
+	// ,{
+	// 	'name': 'Wikimedia Viewer',
+	// 	'description' : 'The Wikimedia Viewer application uses the Wikimedia Web API to retrieve information from WikiPedia and displays it.',
+	// 	'url': ['http://codepen.io/roycode/full/VjZZvw','http://codepen.io/roycode/pen/VjZZvw'],
+	// 	'img' : 'wikipedia-viewer.jpg',
+	// 	'tech' : ['Javascript','CSS','HTML','Bootstrap','API'],
+	// 	'category' : ['frontend']
+	// },{
+	// 	'name': 'Quote Generator',
+	// 	'description' : 'Be inspired by some of the world most beautiful quotes. This application uses an AJAX request to load in quotes that the user can share via Twitter.',
+	// 	'url': ['http://codepen.io/roycode/full/NNJzmG','http://codepen.io/roycode/pen/NNJzmG'],
+	// 	'img' : 'random-quote-generator-javascript.jpg',
+	// 	'tech' : ['Javascript','CSS','HTML','Bootstrap'],
+	// 	'category' : []
+	// },{
+	// 	'name': 'Tribute page',
+	// 	'description' : 'One of my early projects which aim was to build a tribute page for a person that inspires you. In my case that\'s <a href="http://www.siriusdisclosure.com" target="_blank">Steven Greer</a>, who has done a tremendous work for humanity by bringing forward information on the ETs and UFOs subject that has been suppressed since the 1940s. This project helped me to get back into HTML and CSS.',
+	// 	'url': ['http://codepen.io/roycode/full/BKPamX','http://codepen.io/roycode/pen/BKPamX'],
+	// 	'img' : 'Project-StevenGreer.jpg',
+	// 	'tech' : ['CSS','HTML'],
+	// 	'category' : []
+	// }
+];
 
 /*	},{			fix app, currently not displaying anything
 		'name': 'TwitchTV JSON API data',
