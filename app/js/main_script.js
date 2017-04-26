@@ -105,7 +105,7 @@ $( '.project-grid' ).on("click", 'a', function(){
  // Smooth scrolling \\
 //  ----------------  \\
 
-$("#main-nav a, .down-arrow, .cta-buttons .btn").on('click', function(event) {
+$("#main-nav a, .down-arrow, .cta-buttons .btn, .navbar-brand").on('click', function(event) {
   event.preventDefault();   // Prevent default anchor click behavior
   var hash = this.hash;     // Store hash
 
