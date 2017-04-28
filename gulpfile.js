@@ -83,7 +83,7 @@ gulp.task('serve', ['sass'], function() {
 gulp.task('useref', function() {
 	return gulp.src('app/*.html')
 		.pipe(useref())
-		// .pipe(gulpIf('*.js', uglify()))
+		.pipe(gulpIf('app/js/*.js', uglify()))
 		.pipe(gulpIf('*.css', cssnano()))
 		.pipe(gulp.dest('dist'));
 });
@@ -99,6 +99,11 @@ gulp.task('images', function() {
 gulp.task('fonts', function() {
 	return gulp.src('app/fonts/**/*')
 	.pipe(gulp.dest('dist/fonts'));
+});
+
+gulp.task('testimonial-plugin', function() {
+	return gulp.src('app/slick/**/*')
+	.pipe(gulp.dest('dist/slick'));
 });
 
 gulp.task('contact-form', function() {
@@ -122,7 +127,7 @@ gulp.task('cache:clear', function (callback) {
 gulp.task('build', function(callback) {
 	runSequence(
 		'clean:dist',
-		['sass', 'useref', 'images', 'fonts', 'contact-form', 'htaccess'],
+		['sass', 'useref', 'images', 'fonts', 'testimonial-plugin', 'contact-form', 'htaccess'],
 		callback
 	);
 });
