@@ -38,9 +38,11 @@ $(document).ready(function() {
   $('.testimonial-wrapper').slick({
     dots: true,
     infinite: true,
-    speed: 300,
+    speed: 300,                 // transition
+    autoplaySpeed: 550000,      // slide display
     slidesToShow: 1,
-    adaptiveHeight: true
+    adaptiveHeight: true,
+    autoplay: true
   });
 
   // Google analytics
