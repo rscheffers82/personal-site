@@ -35,6 +35,14 @@ $(document).ready(function() {
     submitHandler: submitValidatedForm
   });
 
+  $('.testimonial-wrapper').slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true
+  });
+
   // Google analytics
   /* eslint-disable */
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
