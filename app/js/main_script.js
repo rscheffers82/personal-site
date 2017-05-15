@@ -45,6 +45,102 @@ $(document).ready(function() {
     autoplay: true
   });
 
+  // dropdown code for menu dropdown on mobile
+  $(document).on('click','.navbar-collapse.in',function(e) {
+      if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
+          $(this).collapse('hide');
+      }
+  });
+
+  // form action, calling php script to email info
+  var submitValidatedForm = function() {
+    var data = $('form').serialize();
+    $.ajax({
+      type: 'POST',
+      url: 'http://royscheffers.com/php/contact-form.php',      // use for development
+      data: data,
+    })
+    .done (function() {
+      $('.success-message').html('Message sent successfully');
+      $('.success-container').removeClass('hide');
+      $('#roycode-contact-form').addClass('hide');
+    })
+    .fail (function(jqXHR, textStatus, errorThrown) {
+      // php script not reached or invalid response
+      console.log('failed reason: ' + errorThrown.toString());
+      console.log(jqXHR);
+      $('.success-message').html('Message failed...<br>Please email <a href="mailto:r.scheffers@gmail.com">r.scheffers@gmail.com</a>');
+      $('.success-message').css('background-color','#ffeeee');
+      $('.success-container').removeClass('hide');
+      $('#roycode-contact-form').addClass('hide');
+    });
+  };
+
+
+   // portfolio-area events \\
+  //-------------------------\\
+
+  // Filter projects based on button click
+  $('.filter-btn-group').on('click', '.btn', function() {
+    var filterValue = $( this ).attr('data-filter');
+    $grid.isotope({ filter: filterValue });
+  });
+
+  // change is-checked class on buttons
+  $('.btn-group').each( function( i, buttonGroup ) {
+    var $buttonGroup = $( buttonGroup );
+    $buttonGroup.on( 'click', '.btn', function() {
+      $buttonGroup.find('.is-checked').removeClass('is-checked');
+      $( this ).addClass('is-checked');
+    });
+  });
+
+  $( '.project-grid' ).on("click", 'a', function(){
+    p.modal( $(this).data('number') );      // eslint-disable-line
+  });
+
+
+   // Smooth scrolling \\
+  //  ----------------  \\
+
+  $("#main-nav a, .down-arrow, .cta-buttons .btn, .navbar-brand").on('click', function(event) {
+    event.preventDefault();   // Prevent default anchor click behavior
+    var hash = this.hash;     // Store hash
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 1500, function(){
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  });
+
+
+   // Detect IOS or mobile \\
+  //  --------------------  \\
+
+  function getMobileOperatingSystem() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        // Windows Phone must come first because its UA also contains "Android"
+      if(/windows phone/i.test(userAgent)) {
+          return "Windows Phone";
+      }
+
+      if (/android/i.test(userAgent)) {
+          return "Android";
+      }
+
+      // iOS detection from: http://stackoverflow.com/a/9039885/177710
+      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          return "iOS";
+      }
+
+      return "unknown";
+  }
+
   // Google analytics
   /* eslint-disable */
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -55,100 +151,5 @@ $(document).ready(function() {
   ga('create', 'UA-86887764-1', 'auto');
   ga('send', 'pageview');
   /* eslint-enable */
+
 });
-
-// dropdown code for menu dropdown on mobile
-$(document).on('click','.navbar-collapse.in',function(e) {
-    if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
-        $(this).collapse('hide');
-    }
-});
-
-// form action, calling php script to email info
-var submitValidatedForm = function() {
-  var data = $('form').serialize();
-  $.ajax({
-    type: 'POST',
-    url: 'http://royscheffers.com/php/contact-form.php',      // use for development
-    data: data,
-  })
-  .done (function() {
-    $('.success-message').html('Message sent successfully');
-    $('.success-container').removeClass('hide');
-    $('#roycode-contact-form').addClass('hide');
-  })
-  .fail (function(jqXHR, textStatus, errorThrown) {
-    // php script not reached or invalid response
-    console.log('failed reason: ' + errorThrown.toString());
-    console.log(jqXHR);
-    $('.success-message').html('Message failed...<br>Please email <a href="mailto:r.scheffers@gmail.com">r.scheffers@gmail.com</a>');
-    $('.success-message').css('background-color','#ffeeee');
-    $('.success-container').removeClass('hide');
-    $('#roycode-contact-form').addClass('hide');
-  });
-};
-
-
- // portfolio-area events \\
-//-------------------------\\
-
-// Filter projects based on button click
-$('.filter-btn-group').on('click', '.btn', function() {
-  var filterValue = $( this ).attr('data-filter');
-  $grid.isotope({ filter: filterValue });
-});
-
-// change is-checked class on buttons
-$('.btn-group').each( function( i, buttonGroup ) {
-  var $buttonGroup = $( buttonGroup );
-  $buttonGroup.on( 'click', '.btn', function() {
-    $buttonGroup.find('.is-checked').removeClass('is-checked');
-    $( this ).addClass('is-checked');
-  });
-});
-
-$( '.project-grid' ).on("click", 'a', function(){
-  p.modal( $(this).data('number') );      // eslint-disable-line
-});
-
-
- // Smooth scrolling \\
-//  ----------------  \\
-
-$("#main-nav a, .down-arrow, .cta-buttons .btn, .navbar-brand").on('click', function(event) {
-  event.preventDefault();   // Prevent default anchor click behavior
-  var hash = this.hash;     // Store hash
-
-  // Using jQuery's animate() method to add smooth page scroll
-  // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-  $('html, body').animate({
-    scrollTop: $(hash).offset().top
-  }, 1500, function(){
-    // Add hash (#) to URL when done scrolling (default click behavior)
-    window.location.hash = hash;
-  });
-});
-
-
- // Detect IOS or mobile \\
-//  --------------------  \\
-
-function getMobileOperatingSystem() {
-  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-      // Windows Phone must come first because its UA also contains "Android"
-    if(/windows phone/i.test(userAgent)) {
-        return "Windows Phone";
-    }
-
-    if (/android/i.test(userAgent)) {
-        return "Android";
-    }
-
-    // iOS detection from: http://stackoverflow.com/a/9039885/177710
-    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        return "iOS";
-    }
-
-    return "unknown";
-}
