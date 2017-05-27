@@ -102,6 +102,10 @@ h2 {
   margin-bottom: 20px;
 }
 
+img {
+  // max-height: 100%;
+}
+
 .noheight {
   height: 0px;
 }
@@ -349,6 +353,7 @@ h2 {
   flex-flow: column;
   width: 100%;
   padding: 25px 25px 0px 0px;
+  overflow: hidden;
 }
 
 .main-block {
@@ -362,7 +367,8 @@ h2 {
 .top-flex{
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: stretch;
+  justify-content: flex-start;
 }
 
 .title-text-flex{
@@ -371,6 +377,10 @@ h2 {
   justify-content: center;
   width: 100%;
   text-align: center;
+}
+
+.img-flex {
+  display: block;
 }
 
 .img-mobile {

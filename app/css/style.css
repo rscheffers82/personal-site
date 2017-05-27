@@ -227,7 +227,8 @@ h2 {
       -ms-flex-flow: column;
           flex-flow: column;
   width: 100%;
-  padding: 25px 25px 0px 0px; }
+  padding: 25px 25px 0px 0px;
+  overflow: hidden; }
 
 .main-block {
   display: block;
@@ -243,9 +244,12 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start; }
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
 
 .title-text-flex {
   display: -webkit-box;
@@ -260,6 +264,9 @@ h2 {
           justify-content: center;
   width: 100%;
   text-align: center; }
+
+.img-flex {
+  display: block; }
 
 .img-mobile {
   display: none;
