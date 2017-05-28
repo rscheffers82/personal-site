@@ -27,7 +27,7 @@ var p = (function () {				// eslint-disable-line
 		'category' : ['featured', 'wordpress']
 	},{
 		'name': 'Meteor Short Lnk',
-		'description' : '',
+		'description' : 'This application was built utilizing a Meteor backend and a react frontend interface. The main requirements for the project were to offer users a secure personal space to create and track shortened URLs and allow anyone with a shortened URL to be redirected to the full URL.<br/> Creating a personal secure space was achieved by using Meteor\'s build-in authentication library. New URL\'s are saved in a SimpleSchema format in the MongoDB using Meteor methods. Redirection happens at the backend of the app and login is not required. <br /> Once users visit the shortened URL, the app fetches the request and using Meteor\'s WebApp library and Node\'s req, res and next objects to redirect the user when the URL is found. When this is the case, behind the scenes the last visited and visit count values are updated.',
 		'url': ['https://rs-lnk.herokuapp.com','https://github.com/rscheffers82/short-lnk-meteor'],
 		'img' : 'short-lnk-meteor-project-roy-scheffers.jpg',
 		'tech' : ['Meteor', 'React', 'JSX', 'Sass','HTML'],
