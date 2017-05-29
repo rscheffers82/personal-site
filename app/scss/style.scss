@@ -102,13 +102,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-img {
-  // max-height: 100%;
-}
-
-.noheight {
-  height: 0px;
-}
+.noheight { height: 0px; }
 
 
 // ____________________________________________
@@ -1070,7 +1064,7 @@ label {
   }
 }
 
-@media (min-width: ) and (max-width: 640px) {
+@media (max-width: 640px) {
   .portfolio-area .project {
     width: 60%;
     margin: 0 20%;
@@ -1147,5 +1141,12 @@ label {
 
   .success-message {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 900px ){
+  h2 {
+    font-size: 2.2rem !important;
+    color: #3c6090;
   }
 }
