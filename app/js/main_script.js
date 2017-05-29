@@ -39,7 +39,7 @@ $(document).ready(function() {
     dots: true,
     infinite: true,
     speed: 300,                 // transition
-    autoplaySpeed: 550000,      // slide display
+    autoplaySpeed: 55000,        // slide display
     slidesToShow: 1,
     adaptiveHeight: true,
     autoplay: true
