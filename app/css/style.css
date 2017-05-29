@@ -345,10 +345,13 @@ h2 {
 .portfolio-area img {
   width: 100%; }
 
+.portfolio-area .project-grid {
+  margin-top: 25px; }
+
 .portfolio-area .btn-group {
   width: 100%;
   text-align: center;
-  margin: 25px 0; }
+  margin: 25px 0 0; }
 
 .portfolio-area .btn {
   border: 1px solid transparent;
@@ -361,11 +364,15 @@ h2 {
   transition: all 0.25s ease-in-out; }
   .portfolio-area .btn:hover {
     color: #3c6090; }
-  .portfolio-area .btn:hover, .portfolio-area .btn:focus, .portfolio-area .btn:active,
-  .portfolio-area .btn .is-checked {
+  .portfolio-area .btn:hover, .portfolio-area .btn:focus, .portfolio-area .btn:active {
     color: #3c6090;
     background-color: #FFFFFF;
     border: 1px solid #3c6090; }
+
+.portfolio-area .is-checked {
+  color: #3c6090;
+  background-color: #FFFFFF;
+  border: 1px solid #3c6090; }
 
 .portfolio-area .project-grid {
   display: block; }

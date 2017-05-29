@@ -498,11 +498,15 @@ img {
   img {
     width: 100%;
   }
+.project-grid {
+  margin-top: 25px;
+}
+
   .btn-group{
     width: 100%;
     text-align: center;
     // margin: 0 auto
-    margin: 25px 0;
+    margin: 25px 0 0;
   }
 
   .btn {
@@ -520,13 +524,19 @@ img {
 
     &:hover,
     &:focus,
-    &:active,
-    .is-checked {
+    &:active {
       color: $primary-color;
       background-color: $white;
       border: 1px solid $primary-color;
 
     }
+  }
+
+  .is-checked {
+    color: $primary-color;
+    background-color: $white;
+    border: 1px solid $primary-color;
+
   }
 
   .project-grid {

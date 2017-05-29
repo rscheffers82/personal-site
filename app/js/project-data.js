@@ -47,6 +47,13 @@ var p = (function () {				// eslint-disable-line
 		'tech' : ['Meteor', 'React', 'JSX', 'Sass','HTML'],
 		'category' : ['meteor', 'react']
 	},{
+		'name': 'Exercise Tracker API',
+		'description' : 'Exercise Tracker is built on Node and Express to deepen my knowledge of creating APIs. To make this project a little more intuitive to use and visual, a partial front-end UI is created using Materialize CSS. This setup is chosen for API demo purposes and it is not meant to be a full stack app.<br /> The "Create new user" and "Add Exercise" are POST routes that return JSON data. The "View logs" is a GET route which through an AJAX call will request the user\'s previous exercise data based on the start and end date when provided, and display it in a table underneath the three boxes.',
+		'url': ['https://rs82.herokuapp.com/exercise/','https://github.com/rscheffers82/API-microservices/tree/master/exercise-tracker'],
+		'img' : 'exercise-api-project.jpg',
+		'tech' : ['Node','Express','MongoDB', 'JavaScript', 'MaterializeCSS'],
+		'category' : ['api', 'backend']
+	},{
 		'name': 'Five API projects',
 		'description' : 'This is one of my pet projects used to become familiar with Node, Express and MongoDB. I build five API apps that take input through either POST or GET and return JSON data. My favorite project was the Exercise Tracker. Here users can register, track their exercises and view logs. I added a front-end UI using Materialize CSS, although the Add user and Add Exercise POST routes will return JSON data for demonstration purposes.',
 		'url': ['https://rs82.herokuapp.com/','https://github.com/rscheffers82/API-microservices'],
@@ -109,14 +116,14 @@ var p = (function () {				// eslint-disable-line
 		'img' : 'Weather-application-in-javascript.jpg',
 		'tech' : ['JavaScript','Sass','HTML','Bootstrap','API'],
 		'category' : ['frontend', 'api']
+	},{
+		'name': 'Wikimedia Viewer',
+		'description' : 'The Wikimedia Viewer application uses the Wikimedia Web API to retrieve information from WikiPedia and displays it.',
+		'url': ['http://codepen.io/roycode/full/VjZZvw','http://codepen.io/roycode/pen/VjZZvw'],
+		'img' : 'wikipedia-viewer.jpg',
+		'tech' : ['JavaScript','CSS','HTML','Bootstrap','API'],
+		'category' : ['API']
 	}
-	// ,{
-	// 	'name': 'Wikimedia Viewer',
-	// 	'description' : 'The Wikimedia Viewer application uses the Wikimedia Web API to retrieve information from WikiPedia and displays it.',
-	// 	'url': ['http://codepen.io/roycode/full/VjZZvw','http://codepen.io/roycode/pen/VjZZvw'],
-	// 	'img' : 'wikipedia-viewer.jpg',
-	// 	'tech' : ['JavaScript','CSS','HTML','Bootstrap','API'],
-	// 	'category' : ['frontend']
 	// },{
 	// 	'name': 'Quote Generator',
 	// 	'description' : 'Be inspired by some of the world most beautiful quotes. This application uses an AJAX request to load in quotes that the user can share via Twitter.',
