@@ -581,7 +581,7 @@ div.img-responsive::before {
   position: relative;
   border: none;
   text-align: center;
-  font-size: 2.25rem;
+  font-size: 2rem;
   line-height: 3.25rem; }
 
 .box cite {
