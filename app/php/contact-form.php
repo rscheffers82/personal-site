@@ -4,6 +4,9 @@ header('Access-Control-Allow-Origin: http://localhost:3000');
 header('Access-Control-Allow-Origin: http://royscheffers.com');
 
 //echo 'within the PHP script - mailed2';
+
+// var_dump($_POST);
+
 $name = $_POST['name'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];

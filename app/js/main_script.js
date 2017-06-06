@@ -52,31 +52,6 @@ $(document).ready(function() {
       }
   });
 
-  // form action, calling php script to email info
-  var submitValidatedForm = function() {
-    var data = $('form').serialize();
-    $.ajax({
-      type: 'POST',
-      url: 'http://royscheffers.com/php/contact-form.php',      // use for development
-      data: data,
-    })
-    .done (function() {
-      $('.success-message').html('Message sent successfully');
-      $('.success-container').removeClass('hide');
-      $('#roycode-contact-form').addClass('hide');
-    })
-    .fail (function(jqXHR, textStatus, errorThrown) {
-      // php script not reached or invalid response
-      console.log('failed reason: ' + errorThrown.toString());
-      console.log(jqXHR);
-      $('.success-message').html('Message failed...<br>Please email <a href="mailto:r.scheffers@gmail.com">r.scheffers@gmail.com</a>');
-      $('.success-message').css('background-color','#ffeeee');
-      $('.success-container').removeClass('hide');
-      $('#roycode-contact-form').addClass('hide');
-    });
-  };
-
-
    // portfolio-area events \\
   //-------------------------\\
 
@@ -153,3 +128,28 @@ $(document).ready(function() {
   /* eslint-enable */
 
 });
+
+// form action, calling php script to email info
+var submitValidatedForm = function() {
+  var data = $('form').serialize();
+  console.log('data: ', data);
+  $.ajax({
+    type: 'POST',
+    url: 'http://royscheffers.com/php/contact-form.php',      // use for development
+    data: data,
+  })
+  .done (function() {
+    $('.success-message').html('Message sent successfully');
+    $('.success-container').removeClass('hide');
+    $('#roycode-contact-form').addClass('hide');
+  })
+  .fail (function(jqXHR, textStatus, errorThrown) {
+    // php script not reached or invalid response
+    console.log('failed reason: ' + errorThrown.toString());
+    console.log(jqXHR);
+    $('.success-message').html('Message failed...<br>Please email <a href="mailto:r.scheffers@gmail.com">r.scheffers@gmail.com</a>');
+    $('.success-message').css('background-color','#ffeeee');
+    $('.success-container').removeClass('hide');
+    $('#roycode-contact-form').addClass('hide');
+  });
+};
