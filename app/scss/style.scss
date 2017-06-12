@@ -65,7 +65,7 @@ $title-font: 'Titillium Web', sans-serif;
 
 html {
   // width: 98.8vw;
-    font-size: 66,7%;
+    font-size: 66.7%;
 }
 
 body {
@@ -544,7 +544,7 @@ h2 {
     a {
       color: $grey-dark;
       cursor: pointer;
-      transition: all 0.5 ease-in-out;
+      transition: all 0.5s ease-in-out;
     }
     .project-action-icons a:hover {
       color: $call-to-action;
@@ -951,7 +951,7 @@ label {
   font-size: 2rem;
   display: flex;
 
-  p{
+  p {
     margin: auto;
     padding: 10px;
     text-align: center;
