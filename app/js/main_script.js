@@ -132,7 +132,6 @@ $(document).ready(function() {
 // form action, calling php script to email info
 var submitValidatedForm = function() {
   var data = $('form').serialize();
-  console.log('data: ', data);
   $.ajax({
     type: 'POST',
     url: 'http://royscheffers.com/php/contact-form.php',      // use for development
