@@ -1,1 +1,1 @@
-testing gitpush and copy to ftp pre-hook
+testing gitpush and copy to ftp pre-hook, now all files within the dir
