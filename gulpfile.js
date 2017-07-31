@@ -103,28 +103,27 @@ gulp.task('cache:clear', function (callback) {
 	return cache.clearAll(callback);
 });
 
-gulp.task('add', function() {
-	const add = spawn('git', ['add', '.']);
-	add.on('close', (code) => {
-		if (code == 0 ) console.log(`\nAll files are added.`);
-		else displayError('Unable to add files');
-	});
-});
+// gulp.task('add', function() {
+// 	const add = spawn('git', ['add', '.']);
+// 	add.on('close', (code) => {
+// 		if (code == 0 ) console.log(`\nAll files are added.`);
+// 		else displayError('Unable to add files');
+// 	});
+// });
 
-gulp.task('commit', function() {
-	if (issue) return;
-	// var commitMessage = 'Added automated build and deploy to gulp process';
-	const gitCommit = spawn('git', ['commit', '--message', '"' + commitMessage + '"']);
-
-	gitCommit.stderr.on('data', (data) => {
-		console.log(`gitCommit stderr: ${data}`);
-	});
-
-	gitCommit.on('close', (code) => {
-		if (code == 0 ) console.log(`commit done with message "${commitMessage}".`);
-		else displayError('Unable to commit');
-	});
-});
+// gulp.task('commit', function() {
+// 	// var commitMessage = 'Added automated build and deploy to gulp process';
+// 	const gitCommit = spawn('git', ['commit', '--message', '"' + commitMessage + '"']);
+//
+// 	gitCommit.stderr.on('data', (data) => {
+// 		console.log(`gitCommit stderr: ${data}`);
+// 	});
+//
+// 	gitCommit.on('close', (code) => {
+// 		if (code == 0 ) console.log(`commit done with message "${commitMessage}".`);
+// 		else displayError('Unable to commit');
+// 	});
+// });
 
 gulp.task('push', function() {
 	if (issue) return;
@@ -135,16 +134,19 @@ gulp.task('push', function() {
 	});
 });
 
-gulp.task('git', function() {
-	// execute multiple commands in series
-	shell.series([
-			'git add .',
-			'git commit -m' + commitMessage,
-			'git push ftp master'
-		], function(err){
-			console.log('executed many commands in a row');
-	});
-});
+// gulp.task('git', function() {
+// 	// execute multiple commands in series
+// 	const wrappedMessage = 'test commit';
+// 	console.log('wrappedMessage: ', wrappedMessage);
+// 	shell.series([
+// 			'git add .',
+// 			'git commit -m ' + wrappedMessage,
+// 			'git push ftp master'
+// 		], function(err){
+// 			console.log('executed many commands in a row');
+// 			if (err) console.log('Error: ', err);
+// 	});
+// });
 
 // Main task to build & deploy \\
 
@@ -161,7 +163,7 @@ gulp.task('build', function(done) {
 		'git',
 		// 'add',
 		// 'commit',
-		// 'push',
+		'push',
 		done
 	);
 });
