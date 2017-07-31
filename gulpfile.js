@@ -13,45 +13,18 @@ const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const del = require('del');
 const runSequence = require('run-sequence');
-
-const dist = 'royschefferscom';
-// const plumber = require('gulp-plumber');
-// const gutil = require('gulp-util');
-// const notify = require('gulp-notify');
-
 const useref = require('gulp-useref');
 
-// var gulp_src = gulp.src;
-// gulp.src = function() {
-//   return gulp_src.apply(gulp, arguments)
-//     .pipe(plumber(function(error) {
-//       // Output an error message
-//       gutil.log(gutil.colors.red('Error (' + error.plugin + '): ' + error.message));
-//       // emit the end event, to properly end the task
-//       this.emit('end');
-//     })
-//   );
-// };
+// --- Global vars and functions --- \\
 
-// gulp.task('sass', function(){
-// 	return gulp.src('app/scss/**/*.scss')
-// 		.pipe(sourcemaps.init())
-// 		.pipe(sass().on('error', sass.logError))
-// 		.pipe(autoprefixer())
-// 		.pipe(sourcemaps.write('.'))
-//     .pipe(gulp.dest('app/css/'))
-//     .pipe(browserSync.reload({
-//       stream: true
-//     }))
-// });
-//
-// gulp.task('browserSync', function() {
-// 	browserSync.init({
-//     server: {
-//       baseDir: 'app'
-//     },
-//   })
-// })
+const dist = 'royschefferscom';
+
+const i = process.argv.indexOf("-m");
+const commitMessage = (i>-1) ? process.argv[i+1].slice(1, process.argv[i+1].length - 1): undefined;
+
+function displayError(msg) {
+	console.log(`ERROR: ${msg}`);
+}
 
 gulp.task('sass', function(){
 	return gulp.src('app/scss/**/*.scss')
@@ -127,27 +100,49 @@ gulp.task('cache:clear', function (callback) {
 	return cache.clearAll(callback);
 });
 
-gulp.task('build', function(callback) {
+gulp.task('add', function() {
+	const add = spawn('git', ['add', '.']);
+	add.on('close', (code) => {
+		if (code == 0 ) console.log(`\nAll files are added.`);
+		else displayError('Unable to add files');
+	});
+});
+
+gulp.task('commit', function() {
+	const commit = spawn('git', ['commit', '-m', commitMessage]);
+	commit.on('close', (code) => {
+		if (code == 0 ) console.log(`commit done with message "${commitMessage}".`);
+		else displayError('Unable to commit');
+	});
+});
+
+gulp.task('push', function() {
+	const push = spawn('git', ['push', 'ftp', 'master']);
+	push.on('close', (code) => {
+		if (code == 0 ) console.log(`Upload and deployment succesful! :)`);
+		else displayError('Unable to push');
+	});
+});
+
+// Main task to build & deploy \\
+
+gulp.task('build', function(done) {
+	if(!commitMessage){
+		console.log('\nPlease provide a commit message');
+		console.log("Usage: gulp build -m 'commit message'\n");
+		return;
+	}
+
 	runSequence(
 		'clean:dist',
 		['sass', 'useref', 'images', 'fonts', 'testimonial-plugin', 'contact-form', 'htaccess'],
-		callback
+		'add',
+		'commit',
+		'push',
+		done
 	);
 });
 
 gulp.task('default', function (callback) {
 	runSequence(['serve'], callback);
-});
-
-gulp.task('upload', function() {
-	const push = spawn('git', ['push', 'ftp', 'master']);
-	push.stdout.setEncoding('utf8');
-
-	push.stdout.on('data', (data) => {
-		console.log(data.toString());
-	});
-
-	push.on('close', (code) => {
-		console.log(`child process exited with code ${code}`);
-	});
 });
