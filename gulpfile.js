@@ -20,7 +20,7 @@ const useref = require('gulp-useref');
 const dist = 'royschefferscom';
 
 const i = process.argv.indexOf("-m");
-const commitMessage = (i>-1) ? process.argv[i+1].slice(1, process.argv[i+1].length - 1): undefined;
+const commitMessage = (i>-1) ? process.argv[i+1] : undefined;
 
 function displayError(msg) {
 	console.log(`ERROR: ${msg}`);
@@ -109,8 +109,16 @@ gulp.task('add', function() {
 });
 
 gulp.task('commit', function() {
-	const commit = spawn('git', ['commit', '-m', commitMessage]);
-	commit.on('close', (code) => {
+	// var commitMessage = 'Added automated build and deploy to gulp process';
+	console.log(typeof commitMessage);
+	console.log(commitMessage);
+	const gitCommit = spawn('git', ['commit', '-m', commitMessage]);
+
+	gitCommit.stderr.on('data', (data) => {
+	  console.log(`gitCommit stderr: ${data}`);
+	});
+
+	gitCommit.on('close', (code) => {
 		if (code == 0 ) console.log(`commit done with message "${commitMessage}".`);
 		else displayError('Unable to commit');
 	});
@@ -133,12 +141,15 @@ gulp.task('build', function(done) {
 		return;
 	}
 
+	runSequence('commit');
+
+	return;
 	runSequence(
 		'clean:dist',
 		['sass', 'useref', 'images', 'fonts', 'testimonial-plugin', 'contact-form', 'htaccess'],
 		'add',
 		'commit',
-		'push',
+		// 'push',
 		done
 	);
 });
