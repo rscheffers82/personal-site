@@ -5,6 +5,7 @@ const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 
 var spawn = require('child_process').spawn;
+var shell = require('./shellHelper');
 
 const uglify = require('gulp-uglify');
 const gulpIf = require('gulp-if');
@@ -18,11 +19,13 @@ const useref = require('gulp-useref');
 // --- Global vars and functions --- \\
 
 const dist = 'royschefferscom';
+var issue = false;
 
 const i = process.argv.indexOf("-m");
 const commitMessage = (i>-1) ? process.argv[i+1] : undefined;
 
 function displayError(msg) {
+	issue = true;
 	console.log(`ERROR: ${msg}`);
 }
 
@@ -109,12 +112,13 @@ gulp.task('add', function() {
 });
 
 gulp.task('commit', function() {
+	if (issue) return;
 	// var commitMessage = 'Added automated build and deploy to gulp process';
-	const gitCommit = spawn('git', ['commit', '-m', `"${commitMessage}"`]);
+	const gitCommit = spawn('git', ['commit', '--message', '"' + commitMessage + '"']);
 
 	gitCommit.stderr.on('data', (data) => {
-  console.log(`gitCommit stderr: ${data}`);
-});
+		console.log(`gitCommit stderr: ${data}`);
+	});
 
 	gitCommit.on('close', (code) => {
 		if (code == 0 ) console.log(`commit done with message "${commitMessage}".`);
@@ -123,10 +127,22 @@ gulp.task('commit', function() {
 });
 
 gulp.task('push', function() {
+	if (issue) return;
 	const push = spawn('git', ['push', 'ftp', 'master']);
 	push.on('close', (code) => {
 		if (code == 0 ) console.log(`Upload and deployment succesful! :)`);
 		else displayError('Unable to push');
+	});
+});
+
+gulp.task('git', function() {
+	// execute multiple commands in series
+	shell.series([
+			'git add .',
+			'git commit -m' + commitMessage,
+			'git push ftp master'
+		], function(err){
+			console.log('executed many commands in a row');
 	});
 });
 
@@ -142,9 +158,10 @@ gulp.task('build', function(done) {
 	runSequence(
 		'clean:dist',
 		['sass', 'useref', 'images', 'fonts', 'testimonial-plugin', 'contact-form', 'htaccess'],
-		'add',
-		'commit',
-		'push',
+		'git',
+		// 'add',
+		// 'commit',
+		// 'push',
 		done
 	);
 });
