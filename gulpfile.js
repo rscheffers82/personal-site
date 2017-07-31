@@ -4,6 +4,8 @@ const autoprefixer = require('gulp-autoprefixer');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 
+var spawn = require('child_process').spawn;
+
 const uglify = require('gulp-uglify');
 const gulpIf = require('gulp-if');
 const cssnano = require('gulp-cssnano');
@@ -12,6 +14,7 @@ const cache = require('gulp-cache');
 const del = require('del');
 const runSequence = require('run-sequence');
 
+const dist = 'royschefferscom';
 // const plumber = require('gulp-plumber');
 // const gutil = require('gulp-util');
 // const notify = require('gulp-notify');
@@ -85,7 +88,7 @@ gulp.task('useref', function() {
 		.pipe(useref())
 		.pipe(gulpIf('app/js/*.js', uglify()))
 		.pipe(gulpIf('*.css', cssnano()))
-		.pipe(gulp.dest('dist'));
+		.pipe(gulp.dest( dist ));
 });
 
 gulp.task('images', function() {
@@ -93,31 +96,31 @@ gulp.task('images', function() {
 		.pipe(cache(imagemin({
 			interlaced: true
 		})))
-		.pipe(gulp.dest('dist/images'));
+		.pipe(gulp.dest(`${dist}/images`));
 });
 
 gulp.task('fonts', function() {
 	return gulp.src('app/fonts/**/*')
-	.pipe(gulp.dest('dist/fonts'));
+	.pipe(gulp.dest(`${dist}/fonts`));
 });
 
 gulp.task('testimonial-plugin', function() {
 	return gulp.src('app/slick/**/*')
-	.pipe(gulp.dest('dist/slick'));
+	.pipe(gulp.dest(`${dist}/slick`));
 });
 
 gulp.task('contact-form', function() {
 	return gulp.src('app/php/**/*')
-	.pipe(gulp.dest('dist/php'));
+	.pipe(gulp.dest(`${dist}/php`));
 });
 
 gulp.task('htaccess', function() {
 	return gulp.src('app/.htaccess')
-	.pipe(gulp.dest('dist/'));
+	.pipe(gulp.dest(`${dist}/`));
 });
 
 gulp.task('clean:dist', function() {
-	return del.sync('dist');
+	return del.sync( dist );
 });
 
 gulp.task('cache:clear', function (callback) {
@@ -134,4 +137,17 @@ gulp.task('build', function(callback) {
 
 gulp.task('default', function (callback) {
 	runSequence(['serve'], callback);
+});
+
+gulp.task('upload', function() {
+	const push = spawn('git', ['push', 'ftp', 'master']);
+	push.stdout.setEncoding('utf8');
+
+	push.stdout.on('data', (data) => {
+		console.log(data.toString());
+	});
+
+	push.on('close', (code) => {
+		console.log(`child process exited with code ${code}`);
+	});
 });
