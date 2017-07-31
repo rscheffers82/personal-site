@@ -110,13 +110,11 @@ gulp.task('add', function() {
 
 gulp.task('commit', function() {
 	// var commitMessage = 'Added automated build and deploy to gulp process';
-	console.log(typeof commitMessage);
-	console.log(commitMessage);
-	const gitCommit = spawn('git', ['commit', '-m', commitMessage]);
+	const gitCommit = spawn('git', ['commit', '-m', `"${commitMessage}"`]);
 
 	gitCommit.stderr.on('data', (data) => {
-	  console.log(`gitCommit stderr: ${data}`);
-	});
+  console.log(`gitCommit stderr: ${data}`);
+});
 
 	gitCommit.on('close', (code) => {
 		if (code == 0 ) console.log(`commit done with message "${commitMessage}".`);
@@ -141,15 +139,12 @@ gulp.task('build', function(done) {
 		return;
 	}
 
-	runSequence('commit');
-
-	return;
 	runSequence(
 		'clean:dist',
 		['sass', 'useref', 'images', 'fonts', 'testimonial-plugin', 'contact-form', 'htaccess'],
 		'add',
 		'commit',
-		// 'push',
+		'push',
 		done
 	);
 });
