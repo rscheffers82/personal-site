@@ -1,5 +1,5 @@
 html {
-  font-size: 66,7%; }
+  font-size: 66.7%; }
 
 body {
   background-color: #FFFFFF;
@@ -385,8 +385,8 @@ h2 {
   .portfolio-area .project a {
     color: #3f3f3f;
     cursor: pointer;
-    -webkit-transition: all 0.5 ease-in-out;
-    transition: all 0.5 ease-in-out; }
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
   .portfolio-area .project .project-action-icons a:hover {
     color: #FFC600; }
   .portfolio-area .project .col-md-4 {

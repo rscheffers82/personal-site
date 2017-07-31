@@ -1,1 +1,0 @@
-testing gitpush hook, copy all dist content to main folder
