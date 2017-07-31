@@ -5,7 +5,7 @@ const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 
 var spawn = require('child_process').spawn;
-var shell = require('./shellHelper');
+// var shell = require('./shellHelper');
 
 const uglify = require('gulp-uglify');
 const gulpIf = require('gulp-if');
@@ -21,8 +21,8 @@ const useref = require('gulp-useref');
 const dist = 'royschefferscom';
 var issue = false;
 
-const i = process.argv.indexOf("-m");
-const commitMessage = (i>-1) ? process.argv[i+1] : undefined;
+// const i = process.argv.indexOf("-m");
+// const commitMessage = (i>-1) ? process.argv[i+1] : undefined;
 
 function displayError(msg) {
 	issue = true;
@@ -151,16 +151,15 @@ gulp.task('push', function() {
 // Main task to build & deploy \\
 
 gulp.task('build', function(done) {
-	if(!commitMessage){
-		console.log('\nPlease provide a commit message');
-		console.log("Usage: gulp build -m 'commit message'\n");
-		return;
-	}
+	// if(!commitMessage){
+	// 	console.log('\nPlease provide a commit message');
+	// 	console.log("Usage: gulp build -m 'commit message'\n");
+	// 	return;
+	// }
 
 	runSequence(
 		'clean:dist',
 		['sass', 'useref', 'images', 'fonts', 'testimonial-plugin', 'contact-form', 'htaccess'],
-		'git',
 		// 'add',
 		// 'commit',
 		'push',
