@@ -22,7 +22,6 @@ exports.exec = function(cmd, cb){
     });
 };
 
-
 // execute multiple commands in series
 // this could be replaced by any flow control lib
 exports.series = function(cmds, cb){
