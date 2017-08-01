@@ -21,8 +21,8 @@ const useref = require('gulp-useref');
 const dist = 'royschefferscom';
 var issue = false;
 
-// const i = process.argv.indexOf("-m");
-// const commitMessage = (i>-1) ? process.argv[i+1] : undefined;
+const i = process.argv.indexOf("-m");
+const commitMessage = (i>-1) ? process.argv[i+1].trim() : undefined;
 
 function displayError(msg) {
 	issue = true;
@@ -104,16 +104,16 @@ gulp.task('cache:clear', function (callback) {
 });
 
 // gulp.task('add', function() {
-// 	const add = spawn('git', ['add', '.']);
+// 	const add = spawnSync('git', ['add', '.']);
 // 	add.on('close', (code) => {
 // 		if (code == 0 ) console.log(`\nAll files are added.`);
 // 		else displayError('Unable to add files');
 // 	});
 // });
-
+//
 // gulp.task('commit', function() {
 // 	// var commitMessage = 'Added automated build and deploy to gulp process';
-// 	const gitCommit = spawn('git', ['commit', '--message', '"' + commitMessage + '"']);
+// 	const gitCommit = spawnSync('git', ['commit', '--message', '"' + commitMessage + '"']);
 //
 // 	gitCommit.stderr.on('data', (data) => {
 // 		console.log(`gitCommit stderr: ${data}`);
@@ -124,15 +124,15 @@ gulp.task('cache:clear', function (callback) {
 // 		else displayError('Unable to commit');
 // 	});
 // });
-
-gulp.task('push', function() {
-	if (issue) return;
-	const push = spawn('git', ['push', 'ftp', 'master']);
-	push.on('close', (code) => {
-		if (code == 0 ) console.log(`Upload and deployment succesful! :)`);
-		else displayError('Unable to push');
-	});
-});
+//
+// gulp.task('push', function() {
+// 	if (issue) return;
+// 	const push = spawnSync('git', ['push', 'ftp', 'master']);
+// 	push.on('close', (code) => {
+// 		if (code == 0 ) console.log(`Upload and deployment succesful! :)`);
+// 		else displayError('Unable to push');
+// 	});
+// });
 
 // gulp.task('git', function() {
 // 	// execute multiple commands in series
@@ -148,21 +148,48 @@ gulp.task('push', function() {
 // 	});
 // });
 
+
+gulp.task('git', function() {
+	const add = spawn('git', ['add', '.']);
+
+	add.on('close', (code) => {
+			const gitCommit = spawn('git', ['commit', '--message', '"' + commitMessage + '"']);
+				gitCommit.stderr.on('data', (data) => {
+				console.log(`gitCommit stderr: ${data}`);
+			});
+
+			gitCommit.on('close', (code) => {
+				const push = spawn('git', ['push', 'ftp', 'master']);
+				push.on('close', (code) => {
+					if (code == 0 ) console.log(`Upload and deployment succesful! :)`);
+				});
+			});
+		});
+
+
+
+
+		// if (code == 0 ) console.log(`\nAll files are added.`);
+		// else displayError('Unable to add files');
+	});
+
+
 // Main task to build & deploy \\
 
 gulp.task('build', function(done) {
-	// if(!commitMessage){
-	// 	console.log('\nPlease provide a commit message');
-	// 	console.log("Usage: gulp build -m 'commit message'\n");
-	// 	return;
-	// }
+	if(!commitMessage){
+		console.log('\nPlease provide a commit message');
+		console.log("Usage: gulp build -m 'commit message'\n");
+		return;
+	}
 
 	runSequence(
 		'clean:dist',
 		['sass', 'useref', 'images', 'fonts', 'testimonial-plugin', 'contact-form', 'htaccess'],
+		'git',
 		// 'add',
 		// 'commit',
-		'push',
+		// 'push',
 		done
 	);
 });
