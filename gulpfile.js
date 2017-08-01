@@ -19,15 +19,11 @@ const useref = require('gulp-useref');
 // --- Global vars and functions --- \\
 
 const dist = 'royschefferscom';
-var issue = false;
 
-const i = process.argv.indexOf("-m");
-const commitMessage = (i>-1) ? process.argv[i+1].trim() : undefined;
-
-function displayError(msg) {
-	issue = true;
-	console.log(`ERROR: ${msg}`);
-}
+const commitMsg = () => {
+	const i = process.argv.indexOf("-m");
+	return (i>-1) ? process.argv[i+1].trim() : undefined;
+};
 
 gulp.task('sass', function(){
 	return gulp.src('app/scss/**/*.scss')
@@ -153,31 +149,27 @@ gulp.task('git', function() {
 	const add = spawn('git', ['add', '.']);
 
 	add.on('close', (code) => {
-			const gitCommit = spawn('git', ['commit', '--message', '"' + commitMessage + '"']);
+			if (code == 0) console.log("Success: 'git add .'");
+			const gitCommit = spawn('git', ['commit', '--message', commitMsg()]);
 				gitCommit.stderr.on('data', (data) => {
 				console.log(`gitCommit stderr: ${data}`);
 			});
 
 			gitCommit.on('close', (code) => {
+				if (code == 0) console.log("Success: 'git commit -m'");
 				const push = spawn('git', ['push', 'ftp', 'master']);
 				push.on('close', (code) => {
-					if (code == 0 ) console.log(`Upload and deployment succesful! :)`);
+					if (code == 0 ) console.log(`Success Upload and deployment succesful! :)`);
 				});
 			});
 		});
-
-
-
-
-		// if (code == 0 ) console.log(`\nAll files are added.`);
-		// else displayError('Unable to add files');
 	});
 
 
 // Main task to build & deploy \\
 
 gulp.task('build', function(done) {
-	if(!commitMessage){
+	if(!commitMsg()){
 		console.log('\nPlease provide a commit message');
 		console.log("Usage: gulp build -m 'commit message'\n");
 		return;
