@@ -851,7 +851,6 @@ div.img-responsive::before {
   }
   .social {
     width: 100%;
-    // border: 1px solid blue;
     padding: 10px;
     margin: 0 auto;
 
@@ -865,7 +864,7 @@ div.img-responsive::before {
       font-size: 1.65em;
       overflow: hidden;
       border-radius: 3px;
-      border: 1px solid $primary-color;
+      border: none;
       display: table;
       float: left;
       margin: 0 10px 10px 0;
@@ -883,13 +882,14 @@ div.img-responsive::before {
       vertical-align: middle;
     }
     .fa { transition: all 0.5s ease-in-out; color: $primary-color; }
-    .fa:hover { border: 1px solid transparent; }
+    .fa:hover { border: none; }
 
     .fa-github:hover { background-color: #222; color: #fafafc; }
     .fa-linkedin:hover { background-color: #0077b5; color: #fafafc; }
     .fa-twitter:hover { background-color: #4099FF; color: #fafafc; }
     .fa-free-code-camp:hover { background-color: #006400; color: #fafafc; }
     .fa-codepen:hover { background-color: #222; color: #fafafc; }
+    .fa-stack-overflow:hover { background-color: #F48024; color: #fafafc; }
   }
 }
 
